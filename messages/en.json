@@ -1,0 +1,357 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover the Beauty of Cape Town with Cape Home",
+      "subtitle": "Exceptional tourism experiences and unforgettable adventures in Cape Town's most beautiful destinations",
+      "cta": "Book Your Trip Now",
+      "explore": "Explore Our Services"
+    },
+    "services": {
+      "title": "Our Tourism Services",
+      "subtitle": "We offer a diverse range of tours and travel experiences",
+      "safari": {
+        "title": "Safari Tours",
+        "description": "Explore African wildlife in the most beautiful nature reserves"
+      },
+      "wine": {
+        "title": "StrawberryTours",
+        "description": "Discover the finest farms and taste authentic Cape Town Strawberries"
+      },
+      "culture": {
+        "title": "Cultural Tours",
+        "description": "Learn about Cape Town's rich history and culture"
+      }
+    },
+    "testimonials": {
+      "title": "Customer Reviews",
+      "subtitle": "What our customers say about their experience with us",
+      "items": {
+        "ahmed": {
+          "name": "Ahmed Al-Rashid",
+          "location": "Dubai, UAE",
+          "comment": "An incredible experience! Cape Home made our Cape Town adventure unforgettable. The safari tour was amazing and the guides were very knowledgeable."
+        },
+        "sarah": {
+          "name": "Sarah Johnson",
+          "location": "London, UK",
+          "comment": "Professional service and breathtaking destinations. The Strawberrytour was exceptional and we learned so much about Cape Town culture."
+        },
+        "mohammed": {
+          "name": "Mohammed Hassan",
+          "location": "Cairo, Egypt",
+          "comment": "Cape Home exceeded all our expectations. The cultural tours were enlightening and the hospitality was outstanding. Highly recommended!"
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Cape Home Tourism Company",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We strive to provide exceptional tourism experiences that showcase the beauty and richness of Cape Town to visitors from around the world."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading tourism company in Cape Town, known for our outstanding services and unique experiences."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "Our core values guide everything we do and shape the experiences we create for our guests.",
+      "quality": "Quality",
+      "qualityDesc": "We deliver exceptional service and unforgettable experiences that exceed expectations.",
+      "authenticity": "Authenticity",
+      "authenticityDesc": "We showcase the genuine culture and natural beauty of Cape Town with respect and integrity.",
+      "sustainability": "Sustainability",
+      "sustainabilityDesc": "We are committed to responsible tourism that preserves our environment for future generations.",
+      "excellence": "Excellence",
+      "excellenceDesc": "We strive for excellence in every aspect of our service, from planning to execution."
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Our passionate team of tourism professionals is dedicated to creating unforgettable experiences for every guest.",
+      "experience": "Experience",
+      "members": {
+        "ahmed": {
+          "name": "Ahmed Mansour",
+          "position": "Founder & CEO",
+          "description": "With over 15 years in tourism, Ahmed leads Cape Home with passion for showcasing Cape Town's beauty."
+        },
+        "sarah": {
+          "name": "Sarah Mitchell",
+          "position": "Head of Operations",
+          "description": "Sarah ensures every tour runs smoothly and exceeds our guests' expectations with her attention to detail."
+        },
+        "david": {
+          "name": "David Thompson",
+          "position": "Senior Tour Guide",
+          "description": "A wildlife expert and storyteller, David brings Cape Town culture and nature to life for our guests."
+        }
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Choose from a variety of tours and experiences",
+    "book": "Book Now",
+    "from": "From",
+    "duration": "Duration",
+    "includes": "Includes",
+    "adventure": {
+      "title": "Adventure Tours",
+      "description": "Thrilling outdoor adventures including hiking, rock climbing, and extreme sports"
+    },
+    "city": {
+      "title": "City Tours",
+      "description": "Explore Cape Town and other major cities with our comprehensive urban experiences"
+    },
+    "custom": {
+      "title": "Custom Packages",
+      "description": "Personalized itineraries tailored to your interests and preferences"
+    },
+    "grid": {
+      "title": "Our Complete Service Range",
+      "subtitle": "From wildlife safaris to cultural immersion, we offer comprehensive tourism experiences that showcase the best of Cape Town."
+    },
+    "packages": {
+      "title": "Featured Tour Packages",
+      "subtitle": "Carefully crafted experiences that combine the best attractions, activities, and accommodations for unforgettable journeys.",
+      "highlights": "Package Highlights:",
+      "perPerson": "per person"
+    }
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "See the most beautiful moments from our tourism trips",
+    "photos": "Photos",
+    "videos": "Videos"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tourism tips and articles",
+    "readMore": "Read More",
+    "latestPosts": "Latest Posts",
+    "loadMore": "Load More Posts",
+    "categories": {
+      "title": "Categories",
+      "all": "All Posts",
+      "destinations": "Destinations",
+      "photography": "Photography",
+      "wine": "Strawberry& Food",
+      "culture": "Culture",
+      "adventure": "Adventure",
+      "tips": "Travel Tips"
+    },
+    "sidebar": {
+      "recent": "Recent Posts",
+      "tags": "Popular Tags",
+      "newsletter": {
+        "title": "Stay Updated",
+        "description": "Subscribe to our newsletter for the latest travel tips and destination guides.",
+        "placeholder": "Enter your email",
+        "subscribe": "Subscribe"
+      }
+    },
+    "posts": {
+      "destinations": {
+        "title": "Top 10 Must-Visit Destinations in Cape Town",
+        "excerpt": "Discover the most breathtaking locations that should be on every traveler's Cape Town itinerary.",
+        "content": "<h2>Introduction</h2><p>Cape Town is a land of incredible diversity, offering everything from bustling cities to pristine wilderness areas. Whether you're seeking adventure, culture, or relaxation, this beautiful country has something for everyone.</p><h2>1. Cape Town and Table Mountain</h2><p>No visit to Cape Town is complete without experiencing the mother city. Cape Town offers stunning natural beauty, rich history, and world-class dining.</p><h2>2. Kruger National Park</h2><p>Home to the Big 5 and countless other species, Kruger is one of Africa's premier safari destinations.</p><h2>3. Garden Route</h2><p>This scenic coastal drive offers breathtaking landscapes, charming towns, and outdoor adventures.</p><h2>4. Stellenbosch StrawberryRegion</h2><p>Experience world-class Strawberries in one of the most beautiful Strawberryregions on earth.</p><h2>5. Drakensberg Mountains</h2><p>A UNESCO World Heritage site offering hiking, rock art, and stunning mountain scenery.</p><h2>Conclusion</h2><p>These destinations represent just a fraction of what Cape Town has to offer. Each location provides unique experiences that will create lasting memories.</p>"
+      },
+      "photography": {
+        "title": "Safari Photography: Capturing the Big 5",
+        "excerpt": "Professional tips and techniques for photographing Africa's most magnificent wildlife.",
+        "content": "<h2>Getting Started with Safari Photography</h2><p>Wildlife photography in Africa is an incredible experience that requires patience, skill, and the right equipment. Here's your complete guide to capturing stunning images of the Big 5.</p><h2>Essential Equipment</h2><p>A telephoto lens (300-600mm) is crucial for wildlife photography. Don't forget extra batteries and memory cards!</p><h2>Best Times for Photography</h2><p>Golden hour provides the best lighting conditions for wildlife photography.</p>"
+      },
+      "wine": {
+        "title": "Strawberry Tasting Guide: Stellenbosch vs Franschhoek",
+        "excerpt": "Compare two of Cape Town's premier Strawberryregions and discover which suits your taste.",
+        "content": "<h2>Introduction to Cape Town Wine</h2><p>Cape Town's Strawberryregions offer world-class experiences with stunning landscapes and exceptional Strawberries.</p><h2>Stellenbosch: The Heart of StrawberryCountry</h2><p>Known for its historic estates and premium red Strawberries, Stellenbosch offers a traditional Strawberryexperience.</p><h2>Franschhoek: The French Corner</h2><p>This charming valley combines French heritage with Cape Town terroir.</p>"
+      },
+      "culture": {
+        "title": "Cultural Immersion: Understanding Cape Town Heritage",
+        "excerpt": "Dive deep into the rich cultural tapestry that makes Cape Town unique.",
+        "content": "<h2>The Rainbow Nation</h2><p>Cape Town's cultural diversity is one of its greatest treasures, with 11 official languages and countless traditions.</p><h2>Historical Sites to Visit</h2><p>From Robben Island to the Cradle of Humankind, Cape Town offers profound historical experiences.</p><h2>Living Culture</h2><p>Experience traditional music, dance, and cuisine that tell the story of this remarkable nation.</p>"
+      },
+      "adventure": {
+        "title": "Adventure Activities: Adrenaline Rush in Cape Town",
+        "excerpt": "From bungee jumping to shark cage diving, discover Cape Town's thrilling adventures.",
+        "content": "<h2>Cape Town: Adventure Capital</h2><p>Cape Town offers world-class adventure activities for thrill-seekers of all levels.</p><h2>Top Adventure Activities</h2><p>Bungee jumping, shark cage diving, paragliding, and rock climbing await the brave.</p><h2>Safety First</h2><p>All activities are conducted by certified operators with excellent safety records.</p>"
+      },
+      "tips": {
+        "title": "Best Time to Visit Cape Town: Seasonal Guide",
+        "excerpt": "Plan your perfect trip with our comprehensive guide to Cape Town's seasons.",
+        "content": "<h2>Understanding Cape Town Seasons</h2><p>Cape Town's diverse climate means there's always a perfect time to visit different regions.</p><h2>Summer (December - February)</h2><p>Perfect for coastal activities and Strawberryharvest season.</p><h2>Winter (June - August)</h2><p>Ideal for safari as animals gather around water sources.</p>"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you plan your perfect trip",
+    "getInTouch": {
+      "title": "Get in Touch",
+      "description": "We're here to help you plan your perfect Cape Town adventure. Contact us through any of the methods below, and our friendly team will get back to you as soon as possible."
+    },
+    "visitOffice": {
+      "title": "Visit Our Office",
+      "description": "Located in the heart of Cape Town, our office is easily accessible and we welcome walk-in consultations. Schedule an appointment or drop by to discuss your travel plans in person."
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you for your message! We'll get back to you soon.",
+      "error": "Sorry, there was an error sending your message. Please try again.",
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "messageRequired": "Message is required"
+      }
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Business Hours"
+    },
+    "social": {
+      "title": "Follow Us on Social Media",
+      "description": "Stay updated with our latest tours, travel tips, and special offers!"
+    },
+    "emergency": {
+      "title": "24/7 Emergency Support",
+      "description": "For urgent matters during your tour or travel emergency:"
+    },
+    "directions": "Get Directions",
+    "loadingMap": "Loading map...",
+    "mapNote": "Note: Replace YOUR_GOOGLE_MAPS_API_KEY with your actual Google Maps API key"
+  },
+  "whatsapp": {
+    "message": "Hello! I would like to inquire about your tourism services.",
+    "tooltip": "Contact us via WhatsApp"
+  },
+  "footer": {
+    "description": "Cape Home Tourism offers unforgettable experiences in Cape Town. From safari adventures to Strawberrytours, we create memories that last a lifetime.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Info",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved."
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Login",
+      "subtitle": "Cape Home Tourism CMS",
+      "password": "Password",
+      "placeholder": "Enter admin password",
+      "loginButton": "Login",
+      "invalidPassword": "Invalid password",
+      "demoPassword": "Demo Password:",
+      "note": "Note:",
+      "productionNote": "Replace with proper authentication in production"
+    },
+    "header": {
+      "title": "Cape Home CMS",
+      "subtitle": "Content Management System",
+      "logout": "Logout"
+    },
+    "menu": {
+      "overview": "Overview",
+      "content": "Content",
+      "blog": "Blog Posts",
+      "services": "Services",
+      "gallery": "Gallery",
+      "settings": "Settings"
+    },
+    "overview": {
+      "title": "Dashboard Overview",
+      "lastUpdated": "Last updated:",
+      "stats": {
+        "blogPosts": "Total Blog Posts",
+        "galleryImages": "Gallery Images",
+        "servicePackages": "Service Packages",
+        "monthlyVisitors": "Monthly Visitors",
+        "changes": {
+          "thisMonth": "this month",
+          "thisWeek": "this week",
+          "noChanges": "No changes",
+          "fromLastMonth": "from last month"
+        }
+      },
+      "recentActivity": {
+        "title": "Recent Activity",
+        "newBlogPost": "New blog post published:",
+        "galleryUpdated": "Gallery updated with 5 new images",
+        "servicePricing": "Service package pricing updated"
+      },
+      "quickActions": {
+        "title": "Quick Actions",
+        "addBlogPost": "Add New Blog Post",
+        "uploadImages": "Upload Images"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "siteConfig": "Site Configuration",
+      "siteTitle": "Site Title",
+      "contactEmail": "Contact Email",
+      "whatsapp": "WhatsApp Integration",
+      "whatsappNumber": "WhatsApp Number",
+      "googleMaps": "Google Maps",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Enter Google Maps API Key",
+      "saveSettings": "Save Settings"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try Again",
+    "close": "Close",
+    "viewMore": "View More",
+    "learnMore": "Learn More",
+    "viewAllServices": "View All Services"
+  },
+  "cta": {
+    "title": "Ready to Book Your Adventure?",
+    "subtitle": "Our travel experts are standing by to help you create the perfect Cape Town experience. Contact us today for personalized recommendations and exclusive deals.",
+    "social": {
+      "title": "Follow Us on Social Media",
+      "description": "Stay updated with our latest tours, travel tips, and special offers!"
+    },
+    "emergency": {
+      "title": "24/7 Emergency Support",
+      "description": "For urgent matters during your tour or travel emergency:"
+    },
+    "directions": "Get Directions",
+    "loadingMap": "Loading map...",
+    "mapNote": "Note: Replace YOUR_GOOGLE_MAPS_API_KEY with your actual Google Maps API key",
+    "call": {
+      "title": "Call Us",
+      "description": "Speak directly with our travel experts"
+    },
+    "email": {
+      "title": "Email Us",
+      "description": "Get detailed information via email"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "description": "Quick responses via WhatsApp",
+      "action": "Chat Now"
+    },
+    "bookTrip": "Book Your Trip Now",
+    "viewGallery": "View Gallery"
+  }
+}
