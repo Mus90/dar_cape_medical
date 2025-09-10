@@ -17,14 +17,14 @@ const TeamSection = () => {
       description: t('members.ahmed.description'),
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
       email: 'ahmed@capehome.co.za',
-      phone: '+27 817394084'
+      phone: '+27817394084'
     },
     {
-      name: t('members.sarah.name'),
-      position: t('members.sarah.position'),
-      description: t('members.sarah.description'),
+      name: t('members.mujahid.name'),
+      position: t('members.mujahid.position'),
+      description: t('members.mujahid.description'),
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
-      email: 'sarah@capehome.co.za',
+      email: 'mujahid@capehome.co.za',
       phone: '+27 123 456 790'
     },
     {

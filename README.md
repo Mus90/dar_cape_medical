@@ -243,7 +243,7 @@ The website is optimized for:
 
 For technical support or customization requests, contact:
 - **Email**: developer@capehome.co.za
-- **Phone**: +27 817394084
+- **Phone**: +27817394084
 
 ## 📄 License
 

@@ -26,7 +26,7 @@ const BlogCategories = () => {
     {
       title: t('posts.post1.title'),
       date: '2024-01-15',
-      image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
+      image: 'https://images.unsplash.com/photo-1580060860978-d479ebf95a53?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
       title: t('posts.post2.title'),
@@ -41,7 +41,7 @@ const BlogCategories = () => {
   ];
 
   const popularTags = [
-    'Cape Town', 'Safari', 'StrawberryTours', 'Big 5', 'Table Mountain',
+    'Cape Town', 'Safari', 'Strawberry Tours', 'Big 5', 'Table Mountain',
     'Garden Route', 'Kruger Park', 'Photography', 'Culture', 'Adventure',
     'Food', 'Travel Tips', 'Wildlife', 'Beaches', 'History'
   ];

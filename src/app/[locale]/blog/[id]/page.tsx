@@ -7,31 +7,31 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 // This would typically come from a CMS or database
 const getBlogPost = async (id: string, locale: string) => {
   const t = await getTranslations({ locale, namespace: 'blog' });
-  
+
   const postMap: { [key: string]: string } = {
     '1': 'destinations',
-    '2': 'photography', 
+    '2': 'photography',
     '3': 'wine',
     '4': 'culture',
     '5': 'adventure',
     '6': 'tips'
   };
-  
+
   const postKey = postMap[id];
   if (!postKey) return null;
-  
+
   const posts = [
     {
       id: '1',
       title: t('posts.destinations.title'),
       excerpt: t('posts.destinations.excerpt'),
       content: t('posts.destinations.content'),
-      author: 'Sarah Mitchell',
+      author: 'Ahmed Ali',
       date: '2024-01-15',
       readTime: '8 min read',
       category: 'destinations',
       categoryName: t('categories.destinations'),
-      image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://unsplash.com/photos/aerial-view-of-city-near-mountain-during-daytime-kpdWINVf3JI',
       tags: ['Cape Town', 'Kruger', 'Garden Route', 'Travel Tips']
     },
     {
@@ -39,7 +39,7 @@ const getBlogPost = async (id: string, locale: string) => {
       title: t('posts.photography.title'),
       excerpt: t('posts.photography.excerpt'),
       content: t('posts.photography.content'),
-      author: 'David Thompson',
+      author: 'Mujahid',
       date: '2024-01-12',
       readTime: '6 min read',
       category: 'photography',
@@ -52,7 +52,7 @@ const getBlogPost = async (id: string, locale: string) => {
       title: t('posts.wine.title'),
       excerpt: t('posts.wine.excerpt'),
       content: t('posts.wine.content'),
-      author: 'Ahmed Mansour',
+      author: 'Mustafa Ali',
       date: '2024-01-10',
       readTime: '5 min read',
       category: 'wine',
@@ -65,7 +65,7 @@ const getBlogPost = async (id: string, locale: string) => {
       title: t('posts.culture.title'),
       excerpt: t('posts.culture.excerpt'),
       content: t('posts.culture.content'),
-      author: 'Sarah Mitchell',
+      author: 'Mujahid Mohamed',
       date: '2024-01-08',
       readTime: '7 min read',
       category: 'culture',
@@ -78,7 +78,7 @@ const getBlogPost = async (id: string, locale: string) => {
       title: t('posts.adventure.title'),
       excerpt: t('posts.adventure.excerpt'),
       content: t('posts.adventure.content'),
-      author: 'David Thompson',
+      author: 'Ahmed Ali',
       date: '2024-01-05',
       readTime: '6 min read',
       category: 'adventure',
@@ -91,7 +91,7 @@ const getBlogPost = async (id: string, locale: string) => {
       title: t('posts.tips.title'),
       excerpt: t('posts.tips.excerpt'),
       content: t('posts.tips.content'),
-      author: 'Ahmed Mansour',
+      author: 'Mustafa Ali',
       date: '2024-01-03',
       readTime: '4 min read',
       category: 'tips',
@@ -100,7 +100,7 @@ const getBlogPost = async (id: string, locale: string) => {
       tags: ['Travel Tips', 'Weather', 'Planning', 'Seasons']
     }
   ];
-  
+
   return posts.find(post => post.id === id);
 };
 
@@ -121,7 +121,7 @@ export async function generateMetadata({
   params: { id: string; locale: string };
 }): Promise<Metadata> {
   const post = await getBlogPost(id, locale);
-  
+
   if (!post) {
     return {
       title: 'Post Not Found',

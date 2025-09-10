@@ -8,7 +8,7 @@ import BookingCTA from '@/components/services/BookingCTA';
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'Explore our comprehensive range of tourism services including safari tours, Strawberrytours, cultural experiences, and adventure packages in Cape Town.',
+  description: 'Explore our comprehensive range of tourism services including safari tours, Strawberry tours, cultural experiences, and adventure packages in Cape Town.',
 };
 
 type Props = {

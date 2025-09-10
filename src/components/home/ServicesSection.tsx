@@ -3,11 +3,11 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CameraIcon, 
-  GlobeAltIcon, 
+import {
+  CameraIcon,
+  GlobeAltIcon,
   HeartIcon,
-  ArrowRightIcon 
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
 const ServicesSection = () => {
@@ -20,21 +20,21 @@ const ServicesSection = () => {
       icon: CameraIcon,
       title: t('safari.title'),
       description: t('safari.description'),
-      image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1730397454774-87a43568e255?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       color: 'from-green-500 to-green-600'
     },
     {
       icon: GlobeAltIcon,
       title: t('wine.title'),
       description: t('wine.description'),
-      image: 'https://images.unsplash.com/photo-1574870111867-089730e5a72b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1585254589738-aff16702b974?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       color: 'from-purple-500 to-purple-600'
     },
     {
       icon: HeartIcon,
       title: t('culture.title'),
       description: t('culture.description'),
-      image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1570527141186-e391a3914c42?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       color: 'from-orange-500 to-orange-600'
     }
   ];
@@ -68,7 +68,7 @@ const ServicesSection = () => {
               className="group card overflow-hidden hover:scale-105 transition-transform duration-300"
             >
               <div className="relative h-64 overflow-hidden">
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url('${service.image}')` }}
                 />
@@ -77,7 +77,7 @@ const ServicesSection = () => {
                   <service.icon className="h-6 w-6 text-white" />
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   {service.title}

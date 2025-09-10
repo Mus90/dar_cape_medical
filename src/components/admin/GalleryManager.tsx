@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   PencilIcon,
@@ -15,6 +16,20 @@ import {
 const GalleryManager = () => {
   const [activeTab, setActiveTab] = useState('photos');
   const [isUploading, setIsUploading] = useState(false);
+  const [editingPhoto, setEditingPhoto] = useState<string | null>(null);
+  const [editingVideo, setEditingVideo] = useState<string | null>(null);
+  const [editPhotoData, setEditPhotoData] = useState({
+    title: '',
+    description: '',
+    category: '',
+    tags: ''
+  });
+  const [editVideoData, setEditVideoData] = useState({
+    title: '',
+    description: '',
+    category: '',
+    tags: ''
+  });
 
   const [photos, setPhotos] = useState([
     {
@@ -78,36 +93,69 @@ const GalleryManager = () => {
 
   const handleDeletePhoto = (id: string) => {
     if (confirm('Are you sure you want to delete this photo?')) {
-      setPhotos(photos.filter(photo => photo.id !== id));
+      const updatedPhotos = photos.filter(photo => photo.id !== id);
+      setPhotos(updatedPhotos);
+      localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
     }
   };
 
   const handleDeleteVideo = (id: string) => {
     if (confirm('Are you sure you want to delete this video?')) {
-      setVideos(videos.filter(video => video.id !== id));
+      const updatedVideos = videos.filter(video => video.id !== id);
+      setVideos(updatedVideos);
+      localStorage.setItem('cape_home_gallery_videos', JSON.stringify(updatedVideos));
     }
   };
 
   const handlePublishPhoto = (id: string) => {
-    setPhotos(photos.map(photo =>
+    const updatedPhotos = photos.map(photo =>
       photo.id === id ? { ...photo, status: 'published' } : photo
-    ));
+    );
+    setPhotos(updatedPhotos);
+    localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
   };
 
   const handlePublishVideo = (id: string) => {
-    setVideos(videos.map(video =>
+    const updatedVideos = videos.map(video =>
       video.id === id ? { ...video, status: 'published' } : video
-    ));
+    );
+    setVideos(updatedVideos);
+    localStorage.setItem('cape_home_gallery_videos', JSON.stringify(updatedVideos));
   };
+
+  // Load data from localStorage on component mount
+  React.useEffect(() => {
+    const savedPhotos = localStorage.getItem('cape_home_gallery_photos');
+    const savedVideos = localStorage.getItem('cape_home_gallery_videos');
+    if (savedPhotos) {
+      setPhotos(JSON.parse(savedPhotos));
+    }
+    if (savedVideos) {
+      setVideos(JSON.parse(savedVideos));
+    }
+  }, []);
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files && files.length > 0) {
       setIsUploading(true);
-      // Simulate upload process
+      // Simulate upload process and add to gallery
       setTimeout(() => {
+        const newPhotos = Array.from(files).map((file, index) => ({
+          id: (Date.now() + index).toString(),
+          title: file.name.replace(/\.[^/.]+$/, ""),
+          description: `Uploaded image: ${file.name}`,
+          url: URL.createObjectURL(file),
+          category: 'uploaded',
+          tags: ['Upload', 'New'],
+          uploadDate: new Date().toISOString().split('T')[0],
+          status: 'draft'
+        }));
+        const updatedPhotos = [...newPhotos, ...photos];
+        setPhotos(updatedPhotos);
+        localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
         setIsUploading(false);
-        alert('Files uploaded successfully!');
+        alert(`${files.length} file(s) uploaded successfully!`);
       }, 2000);
     }
   };
@@ -130,6 +178,177 @@ const GalleryManager = () => {
           </label>
         </div>
       </div>
+
+      {/* Edit Photo Modal */}
+      {editingPhoto && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-xl shadow-xl max-w-2xl w-full"
+          >
+            <div className="p-6 border-b border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900">Edit Photo</h3>
+            </div>
+            <div className="p-6 space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
+                <input
+                  type="text"
+                  value={editPhotoData.title}
+                  onChange={(e) => setEditPhotoData({ ...editPhotoData, title: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                <textarea
+                  value={editPhotoData.description}
+                  onChange={(e) => setEditPhotoData({ ...editPhotoData, description: e.target.value })}
+                  rows={3}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                <select
+                  value={editPhotoData.category}
+                  onChange={(e) => setEditPhotoData({ ...editPhotoData, category: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                >
+                  <option value="landscapes">Landscapes</option>
+                  <option value="wine-tours">Wine Tours</option>
+                  <option value="safari">Safari</option>
+                  <option value="city-tours">City Tours</option>
+                  <option value="uploaded">Uploaded</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Tags (comma separated)</label>
+                <input
+                  type="text"
+                  value={editPhotoData.tags}
+                  onChange={(e) => setEditPhotoData({ ...editPhotoData, tags: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+            </div>
+            <div className="p-6 border-t border-gray-200 flex justify-end space-x-4">
+              <button
+                onClick={() => setEditingPhoto(null)}
+                className="btn-secondary"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => {
+                  const updatedPhotos = photos.map(photo =>
+                    photo.id === editingPhoto ? {
+                      ...photo,
+                      title: editPhotoData.title,
+                      description: editPhotoData.description,
+                      category: editPhotoData.category,
+                      tags: editPhotoData.tags.split(',').map(tag => tag.trim())
+                    } : photo
+                  );
+                  setPhotos(updatedPhotos);
+                  localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
+                  setEditingPhoto(null);
+                  alert('Photo updated successfully!');
+                }}
+                className="btn-primary"
+              >
+                Update Photo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Edit Video Modal */}
+      {editingVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-xl shadow-xl max-w-2xl w-full"
+          >
+            <div className="p-6 border-b border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900">Edit Video</h3>
+            </div>
+            <div className="p-6 space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
+                <input
+                  type="text"
+                  value={editVideoData.title}
+                  onChange={(e) => setEditVideoData({ ...editVideoData, title: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                <textarea
+                  value={editVideoData.description}
+                  onChange={(e) => setEditVideoData({ ...editVideoData, description: e.target.value })}
+                  rows={3}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                <select
+                  value={editVideoData.category}
+                  onChange={(e) => setEditVideoData({ ...editVideoData, category: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                >
+                  <option value="city-tours">City Tours</option>
+                  <option value="wine-tours">Wine Tours</option>
+                  <option value="safari">Safari</option>
+                  <option value="landscapes">Landscapes</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Tags (comma separated)</label>
+                <input
+                  type="text"
+                  value={editVideoData.tags}
+                  onChange={(e) => setEditVideoData({ ...editVideoData, tags: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+            </div>
+            <div className="p-6 border-t border-gray-200 flex justify-end space-x-4">
+              <button
+                onClick={() => setEditingVideo(null)}
+                className="btn-secondary"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => {
+                  const updatedVideos = videos.map(video =>
+                    video.id === editingVideo ? {
+                      ...video,
+                      title: editVideoData.title,
+                      description: editVideoData.description,
+                      category: editVideoData.category,
+                      tags: editVideoData.tags.split(',').map(tag => tag.trim())
+                    } : video
+                  );
+                  setVideos(updatedVideos);
+                  localStorage.setItem('cape_home_gallery_videos', JSON.stringify(updatedVideos));
+                  setEditingVideo(null);
+                  alert('Video updated successfully!');
+                }}
+                className="btn-primary"
+              >
+                Update Video
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Upload Progress */}
       {isUploading && (
@@ -220,10 +439,26 @@ const GalleryManager = () => {
                   </span>
 
                   <div className="flex items-center space-x-1">
-                    <button className="p-1 text-gray-400 hover:text-gray-600">
+                    <button 
+                      onClick={() => window.open(photo.url, '_blank')}
+                      className="p-1 text-gray-400 hover:text-gray-600"
+                      title="View full size"
+                    >
                       <EyeIcon className="h-4 w-4" />
                     </button>
-                    <button className="p-1 text-blue-600 hover:text-blue-800">
+                    <button 
+                      onClick={() => {
+                        setEditPhotoData({
+                          title: photo.title,
+                          description: photo.description,
+                          category: photo.category,
+                          tags: photo.tags.join(', ')
+                        });
+                        setEditingPhoto(photo.id);
+                      }}
+                      className="p-1 text-blue-600 hover:text-blue-800"
+                      title="Edit photo"
+                    >
                       <PencilIcon className="h-4 w-4" />
                     </button>
                     <button
@@ -312,10 +547,26 @@ const GalleryManager = () => {
                   </span>
 
                   <div className="flex items-center space-x-1">
-                    <button className="p-1 text-gray-400 hover:text-gray-600">
+                    <button 
+                      onClick={() => window.open(video.url, '_blank')}
+                      className="p-1 text-gray-400 hover:text-gray-600"
+                      title="Watch video"
+                    >
                       <EyeIcon className="h-4 w-4" />
                     </button>
-                    <button className="p-1 text-blue-600 hover:text-blue-800">
+                    <button 
+                      onClick={() => {
+                        setEditVideoData({
+                          title: video.title,
+                          description: video.description,
+                          category: video.category,
+                          tags: video.tags.join(', ')
+                        });
+                        setEditingVideo(video.id);
+                      }}
+                      className="p-1 text-blue-600 hover:text-blue-800"
+                      title="Edit video"
+                    >
                       <PencilIcon className="h-4 w-4" />
                     </button>
                     <button

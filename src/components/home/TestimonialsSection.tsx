@@ -16,10 +16,10 @@ const TestimonialsSection = () => {
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
     {
-      name: t('items.sarah.name'),
-      location: t('items.sarah.location'),
+      name: t('items.mujahid.name'),
+      location: t('items.mujahid.location'),
       rating: 5,
-      comment: t('items.sarah.comment'),
+      comment: t('items.mujahid.comment'),
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
     {

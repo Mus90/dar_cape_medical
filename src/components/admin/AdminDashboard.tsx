@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { 
@@ -23,15 +24,64 @@ const AdminDashboard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
 
-  // Simple password authentication (in production, use proper authentication)
+  // Enhanced password authentication with attempt tracking
+  const [loginAttempts, setLoginAttempts] = useState(0);
+  const [isLocked, setIsLocked] = useState(false);
+  const [lockoutTime, setLockoutTime] = useState<number | null>(null);
+
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === 'capehome2024') { // Change this password
+    
+    if (isLocked) {
+      const timeLeft = Math.ceil((lockoutTime! - Date.now()) / 1000);
+      alert(`Account locked. Try again in ${timeLeft} seconds.`);
+      return;
+    }
+
+    // Check multiple valid passwords for demo
+    const validPasswords = ['capehome2024', 'admin123', 'demo2024'];
+    
+    if (validPasswords.includes(password)) {
       setIsAuthenticated(true);
+      setLoginAttempts(0);
+      // Save login session
+      sessionStorage.setItem('cape_admin_session', JSON.stringify({
+        authenticated: true,
+        timestamp: Date.now(),
+        expires: Date.now() + (30 * 60 * 1000) // 30 minutes
+      }));
     } else {
-      alert(t('login.invalidPassword'));
+      const newAttempts = loginAttempts + 1;
+      setLoginAttempts(newAttempts);
+      
+      if (newAttempts >= 3) {
+        setIsLocked(true);
+        const lockTime = Date.now() + (5 * 60 * 1000); // 5 minutes lockout
+        setLockoutTime(lockTime);
+        setTimeout(() => {
+          setIsLocked(false);
+          setLoginAttempts(0);
+          setLockoutTime(null);
+        }, 5 * 60 * 1000);
+        alert('Too many failed attempts. Account locked for 5 minutes.');
+      } else {
+        alert(`Invalid password. ${3 - newAttempts} attempts remaining.`);
+      }
     }
   };
+
+  // Check for existing session on component mount
+  React.useEffect(() => {
+    const session = sessionStorage.getItem('cape_admin_session');
+    if (session) {
+      const sessionData = JSON.parse(session);
+      if (sessionData.authenticated && Date.now() < sessionData.expires) {
+        setIsAuthenticated(true);
+      } else {
+        sessionStorage.removeItem('cape_admin_session');
+      }
+    }
+  }, []);
 
   const menuItems = [
     { id: 'overview', name: t('menu.overview'), icon: HomeIcon },
@@ -84,8 +134,9 @@ const AdminDashboard = () => {
           
           <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
             <p className="text-sm text-yellow-800">
-              <strong>{t('login.demoPassword')}</strong> capehome2024<br />
-              <strong>{t('login.note')}</strong> {t('login.productionNote')}
+              <strong>Demo Passwords:</strong> capehome2024, admin123, demo2024<br />
+              <strong>Security Features:</strong> Session timeout (30 min), Rate limiting (3 attempts)<br />
+              <strong>Note:</strong> Replace with proper authentication in production
             </p>
           </div>
         </motion.div>
@@ -110,7 +161,11 @@ const AdminDashboard = () => {
             </div>
             
             <button
-              onClick={() => setIsAuthenticated(false)}
+              onClick={() => {
+                setIsAuthenticated(false);
+                sessionStorage.removeItem('cape_admin_session');
+                setPassword('');
+              }}
               className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
             >
               {t('header.logout')}
@@ -238,60 +293,201 @@ const OverviewTab = ({ t }: { t: any }) => {
 };
 
 const SettingsTab = ({ t }: { t: any }) => {
+  const [settings, setSettings] = React.useState({
+    siteTitle: 'Cape Home Tourism',
+    contactEmail: 'info@capehome.co.za',
+    whatsappNumber: '+27123456789',
+    googleMapsApiKey: '',
+    adminPassword: 'capehome2024',
+    sessionTimeout: 30,
+    maxLoginAttempts: 3
+  });
+
+  const [isSaving, setIsSaving] = React.useState(false);
+
+  // Load settings from localStorage
+  React.useEffect(() => {
+    const savedSettings = localStorage.getItem('cape_home_settings');
+    if (savedSettings) {
+      setSettings({ ...settings, ...JSON.parse(savedSettings) });
+    }
+  }, []);
+
+  const handleSaveSettings = () => {
+    setIsSaving(true);
+    // Save to localStorage
+    localStorage.setItem('cape_home_settings', JSON.stringify(settings));
+    
+    setTimeout(() => {
+      setIsSaving(false);
+      alert('Settings saved successfully!');
+    }, 1000);
+  };
+
+  const handleInputChange = (field: string, value: string | number) => {
+    setSettings(prev => ({ ...prev, [field]: value }));
+  };
+
   return (
     <div className="bg-white rounded-xl shadow-sm p-6">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('settings.title')}</h2>
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">Settings</h2>
       
-      <div className="space-y-6">
+      <div className="space-y-8">
+        {/* Site Configuration */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('settings.siteConfig')}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Site Configuration</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">{t('settings.siteTitle')}</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Site Title</label>
               <input
                 type="text"
-                defaultValue="Cape Home Tourism"
+                value={settings.siteTitle}
+                onChange={(e) => handleInputChange('siteTitle', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">{t('settings.contactEmail')}</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Contact Email</label>
               <input
                 type="email"
-                defaultValue="info@capehome.co.za"
+                value={settings.contactEmail}
+                onChange={(e) => handleInputChange('contactEmail', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
           </div>
         </div>
 
+        {/* WhatsApp Configuration */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('settings.whatsapp')}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">WhatsApp Integration</h3>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">{t('settings.whatsappNumber')}</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">WhatsApp Number</label>
             <input
               type="tel"
-              defaultValue="+27123456789"
+              value={settings.whatsappNumber}
+              onChange={(e) => handleInputChange('whatsappNumber', e.target.value)}
               className="w-full md:w-1/2 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              placeholder="+27123456789"
             />
+            <p className="text-sm text-gray-500 mt-1">Include country code (e.g., +27 for South Africa)</p>
           </div>
         </div>
 
+        {/* Google Maps Configuration */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('settings.googleMaps')}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Google Maps Integration</h3>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">{t('settings.apiKey')}</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Google Maps API Key</label>
             <input
-              type="text"
-              placeholder={t('settings.apiKeyPlaceholder')}
+              type="password"
+              value={settings.googleMapsApiKey}
+              onChange={(e) => handleInputChange('googleMapsApiKey', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              placeholder="Enter your Google Maps API key"
             />
+            <p className="text-sm text-gray-500 mt-1">Required for map functionality on contact page</p>
           </div>
         </div>
 
-        <div className="pt-4">
-          <button className="btn-primary">
-            {t('settings.saveSettings')}
+        {/* Security Settings */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Security Settings</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Session Timeout (minutes)</label>
+              <input
+                type="number"
+                value={settings.sessionTimeout}
+                onChange={(e) => handleInputChange('sessionTimeout', parseInt(e.target.value))}
+                min="5"
+                max="120"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Max Login Attempts</label>
+              <input
+                type="number"
+                value={settings.maxLoginAttempts}
+                onChange={(e) => handleInputChange('maxLoginAttempts', parseInt(e.target.value))}
+                min="3"
+                max="10"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Data Management */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Data Management</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <button
+              onClick={() => {
+                const data = {
+                  content: localStorage.getItem('cape_home_content'),
+                  blogPosts: localStorage.getItem('cape_home_blog_posts'),
+                  gallery: localStorage.getItem('cape_home_gallery_photos'),
+                  services: localStorage.getItem('cape_home_services'),
+                  settings: localStorage.getItem('cape_home_settings')
+                };
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `cape-home-backup-${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+              }}
+              className="btn-secondary"
+            >
+              Export Data
+            </button>
+            <button
+              onClick={() => {
+                if (confirm('This will clear all content data. Are you sure?')) {
+                  localStorage.removeItem('cape_home_content');
+                  localStorage.removeItem('cape_home_blog_posts');
+                  localStorage.removeItem('cape_home_gallery_photos');
+                  localStorage.removeItem('cape_home_services');
+                  alert('Content data cleared successfully!');
+                }
+              }}
+              className="btn-secondary text-red-600 border-red-300 hover:bg-red-50"
+            >
+              Clear Content Data
+            </button>
+            <button
+              onClick={() => {
+                if (confirm('This will reset all settings to defaults. Are you sure?')) {
+                  localStorage.removeItem('cape_home_settings');
+                  setSettings({
+                    siteTitle: 'Cape Home Tourism',
+                    contactEmail: 'info@capehome.co.za',
+                    whatsappNumber: '+27123456789',
+                    googleMapsApiKey: '',
+                    adminPassword: 'capehome2024',
+                    sessionTimeout: 30,
+                    maxLoginAttempts: 3
+                  });
+                  alert('Settings reset successfully!');
+                }
+              }}
+              className="btn-secondary text-orange-600 border-orange-300 hover:bg-orange-50"
+            >
+              Reset Settings
+            </button>
+          </div>
+        </div>
+
+        {/* Save Button */}
+        <div className="pt-4 border-t border-gray-200">
+          <button
+            onClick={handleSaveSettings}
+            disabled={isSaving}
+            className={`btn-primary ${isSaving ? 'opacity-50 cursor-not-allowed' : ''}`}
+          >
+            {isSaving ? 'Saving...' : 'Save Settings'}
           </button>
         </div>
       </div>

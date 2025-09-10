@@ -19,30 +19,30 @@ const RelatedPosts = ({ currentPostId, category }: RelatedPostsProps) => {
       id: '2',
       title: 'Safari Photography: Capturing the Big 5',
       excerpt: 'Professional tips and techniques for photographing Africa\'s most magnificent wildlife.',
-      author: 'David Thompson',
+      author: 'Ahmed Ali',
       date: '2024-01-12',
       readTime: '6 min read',
-      image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://images.unsplash.com/photo-1544219110-079476d43889?q=80&w=1184&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       category: 'photography'
     },
     {
       id: '3',
       title: 'Strawberry Tasting Guide: Stellenbosch vs Franschhoek',
       excerpt: 'Compare two of Cape Town\'s premier Strawberryregions and discover which suits your taste.',
-      author: 'Ahmed Mansour',
+      author: 'Mustafa Ali',
       date: '2024-01-10',
       readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://images.unsplash.com/photo-1585254589738-aff16702b974?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       category: 'wine'
     },
     {
       id: '4',
       title: 'Cultural Immersion: Understanding Cape Town Heritage',
       excerpt: 'Dive deep into the rich cultural tapestry that makes Cape Town unique.',
-      author: 'Sarah Mitchell',
+      author: 'Mujahid Mohamed',
       date: '2024-01-08',
       readTime: '7 min read',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: 'https://images.unsplash.com/photo-1704826413546-5805fd26c94f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       category: 'culture'
     }
   ].filter(post => post.id !== currentPostId);

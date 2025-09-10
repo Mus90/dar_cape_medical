@@ -22,7 +22,7 @@
         "description": "Explore African wildlife in the most beautiful nature reserves"
       },
       "wine": {
-        "title": "StrawberryTours",
+        "title": "Strawberry Tours",
         "description": "Discover the finest farms and taste authentic Cape Town Strawberries"
       },
       "culture": {
@@ -39,8 +39,8 @@
           "location": "Dubai, UAE",
           "comment": "An incredible experience! Cape Home made our Cape Town adventure unforgettable. The safari tour was amazing and the guides were very knowledgeable."
         },
-        "sarah": {
-          "name": "Sarah Johnson",
+        "mujahid": {
+          "name": "Mujahid Mohamed",
           "location": "London, UK",
           "comment": "Professional service and breathtaking destinations. The Strawberrytour was exceptional and we learned so much about Cape Town culture."
         },
@@ -81,17 +81,17 @@
       "experience": "Experience",
       "members": {
         "ahmed": {
-          "name": "Ahmed Mansour",
+          "name": "Mustafa Ali",
           "position": "Founder & CEO",
           "description": "With over 15 years in tourism, Ahmed leads Cape Home with passion for showcasing Cape Town's beauty."
         },
-        "sarah": {
-          "name": "Sarah Mitchell",
+        "mujahid": {
+          "name": "Mujahid Mohamed",
           "position": "Head of Operations",
-          "description": "Sarah ensures every tour runs smoothly and exceeds our guests' expectations with her attention to detail."
+          "description": "Mohamed ensures every tour runs smoothly and exceeds our guests' expectations with his attention to detail."
         },
         "david": {
-          "name": "David Thompson",
+          "name": "Ahmed Ali",
           "position": "Senior Tour Guide",
           "description": "A wildlife expert and storyteller, David brings Cape Town culture and nature to life for our guests."
         }
@@ -244,7 +244,7 @@
     "tooltip": "Contact us via WhatsApp"
   },
   "footer": {
-    "description": "Cape Home Tourism offers unforgettable experiences in Cape Town. From safari adventures to Strawberrytours, we create memories that last a lifetime.",
+    "description": "Cape Home Tourism offers unforgettable experiences in Cape Town. From safari adventures to Strawberry tours, we create memories that last a lifetime.",
     "quickLinks": "Quick Links",
     "contact": "Contact Info",
     "followUs": "Follow Us",
@@ -325,8 +325,9 @@
     "viewAllServices": "View All Services"
   },
   "cta": {
-    "title": "Ready to Book Your Adventure?",
-    "subtitle": "Our travel experts are standing by to help you create the perfect Cape Town experience. Contact us today for personalized recommendations and exclusive deals.",
+    "title": "Ready for Your Cape Town Adventure?",
+    "subtitle": "Contact us today to plan your perfect trip. Our expert team is ready to create unforgettable experiences tailored just for you.",
+    "callNow": "Call Now",
     "social": {
       "title": "Follow Us on Social Media",
       "description": "Stay updated with our latest tours, travel tips, and special offers!"

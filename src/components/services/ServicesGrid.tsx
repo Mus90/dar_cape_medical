@@ -30,7 +30,7 @@ const ServicesGrid = () => {
       icon: BeakerIcon,
       title: t('home.services.wine.title'),
       description: t('home.services.wine.description'),
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1585254589738-aff16702b974?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       color: 'from-purple-500 to-indigo-600',
       features: ['Strawberry Tasting Sessions', 'Vineyard Tours', 'Cellar Visits', 'Gourmet Lunch']
     },
@@ -38,7 +38,7 @@ const ServicesGrid = () => {
       icon: HeartIcon,
       title: t('home.services.culture.title'),
       description: t('home.services.culture.description'),
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1560077977-eb99cc10c98c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q3VsdHVyYWwlMjBQZXJmb3JtYW5jZXMlMjBjYXBlJTIwdG93bnxlbnwwfHwwfHx8Mg%3D%3D',
       color: 'from-orange-500 to-red-600',
       features: ['Historical Sites', 'Local Communities', 'Traditional Crafts', 'Cultural Performances']
     },
@@ -46,7 +46,7 @@ const ServicesGrid = () => {
       icon: RocketLaunchIcon,
       title: t('services.adventure.title'),
       description: t('services.adventure.description'),
-      image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1613926156314-125c6a90fa18?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       color: 'from-blue-500 to-cyan-600',
       features: ['Table Mountain Hike', 'Bungee Jumping', 'Shark Cage Diving', 'Safety Equipment']
     },
@@ -54,7 +54,7 @@ const ServicesGrid = () => {
       icon: GlobeAltIcon,
       title: t('services.city.title'),
       description: t('services.city.description'),
-      image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1756061916299-643c5b65858e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNpdHklMjBjZW50ZXIlMjBjYXBlJTIwdG93bnxlbnwwfHwwfHx8Mg%3D%3D',
       color: 'from-teal-500 to-green-600',
       features: ['V&A Waterfront', 'Robben Island', 'Bo-Kaap District', 'Local Cuisine']
     },

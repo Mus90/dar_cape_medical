@@ -10,6 +10,13 @@ import {
   ChatBubbleLeftRightIcon,
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
+import {
+  FaceBookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  YouTubeIcon,
+  TikTokIcon
+} from '@/components/icons/SocialIcons';
 
 const ContactInfo = () => {
   const t = useTranslations('contact');
@@ -30,11 +37,11 @@ const ContactInfo = () => {
       icon: PhoneIcon,
       title: t('info.phone'),
       content: [
-        '+27 817394084'
+        '+27817394084'
       ],
       color: 'from-green-500 to-emerald-500',
       links: [
-        'tel:+27123456789'
+        'tel:+27817394084'
       ]
     },
     {
@@ -64,11 +71,11 @@ const ContactInfo = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', url: '#', icon: '📘' },
-    { name: 'Instagram', url: '#', icon: '📷' },
-    { name: 'Twitter', url: '#', icon: '🐦' },
-    { name: 'YouTube', url: '#', icon: '📺' },
-    { name: 'TikTok', url: '#', icon: '🎵' }
+    { name: 'Facebook', url: 'https://facebook.com/capehometourism', icon: FaceBookIcon, color: 'text-blue-600 hover:text-blue-700' },
+    { name: 'Instagram', url: 'https://instagram.com/capehometourism', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
+    { name: 'Twitter', url: 'https://twitter.com/capehometourism', icon: TwitterIcon, color: 'text-gray-900 hover:text-gray-700' },
+    { name: 'YouTube', url: 'https://youtube.com/@capehometourism', icon: YouTubeIcon, color: 'text-red-600 hover:text-red-700' },
+    { name: 'TikTok', url: 'https://tiktok.com/@capehometourism', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
   ];
 
   return (
@@ -112,10 +119,20 @@ const ContactInfo = () => {
                         href={detail.links[idx]}
                         className="text-gray-600 hover:text-primary-600 transition-colors duration-200"
                       >
-                        {item}
+                        {detail.title === t('info.phone') ? (
+                          <span dir="ltr" className="font-mono">{item}</span>
+                        ) : (
+                          item
+                        )}
                       </a>
                     ) : (
-                      <p className="text-gray-600">{item}</p>
+                      <p className="text-gray-600">
+                        {detail.title === t('info.phone') ? (
+                          <span dir="ltr" className="font-mono">{item}</span>
+                        ) : (
+                          item
+                        )}
+                      </p>
                     )}
                   </div>
                 ))}
@@ -135,19 +152,24 @@ const ContactInfo = () => {
       >
         <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
           <GlobeAltIcon className="h-5 w-5 mr-2 rtl:mr-0 rtl:ml-2" />
-          Follow Us on Social Media
+          {t('social.title')}
         </h3>
         <div className="flex space-x-4 rtl:space-x-reverse">
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-200 shadow-md hover:shadow-lg"
-              title={social.name}
-            >
-              {social.icon}
-            </a>
-          ))}
+          {socialLinks.map((social) => {
+            const IconComponent = social.icon;
+            return (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-12 h-12 bg-white rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-200 shadow-md hover:shadow-lg ${social.color}`}
+                title={social.name}
+              >
+                <IconComponent className="w-6 h-6" />
+              </a>
+            );
+          })}
         </div>
       </motion.div>
 
@@ -164,11 +186,11 @@ const ContactInfo = () => {
           {t('emergency.description')}
         </p>
         <a
-          href="tel:+27123456789"
+          href="tel:+27817394084"
           className="inline-flex items-center text-accent-800 font-medium hover:text-accent-900"
         >
           <PhoneIcon className="h-4 w-4 mr-2 rtl:mr-0 rtl:ml-2" />
-          +27 817394084
+          <span dir="ltr" className="font-mono">+27817394084</span>
         </a>
       </motion.div>
     </motion.div>

@@ -23,7 +23,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "url": baseUrl,
           "logo": `${baseUrl}/images/logo.png`,
           "image": `${baseUrl}/images/og-image.jpg`,
-          "description": "Professional tourism services in Cape Town. Safari tours, Strawberrytours, cultural experiences, and adventure packages.",
+          "description": "Professional tourism services in Cape Town. Safari tours, Strawberry tours, cultural experiences, and adventure packages.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "CBD",
@@ -56,7 +56,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "@type": "WebSite",
           "name": "Cape Home Tourism",
           "url": baseUrl,
-          "description": "Discover Cape Town with Cape Home Tourism. Professional tour services, safari adventures, Strawberrytours, and cultural experiences.",
+          "description": "Discover Cape Town with Cape Home Tourism. Professional tour services, safari adventures, Strawberry tours, and cultural experiences.",
           "inLanguage": [locale === 'ar' ? 'ar' : 'en'],
           "potentialAction": {
             "@type": "SearchAction",

@@ -12,8 +12,8 @@ const VideoGallery = () => {
       id: 1,
       title: 'Cape Town Aerial Tour',
       description: 'Stunning aerial views of Cape Town, Table Mountain, and the coastline',
-      thumbnail: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video
+      thumbnail: 'https://images.unsplash.com/photo-1730234352013-aa4941c41466?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      videoUrl: '', // Placeholder - replace with actual video
       duration: '3:45',
       category: 'City Tours'
     },
@@ -21,8 +21,8 @@ const VideoGallery = () => {
       id: 2,
       title: 'Big 5 Safari Experience',
       description: 'Incredible wildlife encounters in Kruger National Park',
-      thumbnail: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video
+      thumbnail: 'https://images.unsplash.com/photo-1544219110-079476d43889?q=80&w=1184&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      videoUrl: '', // Placeholder - replace with actual video
       duration: '5:20',
       category: 'Safari'
     },
@@ -30,17 +30,17 @@ const VideoGallery = () => {
       id: 3,
       title: 'StrawberryCountry Journey',
       description: 'Explore the beautiful farms of Stellenbosch and Franschhoek',
-      thumbnail: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video
+      thumbnail: 'https://images.unsplash.com/photo-1585254589738-aff16702b974?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      videoUrl: '', // Placeholder - replace with actual video
       duration: '4:15',
-      category: 'StrawberryTours'
+      category: 'Strawberry Tours'
     },
     {
       id: 4,
       title: 'Garden Route Adventure',
       description: 'Journey through Cape Town\'s most scenic coastal route',
-      thumbnail: 'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video
+      thumbnail: 'https://images.unsplash.com/photo-1548790630-2d0b42f5c956?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      videoUrl: '', // Placeholder - replace with actual video
       duration: '6:30',
       category: 'Adventure'
     },
@@ -48,8 +48,8 @@ const VideoGallery = () => {
       id: 5,
       title: 'Cultural Heritage Tour',
       description: 'Discover the rich cultural heritage and traditions of Cape Town',
-      thumbnail: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video
+      thumbnail: 'https://images.unsplash.com/photo-1570527141186-e391a3914c42?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      videoUrl: '', // Placeholder - replace with actual video
       duration: '4:50',
       category: 'Cultural Tours'
     },
@@ -57,8 +57,8 @@ const VideoGallery = () => {
       id: 6,
       title: 'Penguin Colony Experience',
       description: 'Meet the adorable African penguins at Boulders Beach',
-      thumbnail: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video
+      thumbnail: 'https://images.unsplash.com/photo-1730397454774-87a43568e255?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      videoUrl: '', // Placeholder - replace with actual video
       duration: '2:35',
       category: 'Wildlife'
     }

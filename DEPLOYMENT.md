@@ -210,7 +210,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=info@capehome.co.za
 
 - **Technical Issues**: developer@capehome.co.za
 - **Content Updates**: content@capehome.co.za
-- **Emergency Support**: +27 817394084
+- **Emergency Support**: +27817394084
 
 ---
 

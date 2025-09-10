@@ -20,10 +20,10 @@ const CTASection = () => {
           className="text-center text-white"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready for Your Cape Town Adventure?
+            {t('cta.title')}
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Contact us today to plan your perfect trip. Our expert team is ready to create unforgettable experiences tailored just for you.
+            {t('cta.subtitle')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -36,11 +36,14 @@ const CTASection = () => {
             </Link>
 
             <a
-              href="tel:+27123456789"
+              href="tel:+27817394084"
               className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-medium py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center justify-center"
             >
               <PhoneIcon className="h-5 w-5 mr-2 rtl:mr-0 rtl:ml-2" />
-              Call Now
+              <span className="flex items-center">
+                {t('cta.callNow')}
+                <span className="ml-2 rtl:ml-0 rtl:mr-2 font-mono" dir="ltr">+27817394084</span>
+              </span>
             </a>
           </div>
         </motion.div>

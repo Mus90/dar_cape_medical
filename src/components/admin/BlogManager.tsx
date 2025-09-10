@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   PencilIcon,
@@ -20,7 +21,7 @@ const BlogManager = () => {
       id: '1',
       title: 'Top 10 Must-Visit Destinations in Cape Town',
       excerpt: 'Discover the most breathtaking locations that should be on every traveler\'s Cape Town itinerary.',
-      author: 'Sarah Mitchell',
+      author: 'Mujahid Mohamed',
       date: '2024-01-15',
       status: 'published',
       category: 'destinations',
@@ -30,7 +31,7 @@ const BlogManager = () => {
       id: '2',
       title: 'Safari Photography: Capturing the Big 5',
       excerpt: 'Professional tips and techniques for photographing Africa\'s most magnificent wildlife.',
-      author: 'David Thompson',
+      author: 'Ahmed Ali',
       date: '2024-01-12',
       status: 'published',
       category: 'photography',
@@ -40,7 +41,7 @@ const BlogManager = () => {
       id: '3',
       title: 'Strawberry Tasting Guide: Stellenbosch vs Franschhoek',
       excerpt: 'Compare two of Cape Town\'s premier Strawberryregions and discover which suits your taste.',
-      author: 'Ahmed Mansour',
+      author: 'Mustafa Ali',
       date: '2024-01-10',
       status: 'draft',
       category: 'wine',
@@ -58,6 +59,16 @@ const BlogManager = () => {
     status: 'draft'
   });
 
+  const [editPost, setEditPost] = useState({
+    title: '',
+    excerpt: '',
+    content: '',
+    author: '',
+    category: '',
+    tags: '',
+    status: 'draft'
+  });
+
   const handleCreatePost = () => {
     const post = {
       id: Date.now().toString(),
@@ -66,6 +77,9 @@ const BlogManager = () => {
       tags: newPost.tags.split(',').map(tag => tag.trim())
     };
     setBlogPosts([post, ...blogPosts]);
+    // Save to localStorage
+    const updatedPosts = [post, ...blogPosts];
+    localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
     setNewPost({
       title: '',
       excerpt: '',
@@ -78,17 +92,56 @@ const BlogManager = () => {
     setIsCreating(false);
   };
 
+  const handleEditPost = () => {
+    const updatedPosts = blogPosts.map(post =>
+      post.id === editingPost ? {
+        ...post,
+        ...editPost,
+        tags: editPost.tags.split(',').map(tag => tag.trim())
+      } : post
+    );
+    setBlogPosts(updatedPosts);
+    localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
+    setEditingPost(null);
+    alert('Post updated successfully!');
+  };
+
+  const startEditPost = (post: any) => {
+    setEditPost({
+      title: post.title,
+      excerpt: post.excerpt,
+      content: post.content || '',
+      author: post.author,
+      category: post.category,
+      tags: post.tags.join(', '),
+      status: post.status
+    });
+    setEditingPost(post.id);
+  };
+
   const handleDeletePost = (id: string) => {
     if (confirm('Are you sure you want to delete this post?')) {
-      setBlogPosts(blogPosts.filter(post => post.id !== id));
+      const updatedPosts = blogPosts.filter(post => post.id !== id);
+      setBlogPosts(updatedPosts);
+      localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
     }
   };
 
   const handlePublishPost = (id: string) => {
-    setBlogPosts(blogPosts.map(post =>
+    const updatedPosts = blogPosts.map(post =>
       post.id === id ? { ...post, status: 'published' } : post
-    ));
+    );
+    setBlogPosts(updatedPosts);
+    localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
   };
+
+  // Load posts from localStorage on component mount
+  React.useEffect(() => {
+    const savedPosts = localStorage.getItem('cape_home_blog_posts');
+    if (savedPosts) {
+      setBlogPosts(JSON.parse(savedPosts));
+    }
+  }, []);
 
   return (
     <div className="space-y-6">
@@ -102,6 +155,96 @@ const BlogManager = () => {
           New Post
         </button>
       </div>
+
+      {/* Edit Post Modal */}
+      {editingPost && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-xl shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          >
+            <div className="p-6 border-b border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900">Edit Blog Post</h3>
+            </div>
+
+            <div className="p-6 space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
+                  <input
+                    type="text"
+                    value={editPost.title}
+                    onChange={(e) => setEditPost({ ...editPost, title: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                  <select
+                    value={editPost.category}
+                    onChange={(e) => setEditPost({ ...editPost, category: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  >
+                    <option value="destinations">Destinations</option>
+                    <option value="photography">Photography</option>
+                    <option value="wine">Wine & Food</option>
+                    <option value="culture">Culture</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="tips">Travel Tips</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Excerpt</label>
+                <textarea
+                  value={editPost.excerpt}
+                  onChange={(e) => setEditPost({ ...editPost, excerpt: e.target.value })}
+                  rows={3}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Tags (comma separated)</label>
+                <input
+                  type="text"
+                  value={editPost.tags}
+                  onChange={(e) => setEditPost({ ...editPost, tags: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Content</label>
+                <textarea
+                  value={editPost.content}
+                  onChange={(e) => setEditPost({ ...editPost, content: e.target.value })}
+                  rows={10}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+            </div>
+
+            <div className="p-6 border-t border-gray-200 flex justify-end space-x-4">
+              <button
+                onClick={() => setEditingPost(null)}
+                className="btn-secondary"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleEditPost}
+                className="btn-primary"
+              >
+                Update Post
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Create New Post Modal */}
       {isCreating && (
@@ -268,10 +411,18 @@ const BlogManager = () => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <div className="flex items-center justify-end space-x-2">
-                      <button className="text-gray-400 hover:text-gray-600">
+                      <button
+                        onClick={() => alert(`Preview: ${post.title}\n\n${post.excerpt}\n\nThis would show the full blog post preview.`)}
+                        className="text-gray-400 hover:text-gray-600"
+                        title="Preview post"
+                      >
                         <EyeIcon className="h-4 w-4" />
                       </button>
-                      <button className="text-blue-600 hover:text-blue-900">
+                      <button
+                        onClick={() => startEditPost(post)}
+                        className="text-blue-600 hover:text-blue-900"
+                        title="Edit post"
+                      >
                         <PencilIcon className="h-4 w-4" />
                       </button>
                       {post.status === 'draft' && (

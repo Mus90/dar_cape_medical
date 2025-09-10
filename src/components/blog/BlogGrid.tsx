@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CalendarIcon, 
-  ClockIcon, 
+import {
+  CalendarIcon,
+  ClockIcon,
   UserIcon,
   ArrowRightIcon,
   TagIcon
@@ -22,7 +22,7 @@ const BlogGrid = () => {
       id: '1',
       title: t('posts.destinations.title'),
       excerpt: t('posts.destinations.excerpt'),
-      author: 'Sarah Mitchell',
+      author: 'Mujahid Mohamed',
       date: '2024-01-15',
       readTime: '8 min read',
       image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
@@ -34,7 +34,7 @@ const BlogGrid = () => {
       id: '2',
       title: t('posts.photography.title'),
       excerpt: t('posts.photography.excerpt'),
-      author: 'David Thompson',
+      author: 'Ahmed Ali',
       date: '2024-01-12',
       readTime: '6 min read',
       image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
@@ -46,7 +46,7 @@ const BlogGrid = () => {
       id: '3',
       title: t('posts.wine.title'),
       excerpt: t('posts.wine.excerpt'),
-      author: 'Ahmed Mansour',
+      author: 'Mustafa Ali',
       date: '2024-01-10',
       readTime: '5 min read',
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
@@ -58,7 +58,7 @@ const BlogGrid = () => {
       id: '4',
       title: t('posts.culture.title'),
       excerpt: t('posts.culture.excerpt'),
-      author: 'Sarah Mitchell',
+      author: 'Mujahid Mohamed',
       date: '2024-01-08',
       readTime: '7 min read',
       image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
@@ -70,7 +70,7 @@ const BlogGrid = () => {
       id: '5',
       title: t('posts.adventure.title'),
       excerpt: t('posts.adventure.excerpt'),
-      author: 'David Thompson',
+      author: 'Ahmed Ali',
       date: '2024-01-05',
       readTime: '6 min read',
       image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
@@ -82,7 +82,7 @@ const BlogGrid = () => {
       id: '6',
       title: t('posts.tips.title'),
       excerpt: t('posts.tips.excerpt'),
-      author: 'Ahmed Mansour',
+      author: 'Mustafa Ali',
       date: '2024-01-03',
       readTime: '4 min read',
       image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
@@ -92,8 +92,8 @@ const BlogGrid = () => {
     }
   ];
 
-  const filteredPosts = selectedCategory === 'all' 
-    ? blogPosts 
+  const filteredPosts = selectedCategory === 'all'
+    ? blogPosts
     : blogPosts.filter(post => post.category === selectedCategory);
 
   const categories = [
@@ -115,11 +115,10 @@ const BlogGrid = () => {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                selectedCategory === category.id
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${selectedCategory === category.id
+                ? 'bg-primary-600 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
             >
               {category.name} ({category.count})
             </button>
@@ -145,7 +144,7 @@ const BlogGrid = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300" />
-              
+
               {/* Category badge */}
               <div className="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                 {post.categoryName}

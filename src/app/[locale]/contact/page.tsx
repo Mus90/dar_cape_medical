@@ -4,7 +4,6 @@ import { Metadata } from 'next';
 import HeroSection from '@/components/contact/HeroSection';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
-import MapSection from '@/components/contact/MapSection';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -29,7 +28,6 @@ export default function ContactPage({ params: { locale } }: Props) {
           </div>
         </div>
       </div>
-      <MapSection />
     </div>
   );
 }

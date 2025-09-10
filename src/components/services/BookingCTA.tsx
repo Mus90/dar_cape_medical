@@ -46,7 +46,7 @@ const BookingCTA = () => {
                 href="tel:+27123456789"
                 className="text-white font-medium hover:underline"
               >
-                +27 817394084
+                +27817394084
               </a>
             </motion.div>
 

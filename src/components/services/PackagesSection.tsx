@@ -23,7 +23,7 @@ const PackagesSection = () => {
       groupSize: '2-8 People',
       rating: 4.9,
       reviews: 127,
-      image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1588097364416-f79243f2b3f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fENhcGUlMjBUb3dufGVufDB8fDB8fHwy',
       highlights: [
         'Table Mountain Cable Car',
         'V&A Waterfront Tour',
