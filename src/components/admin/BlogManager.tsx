@@ -31,7 +31,7 @@ const BlogManager = () => {
       id: '2',
       title: 'Safari Photography: Capturing the Big 5',
       excerpt: 'Professional tips and techniques for photographing Africa\'s most magnificent wildlife.',
-      author: 'Ahmed Ali',
+      author: 'Mustafa Ali',
       date: '2024-01-12',
       status: 'published',
       category: 'photography',

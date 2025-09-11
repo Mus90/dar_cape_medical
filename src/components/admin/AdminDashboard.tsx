@@ -4,56 +4,192 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { 
+import {
   HomeIcon,
   DocumentTextIcon,
   PhotoIcon,
   UserGroupIcon,
   Cog6ToothIcon,
   ChartBarIcon,
-  PlusIcon
+  PlusIcon,
+  ShieldCheckIcon,
+  KeyIcon,
+  CheckCircleIcon
 } from '@heroicons/react/24/outline';
 import ContentManager from './ContentManager';
 import BlogManager from './BlogManager';
 import GalleryManager from './GalleryManager';
 import ServicesManager from './ServicesManager';
+import { SecureAuth } from '@/utils/secureAuth';
+
+// Forgot Password Form Component
+const ForgotPasswordForm = ({ 
+  resetEmail, 
+  setResetEmail, 
+  resetSent, 
+  setResetSent, 
+  onBack 
+}: {
+  resetEmail: string;
+  setResetEmail: (email: string) => void;
+  resetSent: boolean;
+  setResetSent: (sent: boolean) => void;
+  onBack: () => void;
+}) => {
+  const handleResetSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const result = SecureAuth.sendPasswordResetEmail(resetEmail);
+    
+    if (result.success) {
+      setResetSent(true);
+      alert(result.message);
+    } else {
+      alert(result.message);
+    }
+  };
+
+  if (resetSent) {
+    return (
+      <div className="text-center">
+        <div className="mb-6">
+          <CheckCircleIcon className="h-16 w-16 text-green-500 mx-auto mb-4" />
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Reset Email Sent!</h2>
+          <p className="text-gray-600">
+            We've sent password reset instructions to <strong>{resetEmail}</strong>
+          </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Check your email and follow the instructions. The link will expire in 15 minutes.
+          </p>
+        </div>
+        <button
+          onClick={() => {
+            setResetSent(false);
+            setResetEmail('');
+            onBack();
+          }}
+          className="btn-secondary w-full"
+        >
+          Back to Login
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div className="text-center mb-6">
+        <KeyIcon className="h-12 w-12 text-primary-600 mx-auto mb-4" />
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Reset Password</h2>
+        <p className="text-gray-600">
+          Enter your email address and we'll send you instructions to reset your password.
+        </p>
+      </div>
+
+      <form onSubmit={handleResetSubmit}>
+        <div className="mb-6">
+          <label htmlFor="resetEmail" className="block text-sm font-medium text-gray-700 mb-2">
+            Email Address
+          </label>
+          <input
+            type="email"
+            id="resetEmail"
+            value={resetEmail}
+            onChange={(e) => setResetEmail(e.target.value)}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+            placeholder="admin@capehome.co.za"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="w-full btn-primary py-3 mb-4"
+        >
+          Send Reset Instructions
+        </button>
+
+        <button
+          type="button"
+          onClick={onBack}
+          className="w-full btn-secondary py-3"
+        >
+          Back to Login
+        </button>
+      </form>
+    </div>
+  );
+};
 
 const AdminDashboard = () => {
   const t = useTranslations('admin');
   const [activeTab, setActiveTab] = useState('overview');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
+  const [resetEmail, setResetEmail] = useState('');
+  const [resetSent, setResetSent] = useState(false);
 
   // Enhanced password authentication with attempt tracking
   const [loginAttempts, setLoginAttempts] = useState(0);
   const [isLocked, setIsLocked] = useState(false);
   const [lockoutTime, setLockoutTime] = useState<number | null>(null);
+  const [ipAttempts, setIpAttempts] = useState<{[key: string]: number}>({});
+  const [suspiciousActivity, setSuspiciousActivity] = useState<string[]>([]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (isLocked) {
       const timeLeft = Math.ceil((lockoutTime! - Date.now()) / 1000);
       alert(`Account locked. Try again in ${timeLeft} seconds.`);
       return;
     }
 
-    // Check multiple valid passwords for demo
-    const validPasswords = ['capehome2024', 'admin123', 'demo2024'];
+    // Validate email first
+    if (!SecureAuth.isValidEmail(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
+    // Track IP-based attempts (simulated)
+    const userIP = 'simulated_ip_' + Math.random().toString(36).substr(2, 9);
+    const currentIpAttempts = ipAttempts[userIP] || 0;
+
+    // Admin credentials - using secure hash comparison
+    const validCredentials = {
+      email: 'mustafaalamin.07@gmail.com',
+      passwordHash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' // SHA-256 hash
+    };
+
+    // Validate email and password using secure hash
+    const passwordCheck = SecureAuth.validatePasswordStrength(password);
+    const isValidCredentials = SecureAuth.validateCredentials(email, password, validCredentials);
     
-    if (validPasswords.includes(password)) {
+    if (isValidCredentials && passwordCheck.valid) {
       setIsAuthenticated(true);
       setLoginAttempts(0);
-      // Save login session
-      sessionStorage.setItem('cape_admin_session', JSON.stringify({
-        authenticated: true,
-        timestamp: Date.now(),
-        expires: Date.now() + (30 * 60 * 1000) // 30 minutes
-      }));
+      setIpAttempts(prev => ({ ...prev, [userIP]: 0 }));
+      
+      // Create ultra-secure session with email
+      const secureSession = SecureAuth.createSecureSession(email);
+      sessionStorage.setItem('cape_admin_session', JSON.stringify(secureSession));
+      
+      // Log successful login
+      console.log(`[SECURITY] Successful admin login: ${email} from ${userIP} at ${new Date().toISOString()}`);
     } else {
       const newAttempts = loginAttempts + 1;
-      setLoginAttempts(newAttempts);
+      const newIpAttempts = currentIpAttempts + 1;
       
+      setLoginAttempts(newAttempts);
+      setIpAttempts(prev => ({ ...prev, [userIP]: newIpAttempts }));
+      
+      // Log suspicious activity
+      const suspiciousLog = `Failed login attempt from ${userIP} at ${new Date().toISOString()} - Attempt ${newIpAttempts}`;
+      setSuspiciousActivity(prev => [...prev.slice(-9), suspiciousLog]);
+      console.warn(`[SECURITY ALERT] ${suspiciousLog}`);
+
       if (newAttempts >= 3) {
         setIsLocked(true);
         const lockTime = Date.now() + (5 * 60 * 1000); // 5 minutes lockout
@@ -65,7 +201,15 @@ const AdminDashboard = () => {
         }, 5 * 60 * 1000);
         alert('Too many failed attempts. Account locked for 5 minutes.');
       } else {
-        alert(`Invalid password. ${3 - newAttempts} attempts remaining.`);
+        // Show specific error feedback
+        if (!SecureAuth.isValidEmail(email)) {
+          alert('Invalid email format');
+        } else if (!SecureAuth.validatePasswordStrength(password).valid) {
+          const feedback = SecureAuth.validatePasswordStrength(password).feedback;
+          alert(`Weak password detected. Requirements: ${feedback.join(', ')}`);
+        } else {
+          alert(`Invalid credentials. ${3 - newAttempts} attempts remaining before lockout.`);
+        }
       }
     }
   };
@@ -107,38 +251,69 @@ const AdminDashboard = () => {
             <h1 className="text-2xl font-bold text-gray-900">{t('login.title')}</h1>
             <p className="text-gray-600">{t('login.subtitle')}</p>
           </div>
-          
-          <form onSubmit={handleLogin}>
-            <div className="mb-6">
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                {t('login.password')}
-              </label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                placeholder={t('login.placeholder')}
-                required
-              />
-            </div>
-            
-            <button
-              type="submit"
-              className="w-full btn-primary py-3"
-            >
-              {t('login.loginButton')}
-            </button>
-          </form>
-          
-          <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-            <p className="text-sm text-yellow-800">
-              <strong>Demo Passwords:</strong> capehome2024, admin123, demo2024<br />
-              <strong>Security Features:</strong> Session timeout (30 min), Rate limiting (3 attempts)<br />
-              <strong>Note:</strong> Replace with proper authentication in production
-            </p>
-          </div>
+
+          {!showForgotPassword ? (
+            <form onSubmit={handleLogin}>
+              {/* Email Field */}
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  placeholder="admin@capehome.co.za"
+                  required
+                />
+              </div>
+
+              {/* Password Field */}
+              <div className="mb-6">
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                  {t('login.password')}
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  placeholder={t('login.placeholder')}
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full btn-primary py-3"
+              >
+                {t('login.loginButton')}
+              </button>
+
+              {/* Forgot Password Link */}
+              <div className="mt-4 text-center">
+                <button
+                  type="button"
+                  onClick={() => setShowForgotPassword(true)}
+                  className="text-sm text-primary-600 hover:text-primary-500 underline"
+                >
+                  Forgot your password?
+                </button>
+              </div>
+            </form>
+          ) : (
+            <ForgotPasswordForm 
+              resetEmail={resetEmail}
+              setResetEmail={setResetEmail}
+              resetSent={resetSent}
+              setResetSent={setResetSent}
+              onBack={() => setShowForgotPassword(false)}
+            />
+          )}
+
         </motion.div>
       </div>
     );
@@ -159,7 +334,7 @@ const AdminDashboard = () => {
                 <p className="text-sm text-gray-500">{t('header.subtitle')}</p>
               </div>
             </div>
-            
+
             <button
               onClick={() => {
                 setIsAuthenticated(false);
@@ -184,11 +359,10 @@ const AdminDashboard = () => {
                   <li key={item.id}>
                     <button
                       onClick={() => setActiveTab(item.id)}
-                      className={`w-full flex items-center px-3 py-2 rounded-lg text-left transition-colors duration-200 ${
-                        activeTab === item.id
-                          ? 'bg-primary-50 text-primary-700 border-r-2 border-primary-500'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
+                      className={`w-full flex items-center px-3 py-2 rounded-lg text-left transition-colors duration-200 ${activeTab === item.id
+                        ? 'bg-primary-50 text-primary-700 border-r-2 border-primary-500'
+                        : 'text-gray-700 hover:bg-gray-50'
+                        }`}
                     >
                       <item.icon className="h-5 w-5 mr-3" />
                       {item.name}
@@ -296,9 +470,9 @@ const SettingsTab = ({ t }: { t: any }) => {
   const [settings, setSettings] = React.useState({
     siteTitle: 'Cape Home Tourism',
     contactEmail: 'info@capehome.co.za',
-    whatsappNumber: '+27123456789',
+    whatsappNumber: '+27817394084',
     googleMapsApiKey: '',
-    adminPassword: 'capehome2024',
+    adminPassword: '••••••••••••', // Hidden for security
     sessionTimeout: 30,
     maxLoginAttempts: 3
   });
@@ -317,7 +491,7 @@ const SettingsTab = ({ t }: { t: any }) => {
     setIsSaving(true);
     // Save to localStorage
     localStorage.setItem('cape_home_settings', JSON.stringify(settings));
-    
+
     setTimeout(() => {
       setIsSaving(false);
       alert('Settings saved successfully!');
@@ -331,7 +505,7 @@ const SettingsTab = ({ t }: { t: any }) => {
   return (
     <div className="bg-white rounded-xl shadow-sm p-6">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Settings</h2>
-      
+
       <div className="space-y-8">
         {/* Site Configuration */}
         <div>
@@ -368,7 +542,7 @@ const SettingsTab = ({ t }: { t: any }) => {
               value={settings.whatsappNumber}
               onChange={(e) => handleInputChange('whatsappNumber', e.target.value)}
               className="w-full md:w-1/2 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-              placeholder="+27123456789"
+              placeholder="+27817394084"
             />
             <p className="text-sm text-gray-500 mt-1">Include country code (e.g., +27 for South Africa)</p>
           </div>
@@ -464,7 +638,7 @@ const SettingsTab = ({ t }: { t: any }) => {
                   setSettings({
                     siteTitle: 'Cape Home Tourism',
                     contactEmail: 'info@capehome.co.za',
-                    whatsappNumber: '+27123456789',
+                    whatsappNumber: '+27817394084',
                     googleMapsApiKey: '',
                     adminPassword: 'capehome2024',
                     sessionTimeout: 30,

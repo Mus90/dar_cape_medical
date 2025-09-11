@@ -73,7 +73,7 @@ Create these environment variables in your deployment platform:
 
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_actual_api_key
-NEXT_PUBLIC_WHATSAPP_NUMBER=+27123456789
+NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
 NEXT_PUBLIC_SITE_URL=https://capehome.co.za
 NEXT_PUBLIC_CONTACT_EMAIL=info@capehome.co.za
 ```
@@ -105,7 +105,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=info@capehome.co.za
    - Verify your business number
 
 2. **Update Components**
-   - Replace `+27123456789` in `src/components/ui/WhatsAppButton.tsx`
+   - Replace `+27817394084` in `src/components/ui/WhatsAppButton.tsx`
    - Update contact information in footer and contact page
 
 ## 🔍 SEO Configuration

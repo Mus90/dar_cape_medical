@@ -161,6 +161,15 @@
       }
     },
     "posts": {
+      "post1": {
+        "title": "Top 10 Must-Visit Destinations in Cape Town"
+      },
+      "post2": {
+        "title": "Safari Photography: Capturing Wildlife in Their Natural Habitat"
+      },
+      "post3": {
+        "title": "Wine Tasting in Stellenbosch: A Complete Guide"
+      },
       "destinations": {
         "title": "Top 10 Must-Visit Destinations in Cape Town",
         "excerpt": "Discover the most breathtaking locations that should be on every traveler's Cape Town itinerary.",
@@ -179,7 +188,7 @@
       "culture": {
         "title": "Cultural Immersion: Understanding Cape Town Heritage",
         "excerpt": "Dive deep into the rich cultural tapestry that makes Cape Town unique.",
-        "content": "<h2>The Rainbow Nation</h2><p>Cape Town's cultural diversity is one of its greatest treasures, with 11 official languages and countless traditions.</p><h2>Historical Sites to Visit</h2><p>From Robben Island to the Cradle of Humankind, Cape Town offers profound historical experiences.</p><h2>Living Culture</h2><p>Experience traditional music, dance, and cuisine that tell the story of this remarkable nation.</p>"
+        "content": "<h2>The Relegious Tolerance</h2><p>Cape Town's cultural diversity is one of its greatest treasures, with 11 official languages and countless traditions.</p><h2>Historical Sites to Visit</h2><p>From Robben Island to the Cradle of Humankind, Cape Town offers profound historical experiences.</p><h2>Living Culture</h2><p>Experience traditional music, dance, and cuisine that tell the story of this remarkable nation.</p>"
       },
       "adventure": {
         "title": "Adventure Activities: Adrenaline Rush in Cape Town",

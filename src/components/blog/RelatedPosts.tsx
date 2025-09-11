@@ -19,7 +19,7 @@ const RelatedPosts = ({ currentPostId, category }: RelatedPostsProps) => {
       id: '2',
       title: 'Safari Photography: Capturing the Big 5',
       excerpt: 'Professional tips and techniques for photographing Africa\'s most magnificent wildlife.',
-      author: 'Ahmed Ali',
+      author: 'Mustafa Ali',
       date: '2024-01-12',
       readTime: '6 min read',
       image: 'https://images.unsplash.com/photo-1544219110-079476d43889?q=80&w=1184&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',

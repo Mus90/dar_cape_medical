@@ -147,32 +147,6 @@ const BlogCategories = () => {
         </div>
       </motion.div>
 
-      {/* Newsletter Signup */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        viewport={{ once: true }}
-        className="card p-6 bg-gradient-to-br from-primary-50 to-accent-50 border border-primary-100"
-      >
-        <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
-          <BookmarkIcon className="h-5 w-5 mr-2 rtl:mr-0 rtl:ml-2" />
-        </h3>
-        <h2 className="text-xl font-bold text-gray-900 mb-4">{t('sidebar.newsletter.title')}</h2>
-        <p className="text-gray-600 mb-4">
-          {t('sidebar.newsletter.description')}
-        </p>
-        <div className="space-y-3">
-          <input
-            type="email"
-            placeholder={t('sidebar.newsletter.placeholder')}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
-          />
-          <button className="w-full btn-primary text-sm py-2">
-            {t('sidebar.newsletter.subscribe')}
-          </button>
-        </div>
-      </motion.div>
     </div>
   );
 };

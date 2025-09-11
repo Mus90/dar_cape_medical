@@ -134,8 +134,15 @@ const BlogPost = ({ post }: BlogPostProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="prose prose-lg max-w-none mb-12"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        >
+          {post.content.startsWith('<') ? (
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          ) : (
+            <div className="text-gray-600 text-lg leading-relaxed">
+              {post.content}
+            </div>
+          )}
+        </motion.div>
 
         {/* Author Bio */}
         <motion.div
@@ -146,14 +153,14 @@ const BlogPost = ({ post }: BlogPostProps) => {
         >
           <div className="flex items-start space-x-4 rtl:space-x-reverse">
             <img
-              src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+              src="/images/team/mustafa.png"
               alt={post.author}
               className="w-16 h-16 rounded-full object-cover"
             />
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{post.author}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Travel expert and photographer with over 10 years of experience exploring Cape Town.
+                Travel expert and photographer with over 5 years of experience exploring Cape Town.
                 Passionate about sharing the beauty and culture of this incredible country with fellow travelers.
               </p>
             </div>

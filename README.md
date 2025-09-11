@@ -52,7 +52,7 @@ Create a `.env.local` file in the root directory:
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 
 # WhatsApp Business Number (update in WhatsAppButton component)
-NEXT_PUBLIC_WHATSAPP_NUMBER=+27123456789
+NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
 
 # Site URL for SEO
 NEXT_PUBLIC_SITE_URL=https://capehome.co.za
@@ -111,7 +111,7 @@ cape_home_website/
 
 ### WhatsApp Business Setup
 1. Update the phone number in `src/components/ui/WhatsAppButton.tsx`
-2. Replace `+27123456789` with your actual WhatsApp Business number
+2. Replace `+27817394084` with your actual WhatsApp Business number
 
 ### Google Maps Setup
 1. Get a Google Maps API key from [Google Cloud Console](https://console.cloud.google.com/)
@@ -214,7 +214,7 @@ Required environment variables:
 
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key
-NEXT_PUBLIC_WHATSAPP_NUMBER=+27123456789
+NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
 NEXT_PUBLIC_SITE_URL=https://capehome.co.za
 ```
 

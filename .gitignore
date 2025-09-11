@@ -43,3 +43,14 @@ next-env.d.ts
 
 # OS
 Thumbs.db
+
+# Environment variables (CRITICAL - DO NOT COMMIT)
+.env.local
+.env.production
+.env
+*.env
+!.env.example
+
+# Security and credentials
+CREDENTIAL_SECURITY_GUIDE.md
+security_logs.json

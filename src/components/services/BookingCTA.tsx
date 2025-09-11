@@ -43,7 +43,7 @@ const BookingCTA = () => {
               <h3 className="text-xl font-semibold mb-2">{t('call.title')}</h3>
               <p className="text-white/80 mb-4">{t('call.description')}</p>
               <a
-                href="tel:+27123456789"
+                href="tel:+27817394084"
                 className="text-white font-medium hover:underline"
               >
                 +27817394084

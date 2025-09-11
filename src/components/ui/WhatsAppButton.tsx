@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
   const t = useTranslations('whatsapp');
 
   // Replace with actual WhatsApp Business number
-  const whatsappNumber = '+27123456789'; // Placeholder - replace with actual number
+  const whatsappNumber = '+27817394084'; // Placeholder - replace with actual number
   const message = encodeURIComponent(t('message'));
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
@@ -25,7 +25,7 @@ const WhatsAppButton = () => {
         title={t('tooltip')}
       >
         <ChatBubbleLeftRightIcon className="h-7 w-7" />
-        
+
         {/* Tooltip */}
         {isHovered && (
           <div className="absolute bottom-16 right-0 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap animate-fade-in">
@@ -33,7 +33,7 @@ const WhatsAppButton = () => {
             <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
           </div>
         )}
-        
+
         {/* Pulse animation */}
         <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
       </a>
