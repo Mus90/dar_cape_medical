@@ -9,25 +9,25 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: t('items.ahmed.name'),
-      location: t('items.ahmed.location'),
+      name: t('items.Ali.name'),
+      location: t('items.Ali.location'),
       rating: 5,
-      comment: t('items.ahmed.comment'),
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
+      comment: t('items.Ali.comment'),
+      image: ''
     },
     {
-      name: t('items.mujahid.name'),
-      location: t('items.mujahid.location'),
+      name: t('items.OmNoura.name'),
+      location: t('items.OmNoura.location'),
       rating: 5,
-      comment: t('items.mujahid.comment'),
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
+      comment: t('items.OmNoura.comment'),
+      image: ''
     },
     {
-      name: t('items.mohammed.name'),
-      location: t('items.mohammed.location'),
+      name: t('items.AbdallahAlmardi.name'),
+      location: t('items.AbdallahAlmardi.location'),
       rating: 5,
-      comment: t('items.mohammed.comment'),
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
+      comment: t('items.AbdallahAlmardi.comment'),
+      image: ''
     }
   ];
 
@@ -60,11 +60,6 @@ const TestimonialsSection = () => {
               className="card p-6 hover:shadow-2xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4 rtl:mr-0 rtl:ml-4"
-                />
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                   <p className="text-sm text-gray-600">{testimonial.location}</p>

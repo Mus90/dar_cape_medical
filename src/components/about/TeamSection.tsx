@@ -12,27 +12,27 @@ const TeamSection = () => {
 
   const team = [
     {
-      name: t('members.ahmed.name'),
-      position: t('members.ahmed.position'),
-      description: t('members.ahmed.description'),
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
-      email: 'ahmed@capehome.co.za',
+      name: t('members.Mustafa.name'),
+      position: t('members.Mustafa.position'),
+      description: t('members.Mustafa.description'),
+      image: '/images/team/mustafa.png',
+      email: 'mustafa@capehome.co.za',
       phone: '+27817394084'
     },
     {
       name: t('members.mujahid.name'),
       position: t('members.mujahid.position'),
       description: t('members.mujahid.description'),
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+      image: '/images/team/mujahid.jpg',
       email: 'mujahid@capehome.co.za',
       phone: '+27 123 456 790'
     },
     {
-      name: t('members.david.name'),
-      position: t('members.david.position'),
-      description: t('members.david.description'),
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
-      email: 'david@capehome.co.za',
+      name: t('members.Ahmed.name'),
+      position: t('members.Ahmed.position'),
+      description: t('members.Ahmed.description'),
+      image: '',
+      email: 'Ahmed@capehome.co.za',
       phone: '+27 123 456 791'
     }
   ];

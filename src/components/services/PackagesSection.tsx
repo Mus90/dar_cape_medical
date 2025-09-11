@@ -18,7 +18,7 @@ const PackagesSection = () => {
   const packages = [
     {
       name: 'Cape Town Explorer',
-      duration: '3 Days / 2 Nights',
+      duration: '5 Days / 4 Nights',
       price: 'R 2,500',
       groupSize: '2-8 People',
       rating: 4.9,
@@ -35,7 +35,7 @@ const PackagesSection = () => {
     },
     {
       name: 'Big 5 Safari Adventure',
-      duration: '5 Days / 4 Nights',
+      duration: '2 Days/1 Nights',
       price: 'R 8,900',
       groupSize: '4-12 People',
       rating: 4.8,
@@ -52,7 +52,7 @@ const PackagesSection = () => {
     },
     {
       name: 'Garden Route Discovery',
-      duration: '7 Days / 6 Nights',
+      duration: '5 Days / 4 Nights',
       price: 'R 6,200',
       groupSize: '2-10 People',
       rating: 4.7,
