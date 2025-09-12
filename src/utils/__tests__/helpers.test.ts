@@ -23,7 +23,7 @@ describe('Utility Functions', () => {
     }
 
     it('validates correct email addresses', () => {
-      expect(validateEmail('mustafa@capehome.co.za')).toBe(true)
+      expect(validateEmail('mustafa@darcape.com')).toBe(true)
       expect(validateEmail('test@example.com')).toBe(true)
       expect(validateEmail('user.name+tag@domain.co.uk')).toBe(true)
     })

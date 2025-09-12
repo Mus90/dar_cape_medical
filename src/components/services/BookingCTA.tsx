@@ -61,10 +61,10 @@ const BookingCTA = () => {
               <h3 className="text-xl font-semibold mb-2">{t('email.title')}</h3>
               <p className="text-white/80 mb-4">{t('email.description')}</p>
               <a
-                href="mailto:info@capehome.co.za"
+                href="mailto:info@darcape.com"
                 className="text-white font-medium hover:underline"
               >
-                info@capehome.co.za
+                info@darcape.com
               </a>
             </motion.div>
 

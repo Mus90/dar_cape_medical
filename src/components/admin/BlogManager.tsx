@@ -79,7 +79,7 @@ const BlogManager = () => {
     setBlogPosts([post, ...blogPosts]);
     // Save to localStorage
     const updatedPosts = [post, ...blogPosts];
-    localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
+    localStorage.setItem('dar_cape_blog_posts', JSON.stringify(updatedPosts));
     setNewPost({
       title: '',
       excerpt: '',
@@ -101,7 +101,7 @@ const BlogManager = () => {
       } : post
     );
     setBlogPosts(updatedPosts);
-    localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
+    localStorage.setItem('dar_cape_blog_posts', JSON.stringify(updatedPosts));
     setEditingPost(null);
     alert('Post updated successfully!');
   };
@@ -123,7 +123,7 @@ const BlogManager = () => {
     if (confirm('Are you sure you want to delete this post?')) {
       const updatedPosts = blogPosts.filter(post => post.id !== id);
       setBlogPosts(updatedPosts);
-      localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
+      localStorage.setItem('dar_cape_blog_posts', JSON.stringify(updatedPosts));
     }
   };
 
@@ -132,12 +132,12 @@ const BlogManager = () => {
       post.id === id ? { ...post, status: 'published' } : post
     );
     setBlogPosts(updatedPosts);
-    localStorage.setItem('cape_home_blog_posts', JSON.stringify(updatedPosts));
+    localStorage.setItem('dar_cape_blog_posts', JSON.stringify(updatedPosts));
   };
 
   // Load posts from localStorage on component mount
   React.useEffect(() => {
-    const savedPosts = localStorage.getItem('cape_home_blog_posts');
+    const savedPosts = localStorage.getItem('dar_cape_blog_posts');
     if (savedPosts) {
       setBlogPosts(JSON.parse(savedPosts));
     }

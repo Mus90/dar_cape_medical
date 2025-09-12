@@ -16,7 +16,7 @@ const TeamSection = () => {
       position: t('members.Mustafa.position'),
       description: t('members.Mustafa.description'),
       image: '/images/team/mustafa.png',
-      email: 'mustafa@capehome.co.za',
+      email: 'mustafa@darcape.com',
       phone: '+27817394084'
     },
     {
@@ -24,7 +24,7 @@ const TeamSection = () => {
       position: t('members.mujahid.position'),
       description: t('members.mujahid.description'),
       image: '/images/team/mujahid.jpg',
-      email: 'mujahid@capehome.co.za',
+      email: 'mujahid@darcape.com',
       phone: '+27 123 456 790'
     },
     {
@@ -32,7 +32,7 @@ const TeamSection = () => {
       position: t('members.Ahmed.position'),
       description: t('members.Ahmed.description'),
       image: '',
-      email: 'Ahmed@capehome.co.za',
+      email: 'Ahmed@darcape.com',
       phone: '+27 123 456 791'
     }
   ];

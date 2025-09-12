@@ -1,6 +1,6 @@
-# Deployment Guide - Cape Home Tourism Website
+# Deployment Guide - Dar Cape Tourism Website
 
-This guide covers deployment options for the Cape Home Tourism website built with Next.js 14.
+This guide covers deployment options for the Dar Cape Tourism website built with Next.js 14.
 
 ## 🚀 Quick Deployment Options
 
@@ -13,7 +13,7 @@ Vercel is the easiest deployment option for Next.js applications.
    git init
    git add .
    git commit -m "Initial commit"
-   git remote add origin https://github.com/yourusername/cape-home-website.git
+   git remote add origin https://github.com/yourusername/dar-cape-website.git
    git push -u origin main
    ```
 
@@ -30,7 +30,7 @@ Vercel is the easiest deployment option for Next.js applications.
 
 3. **Custom Domain**
    - Go to Project Settings → Domains
-   - Add `capehome.co.za`
+   - Add `darcape.com`
    - Configure DNS records as instructed
 
 ### Option 2: Netlify
@@ -51,7 +51,7 @@ Vercel is the easiest deployment option for Next.js applications.
 
 4. **Custom Domain**
    - Go to Domain Settings
-   - Add custom domain `capehome.co.za`
+   - Add custom domain `darcape.com`
 
 ### Option 3: Traditional Hosting
 
@@ -74,8 +74,8 @@ Create these environment variables in your deployment platform:
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_actual_api_key
 NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
-NEXT_PUBLIC_SITE_URL=https://capehome.co.za
-NEXT_PUBLIC_CONTACT_EMAIL=info@capehome.co.za
+NEXT_PUBLIC_SITE_URL=https://darcape.com
+NEXT_PUBLIC_CONTACT_EMAIL=info@darcape.com
 ```
 
 ## 🗺️ Google Maps API Setup
@@ -90,7 +90,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=info@capehome.co.za
 
 2. **Configure API Key**
    - Set HTTP referrers restriction
-   - Add your domain: `capehome.co.za/*`
+   - Add your domain: `darcape.com/*`
    - Add localhost for development: `localhost:3000/*`
 
 3. **Update Map Location**
@@ -208,12 +208,12 @@ NEXT_PUBLIC_CONTACT_EMAIL=info@capehome.co.za
 
 ### Support Contacts
 
-- **Technical Issues**: developer@capehome.co.za
-- **Content Updates**: content@capehome.co.za
+- **Technical Issues**: developer@darcape.com
+- **Content Updates**: content@darcape.com
 - **Emergency Support**: +27817394084
 
 ---
 
 **Deployment completed successfully! 🎉**
 
-Your Cape Home Tourism website is now ready to welcome visitors from around the world.
+Your Dar Cape Tourism website is now ready to welcome visitors from around the world.

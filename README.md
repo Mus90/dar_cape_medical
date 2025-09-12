@@ -1,6 +1,6 @@
-# Cape Home Tourism Website
+# Dar Cape Tourism Website
 
-A professional, modern, and fully responsive website for Cape Home Tourism company built with Next.js 14, TypeScript, and Tailwind CSS.
+A professional, modern, and fully responsive website for Dar Cape Tourism company built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## 🌟 Features
 
@@ -35,7 +35,7 @@ A professional, modern, and fully responsive website for Cape Home Tourism compa
 1. **Clone the repository**
 ```bash
 git clone <repository-url>
-cd cape_home_website
+cd dar_cape_website
 ```
 
 2. **Install dependencies**
@@ -55,7 +55,7 @@ NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
 
 # Site URL for SEO
-NEXT_PUBLIC_SITE_URL=https://capehome.co.za
+NEXT_PUBLIC_SITE_URL=https://www.darcape.com
 ```
 
 4. **Run the development server**
@@ -71,7 +71,7 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 ## 📁 Project Structure
 
 ```
-cape_home_website/
+dar_cape_website/
 ├── src/
 │   ├── app/
 │   │   ├── [locale]/
@@ -215,7 +215,7 @@ Required environment variables:
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key
 NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
-NEXT_PUBLIC_SITE_URL=https://capehome.co.za
+NEXT_PUBLIC_SITE_URL=https://www.darcape.com
 ```
 
 ## 📊 Performance
@@ -242,13 +242,13 @@ The website is optimized for:
 ## 📞 Support
 
 For technical support or customization requests, contact:
-- **Email**: developer@capehome.co.za
+- **Email**: developer@darcape.com
 - **Phone**: +27817394084
 
 ## 📄 License
 
-This project is proprietary software developed for Cape Home Tourism.
+This project is proprietary software developed for Dar Cape Tourism.
 
 ---
 
-**Built with ❤️ for Cape Home Tourism**
+**Built with ❤️ for Dar Cape Tourism**

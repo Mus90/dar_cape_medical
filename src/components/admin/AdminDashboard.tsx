@@ -23,12 +23,12 @@ import ServicesManager from './ServicesManager';
 import { SecureAuth } from '@/utils/secureAuth';
 
 // Forgot Password Form Component
-const ForgotPasswordForm = ({ 
-  resetEmail, 
-  setResetEmail, 
-  resetSent, 
-  setResetSent, 
-  onBack 
+const ForgotPasswordForm = ({
+  resetEmail,
+  setResetEmail,
+  resetSent,
+  setResetSent,
+  onBack
 }: {
   resetEmail: string;
   setResetEmail: (email: string) => void;
@@ -38,9 +38,9 @@ const ForgotPasswordForm = ({
 }) => {
   const handleResetSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const result = SecureAuth.sendPasswordResetEmail(resetEmail);
-    
+
     if (result.success) {
       setResetSent(true);
       alert(result.message);
@@ -97,7 +97,7 @@ const ForgotPasswordForm = ({
             value={resetEmail}
             onChange={(e) => setResetEmail(e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-            placeholder="admin@capehome.co.za"
+            placeholder="admin@darcape.com"
             required
           />
         </div>
@@ -135,7 +135,7 @@ const AdminDashboard = () => {
   const [loginAttempts, setLoginAttempts] = useState(0);
   const [isLocked, setIsLocked] = useState(false);
   const [lockoutTime, setLockoutTime] = useState<number | null>(null);
-  const [ipAttempts, setIpAttempts] = useState<{[key: string]: number}>({});
+  const [ipAttempts, setIpAttempts] = useState<{ [key: string]: number }>({});
   const [suspiciousActivity, setSuspiciousActivity] = useState<string[]>([]);
 
   const handleLogin = (e: React.FormEvent) => {
@@ -166,25 +166,25 @@ const AdminDashboard = () => {
     // Validate email and password using secure hash
     const passwordCheck = SecureAuth.validatePasswordStrength(password);
     const isValidCredentials = SecureAuth.validateCredentials(email, password, validCredentials);
-    
+
     if (isValidCredentials && passwordCheck.valid) {
       setIsAuthenticated(true);
       setLoginAttempts(0);
       setIpAttempts(prev => ({ ...prev, [userIP]: 0 }));
-      
+
       // Create ultra-secure session with email
       const secureSession = SecureAuth.createSecureSession(email);
       sessionStorage.setItem('cape_admin_session', JSON.stringify(secureSession));
-      
+
       // Log successful login
       console.log(`[SECURITY] Successful admin login: ${email} from ${userIP} at ${new Date().toISOString()}`);
     } else {
       const newAttempts = loginAttempts + 1;
       const newIpAttempts = currentIpAttempts + 1;
-      
+
       setLoginAttempts(newAttempts);
       setIpAttempts(prev => ({ ...prev, [userIP]: newIpAttempts }));
-      
+
       // Log suspicious activity
       const suspiciousLog = `Failed login attempt from ${userIP} at ${new Date().toISOString()} - Attempt ${newIpAttempts}`;
       setSuspiciousActivity(prev => [...prev.slice(-9), suspiciousLog]);
@@ -265,7 +265,7 @@ const AdminDashboard = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="admin@capehome.co.za"
+                  placeholder="admin@darcape.com"
                   required
                 />
               </div>
@@ -305,7 +305,7 @@ const AdminDashboard = () => {
               </div>
             </form>
           ) : (
-            <ForgotPasswordForm 
+            <ForgotPasswordForm
               resetEmail={resetEmail}
               setResetEmail={setResetEmail}
               resetSent={resetSent}
@@ -468,8 +468,8 @@ const OverviewTab = ({ t }: { t: any }) => {
 
 const SettingsTab = ({ t }: { t: any }) => {
   const [settings, setSettings] = React.useState({
-    siteTitle: 'Cape Home Tourism',
-    contactEmail: 'info@capehome.co.za',
+    siteTitle: 'Dar Cape Tourism',
+    contactEmail: 'info@darcape.com',
     whatsappNumber: '+27817394084',
     googleMapsApiKey: '',
     adminPassword: '••••••••••••', // Hidden for security
@@ -481,7 +481,7 @@ const SettingsTab = ({ t }: { t: any }) => {
 
   // Load settings from localStorage
   React.useEffect(() => {
-    const savedSettings = localStorage.getItem('cape_home_settings');
+    const savedSettings = localStorage.getItem('dar_cape_settings');
     if (savedSettings) {
       setSettings({ ...settings, ...JSON.parse(savedSettings) });
     }
@@ -490,7 +490,7 @@ const SettingsTab = ({ t }: { t: any }) => {
   const handleSaveSettings = () => {
     setIsSaving(true);
     // Save to localStorage
-    localStorage.setItem('cape_home_settings', JSON.stringify(settings));
+    localStorage.setItem('dar_cape_settings', JSON.stringify(settings));
 
     setTimeout(() => {
       setIsSaving(false);
@@ -600,17 +600,17 @@ const SettingsTab = ({ t }: { t: any }) => {
             <button
               onClick={() => {
                 const data = {
-                  content: localStorage.getItem('cape_home_content'),
-                  blogPosts: localStorage.getItem('cape_home_blog_posts'),
-                  gallery: localStorage.getItem('cape_home_gallery_photos'),
-                  services: localStorage.getItem('cape_home_services'),
-                  settings: localStorage.getItem('cape_home_settings')
+                  content: localStorage.getItem('dar_cape_content'),
+                  blogPosts: localStorage.getItem('dar_cape_blog_posts'),
+                  gallery: localStorage.getItem('dar_cape_gallery_photos'),
+                  services: localStorage.getItem('dar_cape_services'),
+                  settings: localStorage.getItem('dar_cape_settings')
                 };
                 const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = `cape-home-backup-${new Date().toISOString().split('T')[0]}.json`;
+                a.download = `dar-cape-backup-${new Date().toISOString().split('T')[0]}.json`;
                 a.click();
               }}
               className="btn-secondary"
@@ -620,10 +620,10 @@ const SettingsTab = ({ t }: { t: any }) => {
             <button
               onClick={() => {
                 if (confirm('This will clear all content data. Are you sure?')) {
-                  localStorage.removeItem('cape_home_content');
-                  localStorage.removeItem('cape_home_blog_posts');
-                  localStorage.removeItem('cape_home_gallery_photos');
-                  localStorage.removeItem('cape_home_services');
+                  localStorage.removeItem('dar_cape_content');
+                  localStorage.removeItem('dar_cape_blog_posts');
+                  localStorage.removeItem('dar_cape_gallery_photos');
+                  localStorage.removeItem('dar_cape_services');
                   alert('Content data cleared successfully!');
                 }
               }}
@@ -634,13 +634,13 @@ const SettingsTab = ({ t }: { t: any }) => {
             <button
               onClick={() => {
                 if (confirm('This will reset all settings to defaults. Are you sure?')) {
-                  localStorage.removeItem('cape_home_settings');
+                  localStorage.removeItem('dar_cape_settings');
                   setSettings({
-                    siteTitle: 'Cape Home Tourism',
-                    contactEmail: 'info@capehome.co.za',
+                    siteTitle: 'Dar Cape Tourism',
+                    contactEmail: 'info@darcape.com',
                     whatsappNumber: '+27817394084',
                     googleMapsApiKey: '',
-                    adminPassword: 'capehome2024',
+                    adminPassword: 'darcape2024',
                     sessionTimeout: 30,
                     maxLoginAttempts: 3
                   });

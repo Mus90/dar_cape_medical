@@ -8,11 +8,11 @@ describe('API Integration Tests', () => {
       if (!formData.name || !formData.email || !formData.message) {
         return { success: false, error: 'Missing required fields' }
       }
-      
+
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
         return { success: false, error: 'Invalid email format' }
       }
-      
+
       return { success: true, message: 'Contact form submitted successfully' }
     }
 
@@ -23,7 +23,7 @@ describe('API Integration Tests', () => {
         message: 'I would like to book a tour',
         phone: '+27817394084'
       }
-      
+
       const result = await mockContactSubmission(formData)
       expect(result.success).toBe(true)
       expect(result.message).toBe('Contact form submitted successfully')
@@ -35,7 +35,7 @@ describe('API Integration Tests', () => {
         email: '',
         message: 'Test message'
       }
-      
+
       const result = await mockContactSubmission(formData)
       expect(result.success).toBe(false)
       expect(result.error).toBe('Missing required fields')
@@ -47,7 +47,7 @@ describe('API Integration Tests', () => {
         email: 'invalid-email',
         message: 'Test message'
       }
-      
+
       const result = await mockContactSubmission(formData)
       expect(result.success).toBe(false)
       expect(result.error).toBe('Invalid email format')
@@ -56,12 +56,12 @@ describe('API Integration Tests', () => {
 
   describe('Admin Authentication', () => {
     const mockAuthCheck = (password: string) => {
-      const validPasswords = ['capehome2024', 'admin123', 'demo2024']
+      const validPasswords = ['darcape2024', 'admin123', 'demo2024']
       return validPasswords.includes(password)
     }
 
     it('authenticates with valid passwords', () => {
-      expect(mockAuthCheck('capehome2024')).toBe(true)
+      expect(mockAuthCheck('darcape2024')).toBe(true)
       expect(mockAuthCheck('admin123')).toBe(true)
       expect(mockAuthCheck('demo2024')).toBe(true)
     })
@@ -76,15 +76,15 @@ describe('API Integration Tests', () => {
   describe('Content Management', () => {
     const mockContentUpdate = (section: string, data: any) => {
       const validSections = ['home', 'about', 'services', 'contact', 'footer']
-      
+
       if (!validSections.includes(section)) {
         return { success: false, error: 'Invalid section' }
       }
-      
+
       if (!data || Object.keys(data).length === 0) {
         return { success: false, error: 'No data provided' }
       }
-      
+
       return { success: true, message: `${section} content updated successfully` }
     }
 

@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://capehome.co.za'
-  
+  const baseUrl = 'https://darcape.com'
+
   const routes = [
     '',
     '/about',
@@ -13,8 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const locales = ['ar', 'en']
-  
-  const staticPages = locales.flatMap(locale => 
+
+  const staticPages = locales.flatMap(locale =>
     routes.map(route => ({
       url: `${baseUrl}/${locale}${route}`,
       lastModified: new Date(),

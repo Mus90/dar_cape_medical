@@ -1,13 +1,13 @@
 // Advanced Secure Authentication System
 
 export class SecureAuth {
-  private static readonly SALT = 'CapeHome2024_SecureSalt_!@#$%';
+  private static readonly SALT = 'darcape2024_SecureSalt_!@#$%';
   private static readonly PEPPER = 'Tourism_Security_Pepper_&*()';
 
   // Hash password with salt and pepper for maximum security
   static async hashPassword(password: string): Promise<string> {
     const saltedPassword = this.SALT + password + this.PEPPER;
-    
+
     // Use Web Crypto API for secure hashing
     if (typeof window !== 'undefined' && window.crypto && window.crypto.subtle) {
       const encoder = new TextEncoder();
@@ -16,7 +16,7 @@ export class SecureAuth {
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
-    
+
     // Fallback for server-side (basic hash)
     let hash = 0;
     for (let i = 0; i < saltedPassword.length; i++) {
@@ -31,18 +31,18 @@ export class SecureAuth {
   static generateMasterPassword(): string {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
     let password = '';
-    
+
     // Ensure at least one of each type
     password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)]; // Uppercase
     password += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)]; // Lowercase
     password += '0123456789'[Math.floor(Math.random() * 10)]; // Number
     password += '!@#$%^&*()_+-='[Math.floor(Math.random() * 13)]; // Special char
-    
+
     // Fill remaining length
     for (let i = 4; i < 24; i++) {
       password += chars[Math.floor(Math.random() * chars.length)];
     }
-    
+
     // Shuffle the password
     return password.split('').sort(() => Math.random() - 0.5).join('');
   }
@@ -93,15 +93,15 @@ export class SecureAuth {
   // Two-Factor Authentication Token Generator
   static generateTOTP(): string {
     const timestamp = Math.floor(Date.now() / 30000); // 30-second window
-    const secret = 'CAPEHOME2024SECRET';
-    
+    const secret = 'darcape2024SECRET';
+
     // Simple TOTP implementation
     let hash = 0;
     const input = secret + timestamp.toString();
     for (let i = 0; i < input.length; i++) {
       hash = ((hash << 5) - hash + input.charCodeAt(i)) & 0xffffffff;
     }
-    
+
     return Math.abs(hash % 1000000).toString().padStart(6, '0');
   }
 
@@ -109,12 +109,12 @@ export class SecureAuth {
   static verifyTOTP(token: string): boolean {
     const currentToken = this.generateTOTP();
     const previousToken = this.generateTOTPForTime(Math.floor(Date.now() / 30000) - 1);
-    
+
     return token === currentToken || token === previousToken; // Allow 30-second window
   }
 
   private static generateTOTPForTime(timestamp: number): string {
-    const secret = 'CAPEHOME2024SECRET';
+    const secret = 'darcape2024SECRET';
     let hash = 0;
     const input = secret + timestamp.toString();
     for (let i = 0; i < input.length; i++) {
@@ -140,7 +140,7 @@ export class SecureAuth {
   static createSecureSession(userId: string): any {
     const sessionToken = this.generateSecureToken();
     const refreshToken = this.generateSecureToken();
-    
+
     return {
       sessionId: sessionToken,
       refreshToken: refreshToken,
@@ -184,10 +184,10 @@ export class SecureAuth {
 
     // Generate SHA-256 hash of provided password
     const passwordHash = this.generatePasswordHash(password);
-    
+
     // Admin password hash validation
     const correctHash = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92';
-    
+
     return passwordHash === correctHash;
   }
 
@@ -195,7 +195,7 @@ export class SecureAuth {
   static generatePasswordHash(password: string): string {
     // Secure hash validation - no plaintext passwords stored
     const validHash = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92';
-    
+
     // Simple hash check (in production, use proper crypto library)
     const testHash = this.simpleHash(password);
     if (testHash === validHash) {
@@ -233,7 +233,7 @@ export class SecureAuth {
     try {
       const decoded = atob(token);
       const [email, timestamp, randomBytes] = decoded.split(':');
-      
+
       if (!email || !timestamp || !randomBytes) {
         return { valid: false };
       }
@@ -254,7 +254,7 @@ export class SecureAuth {
   // Simulate sending password reset email
   static sendPasswordResetEmail(email: string): { success: boolean; message: string } {
     const validEmails = ['mustafaalamin.07@gmail.com'];
-    
+
     if (!this.isValidEmail(email)) {
       return { success: false, message: 'Invalid email format' };
     }
@@ -264,10 +264,10 @@ export class SecureAuth {
     }
 
     const resetToken = this.generatePasswordResetToken(email);
-    
+
     // In a real application, you would send this via email service
     console.log(`[PASSWORD RESET] Token for ${email}: ${resetToken}`);
-    
+
     // Store the token temporarily (in real app, this would be in database)
     if (typeof window !== 'undefined') {
       localStorage.setItem(`reset_token_${email}`, JSON.stringify({
@@ -277,9 +277,9 @@ export class SecureAuth {
       }));
     }
 
-    return { 
-      success: true, 
-      message: 'Password reset instructions have been sent to your email address' 
+    return {
+      success: true,
+      message: 'Password reset instructions have been sent to your email address'
     };
   }
 

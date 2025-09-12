@@ -86,7 +86,7 @@ const ServicesManager = () => {
     };
     const updatedServices = [service, ...services];
     setServices(updatedServices);
-    localStorage.setItem('cape_home_services', JSON.stringify(updatedServices));
+    localStorage.setItem('dar_cape_services', JSON.stringify(updatedServices));
     setNewService({
       name: '',
       description: '',
@@ -104,7 +104,7 @@ const ServicesManager = () => {
     if (confirm('Are you sure you want to delete this service?')) {
       const updatedServices = services.filter(service => service.id !== id);
       setServices(updatedServices);
-      localStorage.setItem('cape_home_services', JSON.stringify(updatedServices));
+      localStorage.setItem('dar_cape_services', JSON.stringify(updatedServices));
     }
   };
 
@@ -113,12 +113,12 @@ const ServicesManager = () => {
       service.id === id ? { ...service, status: 'active' } : service
     );
     setServices(updatedServices);
-    localStorage.setItem('cape_home_services', JSON.stringify(updatedServices));
+    localStorage.setItem('dar_cape_services', JSON.stringify(updatedServices));
   };
 
   // Load services from localStorage on component mount
   React.useEffect(() => {
-    const savedServices = localStorage.getItem('cape_home_services');
+    const savedServices = localStorage.getItem('dar_cape_services');
     if (savedServices) {
       setServices(JSON.parse(savedServices));
     }
@@ -267,7 +267,7 @@ const ServicesManager = () => {
                     } : service
                   );
                   setServices(updatedServices);
-                  localStorage.setItem('cape_home_services', JSON.stringify(updatedServices));
+                  localStorage.setItem('dar_cape_services', JSON.stringify(updatedServices));
                   setEditingService(null);
                   alert('Service updated successfully!');
                 }}

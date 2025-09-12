@@ -9,7 +9,7 @@
   },
   "home": {
     "hero": {
-      "title": "Discover the Beauty of Cape Town with Cape Home",
+      "title": "Discover the Beauty of Cape Town with Dar Cape",
       "subtitle": "Exceptional tourism experiences and unforgettable adventures in Cape Town's most beautiful destinations",
       "cta": "Book Your Trip Now",
       "explore": "Explore Our Services"
@@ -37,7 +37,7 @@
         "Ali": {
           "name": "Ali Al-Shamrani",
           "location": "Saudi Arabia",
-          "comment": "An incredible experience! Cape Home made our Cape Town adventure unforgettable. The safari tour was amazing and the guides were very knowledgeable."
+          "comment": "An incredible experience! Dar Cape made our Cape Town adventure unforgettable. The safari tour was amazing and the guides were very knowledgeable."
         },
         "OmNoura": {
           "name": "Om Noura",
@@ -47,14 +47,14 @@
         "AbdallahAlmardi": {
           "name": "Abdallah Almardi",
           "location": "Saudi Arabia",
-          "comment": "Cape Home exceeded all our expectations. The cultural tours were enlightening and the hospitality was outstanding. Highly recommended!"
+          "comment": "Dar Cape exceeded all our expectations. The cultural tours were enlightening and the hospitality was outstanding. Highly recommended!"
         }
       }
     }
   },
   "about": {
     "title": "About Us",
-    "subtitle": "Cape Home Tourism Company",
+    "subtitle": "Dar Cape Tourism Company",
     "mission": {
       "title": "Our Mission",
       "description": "We strive to provide exceptional tourism experiences that showcase the beauty and richness of Cape Town to visitors from around the world."
@@ -83,7 +83,7 @@
         "Mustafa": {
           "name": "Mustafa Ali",
           "position": "Founder & CEO",
-          "description": "With over 15 years in tourism, Mustafa leads Cape Home with passion for showcasing Cape Town's beauty."
+          "description": "With over 15 years in tourism, Mustafa leads Dar Cape with passion for showcasing Cape Town's beauty."
         },
         "mujahid": {
           "name": "Mujahid Mohamed",
@@ -253,7 +253,7 @@
     "tooltip": "Contact us via WhatsApp"
   },
   "footer": {
-    "description": "Cape Home Tourism offers unforgettable experiences in Cape Town. From safari adventures to Strawberry tours, we create memories that last a lifetime.",
+    "description": "Dar Cape Tourism offers unforgettable experiences in Cape Town. From safari adventures to Strawberry tours, we create memories that last a lifetime.",
     "quickLinks": "Quick Links",
     "contact": "Contact Info",
     "followUs": "Follow Us",
@@ -262,7 +262,7 @@
   "admin": {
     "login": {
       "title": "Admin Login",
-      "subtitle": "Cape Home Tourism CMS",
+      "subtitle": "Dar Cape Tourism CMS",
       "password": "Password",
       "placeholder": "Enter admin password",
       "loginButton": "Login",
@@ -272,7 +272,7 @@
       "productionNote": "Replace with proper authentication in production"
     },
     "header": {
-      "title": "Cape Home CMS",
+      "title": "Dar Cape CMS",
       "subtitle": "Content Management System",
       "logout": "Logout"
     },

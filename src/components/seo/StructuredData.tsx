@@ -11,15 +11,15 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
   const locale = useLocale();
 
   const getStructuredData = () => {
-    const baseUrl = 'https://capehome.co.za';
+    const baseUrl = 'https://www.darcape.com';
 
     switch (type) {
       case 'organization':
         return {
           "@context": "https://schema.org",
           "@type": "TravelAgency",
-          "name": "Cape Home Tourism",
-          "alternateName": "Cape Home",
+          "name": "Dar Cape Tourism",
+          "alternateName": "Dar Cape",
           "url": baseUrl,
           "logo": `${baseUrl}/images/logo.png`,
           "image": `${baseUrl}/images/og-image.jpg`,
@@ -38,9 +38,9 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
             "availableLanguage": ["English", "Arabic"]
           },
           "sameAs": [
-            "https://facebook.com/capehometourism",
-            "https://instagram.com/capehometourism",
-            "https://twitter.com/capehometourism"
+            "https://facebook.com/darcapetourism",
+            "https://instagram.com/darcapetourism",
+            "https://twitter.com/darcapetourism"
           ],
           "priceRange": "$$",
           "servesCuisine": "Cape Town",
@@ -54,9 +54,9 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
         return {
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Cape Home Tourism",
+          "name": "Dar Cape Tourism",
           "url": baseUrl,
-          "description": "Discover Cape Town with Cape Home Tourism. Professional tour services, safari adventures, Strawberry tours, and cultural experiences.",
+          "description": "Discover Cape Town with Dar Cape Tourism. Professional tour services, safari adventures, Strawberry tours, and cultural experiences.",
           "inLanguage": [locale === 'ar' ? 'ar' : 'en'],
           "potentialAction": {
             "@type": "SearchAction",
@@ -73,7 +73,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "description": data?.description || "Professional tourism services in Cape Town",
           "provider": {
             "@type": "TravelAgency",
-            "name": "Cape Home Tourism"
+            "name": "Dar Cape Tourism"
           },
           "areaServed": {
             "@type": "Country",
@@ -100,7 +100,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Cape Home Tourism",
+            "name": "Dar Cape Tourism",
             "logo": {
               "@type": "ImageObject",
               "url": `${baseUrl}/images/logo.png`

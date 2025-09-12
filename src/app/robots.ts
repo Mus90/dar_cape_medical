@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://capehome.co.za/sitemap.xml',
+    sitemap: 'https://darcape.com/sitemap.xml',
   }
 }

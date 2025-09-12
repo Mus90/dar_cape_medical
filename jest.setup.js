@@ -9,7 +9,7 @@ jest.mock('next-intl', () => ({
       'about.team.subtitle': 'Meet our dedicated professionals',
       'about.team.members.Mustafa.name': 'Mustafa',
       'about.team.members.Mustafa.position': 'CEO & Founder',
-      'about.team.members.Mustafa.description': 'Leading Cape Home with vision and expertise',
+      'about.team.members.Mustafa.description': 'Leading Dar Cape with vision and expertise',
       'about.team.members.mujahid.name': 'Mujahid',
       'about.team.members.mujahid.position': 'CTO',
       'about.team.members.mujahid.description': 'Technical excellence and innovation',
@@ -39,10 +39,10 @@ jest.mock('framer-motion', () => ({
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+  constructor() { }
+  disconnect() { }
+  observe() { }
+  unobserve() { }
 }
 
 // Mock window.matchMedia

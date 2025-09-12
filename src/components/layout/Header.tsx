@@ -38,7 +38,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">CH</span>
             </div>
-            <span className="text-2xl font-bold text-gray-900">Cape Home</span>
+            <span className="text-2xl font-bold text-gray-900">Dar Cape</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,11 +47,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 ${
-                  isActive(item.href)
+                className={`font-medium transition-colors duration-200 ${isActive(item.href)
                     ? 'text-primary-600 border-b-2 border-primary-600 pb-1'
                     : 'text-gray-700 hover:text-primary-600'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -61,7 +60,7 @@ const Header = () => {
           {/* Language Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4 rtl:space-x-reverse">
             <LanguageToggle />
-            
+
             {/* Mobile menu button */}
             <button
               type="button"
@@ -86,11 +85,10 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${
-                    isActive(item.href)
+                  className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${isActive(item.href)
                       ? 'text-primary-600 bg-primary-50'
                       : 'text-gray-700 hover:text-primary-600 hover:bg-gray-100'
-                  }`}
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

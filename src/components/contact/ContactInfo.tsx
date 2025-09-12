@@ -26,7 +26,7 @@ const ContactInfo = () => {
       icon: MapPinIcon,
       title: t('info.address'),
       content: [
-        'Cape Home Tourism',
+        'Dar Cape Tourism',
         'CBD',
         'Cape Town, 8001',
         'Cape Town'
@@ -48,13 +48,13 @@ const ContactInfo = () => {
       icon: EnvelopeIcon,
       title: t('info.email'),
       content: [
-        'info@capehome.co.za',
-        'bookings@capehome.co.za'
+        'info@darcape.com',
+        'bookings@darcape.com'
       ],
       color: 'from-purple-500 to-indigo-500',
       links: [
-        'mailto:info@capehome.co.za',
-        'mailto:bookings@capehome.co.za'
+        'mailto:info@darcape.com',
+        'mailto:bookings@darcape.com'
       ]
     },
     {
@@ -71,11 +71,11 @@ const ContactInfo = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', url: 'https://facebook.com/capehometourism', icon: FaceBookIcon, color: 'text-blue-600 hover:text-blue-700' },
-    { name: 'Instagram', url: 'https://instagram.com/capehometourism', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
-    { name: 'Twitter', url: 'https://twitter.com/capehometourism', icon: TwitterIcon, color: 'text-gray-900 hover:text-gray-700' },
-    { name: 'YouTube', url: 'https://youtube.com/@capehometourism', icon: YouTubeIcon, color: 'text-red-600 hover:text-red-700' },
-    { name: 'TikTok', url: 'https://tiktok.com/@capehometourism', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
+    { name: 'Facebook', url: 'https://facebook.com/darcapetourism', icon: FaceBookIcon, color: 'text-blue-600 hover:text-blue-700' },
+    { name: 'Instagram', url: 'https://instagram.com/darcapetourism', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
+    { name: 'Twitter', url: 'https://twitter.com/darcapetourism', icon: TwitterIcon, color: 'text-gray-900 hover:text-gray-700' },
+    { name: 'YouTube', url: 'https://youtube.com/@darcapetourism', icon: YouTubeIcon, color: 'text-red-600 hover:text-red-700' },
+    { name: 'TikTok', url: 'https://tiktok.com/@darcapetourism', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
   ];
 
   return (

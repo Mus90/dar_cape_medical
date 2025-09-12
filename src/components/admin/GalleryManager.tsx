@@ -95,7 +95,7 @@ const GalleryManager = () => {
     if (confirm('Are you sure you want to delete this photo?')) {
       const updatedPhotos = photos.filter(photo => photo.id !== id);
       setPhotos(updatedPhotos);
-      localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
+      localStorage.setItem('dar_cape_gallery_photos', JSON.stringify(updatedPhotos));
     }
   };
 
@@ -103,7 +103,7 @@ const GalleryManager = () => {
     if (confirm('Are you sure you want to delete this video?')) {
       const updatedVideos = videos.filter(video => video.id !== id);
       setVideos(updatedVideos);
-      localStorage.setItem('cape_home_gallery_videos', JSON.stringify(updatedVideos));
+      localStorage.setItem('dar_cape_gallery_videos', JSON.stringify(updatedVideos));
     }
   };
 
@@ -112,7 +112,7 @@ const GalleryManager = () => {
       photo.id === id ? { ...photo, status: 'published' } : photo
     );
     setPhotos(updatedPhotos);
-    localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
+    localStorage.setItem('dar_cape_gallery_photos', JSON.stringify(updatedPhotos));
   };
 
   const handlePublishVideo = (id: string) => {
@@ -120,13 +120,13 @@ const GalleryManager = () => {
       video.id === id ? { ...video, status: 'published' } : video
     );
     setVideos(updatedVideos);
-    localStorage.setItem('cape_home_gallery_videos', JSON.stringify(updatedVideos));
+    localStorage.setItem('dar_cape_gallery_videos', JSON.stringify(updatedVideos));
   };
 
   // Load data from localStorage on component mount
   React.useEffect(() => {
-    const savedPhotos = localStorage.getItem('cape_home_gallery_photos');
-    const savedVideos = localStorage.getItem('cape_home_gallery_videos');
+    const savedPhotos = localStorage.getItem('dar_cape_gallery_photos');
+    const savedVideos = localStorage.getItem('dar_cape_gallery_videos');
     if (savedPhotos) {
       setPhotos(JSON.parse(savedPhotos));
     }
@@ -153,7 +153,7 @@ const GalleryManager = () => {
         }));
         const updatedPhotos = [...newPhotos, ...photos];
         setPhotos(updatedPhotos);
-        localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
+        localStorage.setItem('dar_cape_gallery_photos', JSON.stringify(updatedPhotos));
         setIsUploading(false);
         alert(`${files.length} file(s) uploaded successfully!`);
       }, 2000);
@@ -252,7 +252,7 @@ const GalleryManager = () => {
                     } : photo
                   );
                   setPhotos(updatedPhotos);
-                  localStorage.setItem('cape_home_gallery_photos', JSON.stringify(updatedPhotos));
+                  localStorage.setItem('dar_cape_gallery_photos', JSON.stringify(updatedPhotos));
                   setEditingPhoto(null);
                   alert('Photo updated successfully!');
                 }}
@@ -337,7 +337,7 @@ const GalleryManager = () => {
                     } : video
                   );
                   setVideos(updatedVideos);
-                  localStorage.setItem('cape_home_gallery_videos', JSON.stringify(updatedVideos));
+                  localStorage.setItem('dar_cape_gallery_videos', JSON.stringify(updatedVideos));
                   setEditingVideo(null);
                   alert('Video updated successfully!');
                 }}

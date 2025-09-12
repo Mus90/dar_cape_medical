@@ -6,14 +6,14 @@ describe('TeamSection Data', () => {
         name: 'Mustafa',
         position: 'CEO & Founder',
         image: '/images/team/mustafa.png',
-        email: 'mustafa@capehome.co.za',
+        email: 'mustafa@darcape.com',
         phone: '+27817394084'
       },
       {
         name: 'Mujahid',
         position: 'CTO',
         image: '/images/team/mujahid.jpg',
-        email: 'mujahid@capehome.co.za',
+        email: 'mujahid@darcape.com',
         phone: '+27 123 456 790'
       }
     ]
@@ -31,8 +31,8 @@ describe('TeamSection Data', () => {
       return emailRegex.test(email)
     }
 
-    expect(validateEmail('mustafa@capehome.co.za')).toBe(true)
-    expect(validateEmail('mujahid@capehome.co.za')).toBe(true)
+    expect(validateEmail('mustafa@darcape.com')).toBe(true)
+    expect(validateEmail('mujahid@darcape.com')).toBe(true)
     expect(validateEmail('invalid-email')).toBe(false)
   })
 

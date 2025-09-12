@@ -23,7 +23,7 @@ const ContentManager = () => {
   ];
 
   const [homeContent, setHomeContent] = useState({
-    heroTitle: 'Discover the Beauty of Cape Town with Cape Home',
+    heroTitle: 'Discover the Beauty of Cape Town with Dar Cape',
     heroSubtitle: 'Exceptional tourism experiences and unforgettable adventures in Cape Town\'s most beautiful destinations',
     heroButtonText: 'Book Your Trip Now',
     servicesTitle: 'Our Tourism Services',
@@ -31,7 +31,7 @@ const ContentManager = () => {
   });
 
   const [aboutContent, setAboutContent] = useState({
-    title: 'About Cape Home Tourism',
+    title: 'About Dar Cape Tourism',
     description: 'We are passionate about showcasing the beauty of Cape Town and South Africa.'
   });
 
@@ -41,11 +41,11 @@ const ContentManager = () => {
 
   const [contactContent, setContactContent] = useState({
     title: 'Get in Touch',
-    email: 'info@capehome.co.za'
+    email: 'info@darcape.com'
   });
 
   const [footerContent, setFooterContent] = useState({
-    copyright: '© 2024 Cape Home Tourism. All rights reserved.'
+    copyright: '© 2024 Dar Cape Tourism. All rights reserved.'
   });
 
   const handleSave = () => {
@@ -57,14 +57,14 @@ const ContentManager = () => {
       contact: contactContent,
       footer: footerContent
     };
-    localStorage.setItem('cape_home_content', JSON.stringify(allContent));
+    localStorage.setItem('dar_cape_content', JSON.stringify(allContent));
     alert('Content saved successfully!');
     setIsEditing(false);
   };
 
   // Load content from localStorage on component mount
   const loadContent = () => {
-    const saved = localStorage.getItem('cape_home_content');
+    const saved = localStorage.getItem('dar_cape_content');
     if (saved) {
       const allContent = JSON.parse(saved);
       if (allContent.home) setHomeContent(allContent.home);
@@ -87,8 +87,8 @@ const ContentManager = () => {
         <button
           onClick={() => setIsEditing(!isEditing)}
           className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${isEditing
-              ? 'bg-green-600 text-white hover:bg-green-700'
-              : 'bg-primary-600 text-white hover:bg-primary-700'
+            ? 'bg-green-600 text-white hover:bg-green-700'
+            : 'bg-primary-600 text-white hover:bg-primary-700'
             }`}
         >
           {isEditing ? 'Save Changes' : 'Edit Content'}
@@ -106,8 +106,8 @@ const ContentManager = () => {
                   key={section.id}
                   onClick={() => setSelectedContent(section.id)}
                   className={`w-full text-left px-3 py-2 rounded-lg transition-colors duration-200 ${selectedContent === section.id
-                      ? 'bg-primary-50 text-primary-700 border-l-2 border-primary-500'
-                      : 'text-gray-700 hover:bg-gray-50'
+                    ? 'bg-primary-50 text-primary-700 border-l-2 border-primary-500'
+                    : 'text-gray-700 hover:bg-gray-50'
                     }`}
                 >
                   <div className="font-medium">{section.name}</div>
@@ -126,7 +126,7 @@ const ContentManager = () => {
                 {contentSections.find(s => s.id === selectedContent)?.name}
               </h3>
               <div className="flex space-x-2">
-                <button 
+                <button
                   onClick={() => alert('Preview functionality would show how this content appears on the live website')}
                   className="p-2 text-gray-500 hover:text-gray-700 rounded-lg hover:bg-gray-100"
                   title="Preview content"
@@ -283,7 +283,7 @@ const ContentManager = () => {
               <div className="space-y-6">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <p className="text-green-800 text-sm">
-                    <strong>Services Content:</strong> Edit your services page header content. 
+                    <strong>Services Content:</strong> Edit your services page header content.
                     Use the Services Manager tab for detailed service management.
                   </p>
                 </div>

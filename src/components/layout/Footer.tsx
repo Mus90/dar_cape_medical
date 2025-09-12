@@ -39,7 +39,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">CH</span>
               </div>
-              <span className="text-2xl font-bold">Cape Home</span>
+              <span className="text-2xl font-bold">Dar Cape</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               {t('footer.description')}
@@ -82,7 +82,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3 rtl:space-x-reverse">
                 <MapPinIcon className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  Cape Town, Cape Town<br />
+                  Cape Town, South Africa <br />
                   CBD
                 </p>
               </div>
@@ -94,39 +94,22 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <EnvelopeIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">info@capehome.co.za</p>
+                <p className="text-gray-300 text-sm">info@darcape.com</p>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <GlobeAltIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">www.capehome.co.za</p>
+                <p className="text-gray-300 text-sm">www.darcape.com</p>
               </div>
             </div>
           </div>
 
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{t('footer.followUs')}</h3>
-            <p className="text-gray-300 text-sm">
-              Stay updated with our latest tours and travel tips
-            </p>
-            <div className="flex flex-col space-y-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-primary-500"
-              />
-              <button className="btn-primary text-sm">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Cape Home Tourism. {t('footer.rights')}.
+              © {new Date().getFullYear()} Dar Cape Tourism. {t('footer.rights')}.
             </p>
             <div className="flex space-x-6 rtl:space-x-reverse">
               <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
