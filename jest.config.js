@@ -21,6 +21,7 @@ const customJestConfig = {
     '!src/app/**/not-found.tsx',
     '!src/app/**/error.tsx',
     '!src/middleware.ts',
+    '!src/**/index.{js,ts,tsx}', // optional: ignore barrel files
   ],
   coverageThreshold: {
     global: {

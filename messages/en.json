@@ -131,8 +131,7 @@
   "gallery": {
     "title": "Photo Gallery",
     "subtitle": "See the most beautiful moments from our tourism trips",
-    "photos": "Photos",
-    "videos": "Videos"
+    "photos": "Photos"
   },
   "blog": {
     "title": "Blog",
