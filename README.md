@@ -132,7 +132,6 @@ Update content in the following locations:
 Replace placeholder images with your actual content:
 - Gallery photos
 - Service images
-- Team photos
 - Blog post images
 
 #### Contact Information
