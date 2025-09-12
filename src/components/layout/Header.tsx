@@ -36,7 +36,7 @@ const Header = () => {
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-2 rtl:space-x-reverse">
             <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">CH</span>
+              <span className="text-white font-bold text-xl">DC</span>
             </div>
             <span className="text-2xl font-bold text-gray-900">Dar Cape</span>
           </Link>
@@ -48,8 +48,8 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 className={`font-medium transition-colors duration-200 ${isActive(item.href)
-                    ? 'text-primary-600 border-b-2 border-primary-600 pb-1'
-                    : 'text-gray-700 hover:text-primary-600'
+                  ? 'text-primary-600 border-b-2 border-primary-600 pb-1'
+                  : 'text-gray-700 hover:text-primary-600'
                   }`}
               >
                 {item.name}
@@ -86,8 +86,8 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${isActive(item.href)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-100'
+                    ? 'text-primary-600 bg-primary-50'
+                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-100'
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
