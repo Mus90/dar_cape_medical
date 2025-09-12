@@ -130,7 +130,6 @@ Update content in the following locations:
 
 #### Images
 Replace placeholder images with your actual content:
-- Company logo
 - Gallery photos
 - Service images
 - Team photos
