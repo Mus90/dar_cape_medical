@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PlayIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 const VideoGallery = () => {
   const [selectedVideo, setSelectedVideo] = useState<number | null>(null);
@@ -86,10 +87,12 @@ const VideoGallery = () => {
             onClick={() => openVideo(index)}
           >
             <div className="aspect-w-16 aspect-h-9 relative h-64">
-              <img
+              <Image
                 src={video.thumbnail}
                 alt={video.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all duration-300" />
 
