@@ -3,7 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import HeroSection from '@/components/gallery/HeroSection';
 import PhotoGallery from '@/components/gallery/PhotoGallery';
-import VideoGallery from '@/components/gallery/VideoGallery';
+
 import GalleryTabs from '@/components/gallery/GalleryTabs';
 
 export const metadata: Metadata = {
