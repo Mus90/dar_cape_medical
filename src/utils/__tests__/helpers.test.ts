@@ -19,6 +19,8 @@ describe('Utility Functions', () => {
   describe('validateEmail', () => {
     const validateEmail = (email: string) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      // Additional check for consecutive dots
+      if (email.includes('..')) return false
       return emailRegex.test(email)
     }
 
