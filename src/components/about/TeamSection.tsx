@@ -15,7 +15,7 @@ const TeamSection = () => {
       name: t('members.Mustafa.name'),
       position: t('members.Mustafa.position'),
       description: t('members.Mustafa.description'),
-      image: '/images/team/mustafa.png',
+      image: '/images/team/Mustafa.png',
       email: 'mustafa@darcape.com',
       phone: '+27817394084'
     },
@@ -23,7 +23,7 @@ const TeamSection = () => {
       name: t('members.mujahid.name'),
       position: t('members.mujahid.position'),
       description: t('members.mujahid.description'),
-      image: '/images/team/mujahid.jpg',
+      image: '/images/team/Mujahid.jpg',
       email: 'mujahid@darcape.com',
       phone: '+27 123 456 790'
     },
