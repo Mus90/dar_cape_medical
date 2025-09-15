@@ -6,8 +6,8 @@ describe('Utility Functions', () => {
     }
 
     it('formats South African phone numbers correctly', () => {
-      expect(formatPhoneNumber('27749548756')).toBe('+27 817 394 084')
-      expect(formatPhoneNumber('+27749548756')).toBe('+27 817 394 084')
+      expect(formatPhoneNumber('27749548756')).toBe('+27 749 548 756')
+      expect(formatPhoneNumber('+27749548756')).toBe('+27 749 548 756')
     })
 
     it('handles phone numbers with spaces and dashes', () => {
