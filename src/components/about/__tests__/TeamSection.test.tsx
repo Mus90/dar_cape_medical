@@ -7,7 +7,7 @@ describe('TeamSection Data', () => {
         position: 'CEO & Founder',
         image: '/images/team/mustafa.png',
         email: 'mustafa@darcape.com',
-        phone: '+27817394084'
+        phone: '+27749548756'
       },
       {
         name: 'Mujahid',
@@ -41,7 +41,7 @@ describe('TeamSection Data', () => {
       return phone.replace(/\D/g, '').length >= 10
     }
 
-    expect(formatPhone('+27817394084')).toBe(true)
+    expect(formatPhone('+27749548756')).toBe(true)
     expect(formatPhone('+27 123 456 790')).toBe(true)
     expect(formatPhone('123')).toBe(false)
   })

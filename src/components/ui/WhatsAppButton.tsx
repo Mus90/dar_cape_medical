@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
   const t = useTranslations('whatsapp');
 
   // Replace with actual WhatsApp Business number
-  const whatsappNumber = '+27817394084'; // Placeholder - replace with actual number
+  const whatsappNumber = '+27749548756'; // Placeholder - replace with actual number
   const message = encodeURIComponent(t('message'));
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 

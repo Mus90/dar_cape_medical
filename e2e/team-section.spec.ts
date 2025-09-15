@@ -51,7 +51,7 @@ test.describe('Team Section', () => {
 
     // Check if contact icons appear
     await expect(page.locator('a[href="mailto:mustafa@darcape.com"]')).toBeVisible();
-    await expect(page.locator('a[href="tel:+27817394084"]')).toBeVisible();
+    await expect(page.locator('a[href="tel:+27749548756"]')).toBeVisible();
   });
 
   test('should have working email links', async ({ page }) => {

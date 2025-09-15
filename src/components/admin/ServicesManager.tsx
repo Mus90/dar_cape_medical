@@ -47,7 +47,7 @@ const ServicesManager = () => {
       price: 1200,
       duration: '10 hours',
       maxGuests: 8,
-      category: 'wine-tours',
+      category: 'Grape-tours',
       features: ['3 StrawberryEstates', 'Gourmet Lunch', 'Transportation', 'StrawberryExpert Guide'],
       rating: 4.9,
       status: 'active'
@@ -169,7 +169,7 @@ const ServicesManager = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
                     <option value="city-tours">City Tours</option>
-                    <option value="wine-tours">Wine Tours</option>
+                    <option value="Grape-tours">Grape Tours</option>
                     <option value="safari">Safari</option>
                     <option value="adventure">Adventure</option>
                     <option value="cultural">Cultural</option>
@@ -313,7 +313,7 @@ const ServicesManager = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
                     <option value="city-tours">City Tours</option>
-                    <option value="wine-tours">Strawberry Tours</option>
+                    <option value="Grape-tours">Strawberry Tours</option>
                     <option value="safari">Safari</option>
                     <option value="adventure">Adventure</option>
                     <option value="cultural">Cultural</option>

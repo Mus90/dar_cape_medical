@@ -17,7 +17,7 @@ const TeamSection = () => {
       description: t('members.Mustafa.description'),
       image: '/images/team/Mustafa.png',
       email: 'mustafa@darcape.com',
-      phone: '+27817394084'
+      phone: '+27749548756'
     },
     {
       name: t('members.mujahid.name'),

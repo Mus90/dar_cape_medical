@@ -470,7 +470,7 @@ const SettingsTab = ({ t }: { t: any }) => {
   const [settings, setSettings] = React.useState({
     siteTitle: 'Dar Cape Tourism',
     contactEmail: 'info@darcape.com',
-    whatsappNumber: '+27817394084',
+    whatsappNumber: '+27749548756',
     googleMapsApiKey: '',
     adminPassword: '••••••••••••', // Hidden for security
     sessionTimeout: 30,
@@ -542,7 +542,7 @@ const SettingsTab = ({ t }: { t: any }) => {
               value={settings.whatsappNumber}
               onChange={(e) => handleInputChange('whatsappNumber', e.target.value)}
               className="w-full md:w-1/2 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-              placeholder="+27817394084"
+              placeholder="+27749548756"
             />
             <p className="text-sm text-gray-500 mt-1">Include country code (e.g., +27 for South Africa)</p>
           </div>
@@ -638,7 +638,7 @@ const SettingsTab = ({ t }: { t: any }) => {
                   setSettings({
                     siteTitle: 'Dar Cape Tourism',
                     contactEmail: 'info@darcape.com',
-                    whatsappNumber: '+27817394084',
+                    whatsappNumber: '+27749548756',
                     googleMapsApiKey: '',
                     adminPassword: 'darcape2024',
                     sessionTimeout: 30,

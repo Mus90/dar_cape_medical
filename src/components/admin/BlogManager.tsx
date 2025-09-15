@@ -44,8 +44,8 @@ const BlogManager = () => {
       author: 'Mustafa Ali',
       date: '2024-01-10',
       status: 'draft',
-      category: 'wine',
-      tags: ['Wine', 'Stellenbosch', 'Franschhoek']
+      category: 'Grape',
+      tags: ['Grape', 'Stellenbosch', 'Franschhoek']
     }
   ]);
 
@@ -189,7 +189,7 @@ const BlogManager = () => {
                   >
                     <option value="destinations">Destinations</option>
                     <option value="photography">Photography</option>
-                    <option value="wine">Wine & Food</option>
+                    <option value="Grape">Grape & Food</option>
                     <option value="culture">Culture</option>
                     <option value="adventure">Adventure</option>
                     <option value="tips">Travel Tips</option>
@@ -280,7 +280,7 @@ const BlogManager = () => {
                   >
                     <option value="destinations">Destinations</option>
                     <option value="photography">Photography</option>
-                    <option value="wine">Strawberry& Food</option>
+                    <option value="Grape">Strawberry& Food</option>
                     <option value="culture">Culture</option>
                     <option value="adventure">Adventure</option>
                     <option value="tips">Travel Tips</option>

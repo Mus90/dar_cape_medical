@@ -36,13 +36,13 @@ const CTASection = () => {
             </Link>
 
             <a
-              href="tel:+27817394084"
+              href="tel:+27749548756"
               className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-medium py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center justify-center"
             >
               <PhoneIcon className="h-5 w-5 mr-2 rtl:mr-0 rtl:ml-2" />
               <span className="flex items-center">
                 {t('cta.callNow')}
-                <span className="ml-2 rtl:ml-0 rtl:mr-2 font-mono" dir="ltr">+27817394084</span>
+                <span className="ml-2 rtl:ml-0 rtl:mr-2 font-mono" dir="ltr">+27749548756</span>
               </span>
             </a>
           </div>

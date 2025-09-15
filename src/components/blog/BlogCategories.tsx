@@ -16,7 +16,7 @@ const BlogCategories = () => {
     { id: 'all', name: t('categories.all'), count: 24 },
     { id: 'destinations', name: t('categories.destinations'), count: 8 },
     { id: 'photography', name: t('categories.photography'), count: 6 },
-    { id: 'wine', name: t('categories.wine'), count: 4 },
+    { id: 'Grape', name: t('categories.Grape'), count: 4 },
     { id: 'culture', name: t('categories.culture'), count: 3 },
     { id: 'adventure', name: t('categories.adventure'), count: 2 },
     { id: 'tips', name: t('categories.tips'), count: 1 }

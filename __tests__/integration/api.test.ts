@@ -21,7 +21,7 @@ describe('API Integration Tests', () => {
         name: 'John Doe',
         email: 'john@example.com',
         message: 'I would like to book a tour',
-        phone: '+27817394084'
+        phone: '+27749548756'
       }
 
       const result = await mockContactSubmission(formData)

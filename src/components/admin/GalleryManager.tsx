@@ -47,8 +47,8 @@ const GalleryManager = () => {
       title: 'StrawberryEstate Vineyard',
       description: 'Scenic vineyard in Stellenbosch',
       url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-      category: 'wine-tours',
-      tags: ['Wine', 'Vineyard', 'Stellenbosch'],
+      category: 'Grape-tours',
+      tags: ['Grape', 'Vineyard', 'Stellenbosch'],
       uploadDate: '2024-01-12',
       status: 'published'
     },
@@ -83,8 +83,8 @@ const GalleryManager = () => {
       description: 'Behind the scenes at a Strawberry Tasting',
       thumbnail: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800',
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      category: 'wine-tours',
-      tags: ['Wine', 'Tasting', 'Experience'],
+      category: 'Grape-tours',
+      tags: ['Grape', 'Tasting', 'Experience'],
       uploadDate: '2024-01-11',
       duration: '5:20',
       status: 'published'
@@ -217,7 +217,7 @@ const GalleryManager = () => {
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 >
                   <option value="landscapes">Landscapes</option>
-                  <option value="wine-tours">Wine Tours</option>
+                  <option value="Grape-tours">Grape Tours</option>
                   <option value="safari">Safari</option>
                   <option value="city-tours">City Tours</option>
                   <option value="uploaded">Uploaded</option>
@@ -303,7 +303,7 @@ const GalleryManager = () => {
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 >
                   <option value="city-tours">City Tours</option>
-                  <option value="wine-tours">Wine Tours</option>
+                  <option value="Grape-tours">Grape Tours</option>
                   <option value="safari">Safari</option>
                   <option value="landscapes">Landscapes</option>
                 </select>

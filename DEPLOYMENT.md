@@ -73,7 +73,7 @@ Create these environment variables in your deployment platform:
 
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_actual_api_key
-NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
+NEXT_PUBLIC_WHATSAPP_NUMBER=+27749548756
 NEXT_PUBLIC_SITE_URL=https://darcape.com
 NEXT_PUBLIC_CONTACT_EMAIL=info@darcape.com
 ```
@@ -105,7 +105,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=info@darcape.com
    - Verify your business number
 
 2. **Update Components**
-   - Replace `+27817394084` in `src/components/ui/WhatsAppButton.tsx`
+   - Replace `+27749548756` in `src/components/ui/WhatsAppButton.tsx`
    - Update contact information in footer and contact page
 
 ## 🔍 SEO Configuration
@@ -210,7 +210,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=info@darcape.com
 
 - **Technical Issues**: developer@darcape.com
 - **Content Updates**: content@darcape.com
-- **Emergency Support**: +27817394084
+- **Emergency Support**: +27749548756
 
 ---
 

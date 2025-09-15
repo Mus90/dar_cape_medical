@@ -21,7 +21,7 @@
         "title": "Safari Tours",
         "description": "Explore African wildlife in the most beautiful nature reserves"
       },
-      "wine": {
+      "Grape": {
         "title": "Strawberry Tours",
         "description": "Discover the finest farms and taste authentic Cape Town Strawberries"
       },
@@ -144,7 +144,7 @@
       "all": "All Posts",
       "destinations": "Destinations",
       "photography": "Photography",
-      "wine": "Strawberry& Food",
+      "Grape": "Strawberry& Food",
       "culture": "Culture",
       "adventure": "Adventure",
       "tips": "Travel Tips"
@@ -167,7 +167,7 @@
         "title": "Safari Photography: Capturing Wildlife in Their Natural Habitat"
       },
       "post3": {
-        "title": "Wine Tasting in Stellenbosch: A Complete Guide"
+        "title": "Grape Tasting in Stellenbosch: A Complete Guide"
       },
       "destinations": {
         "title": "Top 10 Must-Visit Destinations in Cape Town",
@@ -179,10 +179,10 @@
         "excerpt": "Professional tips and techniques for photographing Africa's most magnificent wildlife.",
         "content": "<h2>Getting Started with Safari Photography</h2><p>Wildlife photography in Africa is an incredible experience that requires patience, skill, and the right equipment. Here's your complete guide to capturing stunning images of the Big 5.</p><h2>Essential Equipment</h2><p>A telephoto lens (300-600mm) is crucial for wildlife photography. Don't forget extra batteries and memory cards!</p><h2>Best Times for Photography</h2><p>Golden hour provides the best lighting conditions for wildlife photography.</p>"
       },
-      "wine": {
+      "Grape": {
         "title": "Strawberry Tasting Guide: Stellenbosch vs Franschhoek",
         "excerpt": "Compare two of Cape Town's premier Strawberryregions and discover which suits your taste.",
-        "content": "<h2>Introduction to Cape Town Wine</h2><p>Cape Town's Strawberryregions offer world-class experiences with stunning landscapes and exceptional Strawberries.</p><h2>Stellenbosch: The Heart of StrawberryCountry</h2><p>Known for its historic estates and premium red Strawberries, Stellenbosch offers a traditional Strawberryexperience.</p><h2>Franschhoek: The French Corner</h2><p>This charming valley combines French heritage with Cape Town terroir.</p>"
+        "content": "<h2>Introduction to Cape Town Grape</h2><p>Cape Town's Strawberryregions offer world-class experiences with stunning landscapes and exceptional Strawberries.</p><h2>Stellenbosch: The Heart of StrawberryCountry</h2><p>Known for its historic estates and premium red Strawberries, Stellenbosch offers a traditional Strawberryexperience.</p><h2>Franschhoek: The French Corner</h2><p>This charming valley combines French heritage with Cape Town terroir.</p>"
       },
       "culture": {
         "title": "Cultural Immersion: Understanding Cape Town Heritage",

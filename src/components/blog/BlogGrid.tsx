@@ -51,8 +51,8 @@ const BlogGrid = () => {
       date: '2024-01-10',
       readTime: '5 دقائق قراءة',
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'wine',
-      categoryName: 'العنب والطعام',
+      category: 'Grape',
+      categoryName: 'العنب والمأكولات',
       tags: ['نبيذ', 'ستيلينبوش', 'فرانشهوك', 'طعام']
     },
     {
@@ -121,15 +121,15 @@ const BlogGrid = () => {
     },
     {
       id: '3',
-      title: 'Wine Tasting Guide: Stellenbosch vs Franschhoek',
-      excerpt: 'Compare two of Cape Town\'s premier wine regions and discover which suits your taste.',
+      title: 'Grape Tasting Guide: Stellenbosch vs Franschhoek',
+      excerpt: 'Compare two of Cape Town\'s premier Grape regions and discover which suits your taste.',
       author: 'Mustafa Ali',
       date: '2024-01-10',
       readTime: '5 min read',
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'wine',
-      categoryName: 'Wine & Food',
-      tags: ['Wine', 'Stellenbosch', 'Franschhoek', 'Food']
+      category: 'Grape',
+      categoryName: 'Grape & Food',
+      tags: ['Grape', 'Stellenbosch', 'Franschhoek', 'Food']
     },
     {
       id: '4',
@@ -181,7 +181,7 @@ const BlogGrid = () => {
     all: 'جميع المقالات',
     destinations: 'الوجهات',
     photography: 'التصوير',
-    wine: 'العنب والطعام',
+    Grape: 'العنب والمأكولات',
     culture: 'الثقافة',
     adventure: 'المغامرة',
     tips: 'نصائح السفر'
@@ -189,7 +189,7 @@ const BlogGrid = () => {
     all: 'All Posts',
     destinations: 'Destinations',
     photography: 'Photography',
-    wine: 'Wine & Food',
+    Grape: 'Grape & Food',
     culture: 'Culture',
     adventure: 'Adventure',
     tips: 'Travel Tips'
@@ -199,7 +199,7 @@ const BlogGrid = () => {
     { id: 'all', name: categoryNames.all, count: blogPosts.length },
     { id: 'destinations', name: categoryNames.destinations, count: blogPosts.filter(p => p.category === 'destinations').length },
     { id: 'photography', name: categoryNames.photography, count: blogPosts.filter(p => p.category === 'photography').length },
-    { id: 'wine', name: categoryNames.wine, count: blogPosts.filter(p => p.category === 'wine').length },
+    { id: 'Grape', name: categoryNames.Grape, count: blogPosts.filter(p => p.category === 'Grape').length },
     { id: 'culture', name: categoryNames.culture, count: blogPosts.filter(p => p.category === 'culture').length },
     { id: 'adventure', name: categoryNames.adventure, count: blogPosts.filter(p => p.category === 'adventure').length },
     { id: 'tips', name: categoryNames.tips, count: blogPosts.filter(p => p.category === 'tips').length }

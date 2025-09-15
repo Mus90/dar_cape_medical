@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LanguageToggle from '@/components/ui/LanguageToggle';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,10 +36,14 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-2 rtl:space-x-reverse">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">DC</span>
-            </div>
-            <span className="text-2xl font-bold text-gray-900">Dar Cape</span>
+            <Image
+              src="/images/DarCapeLogo.png" // make sure logo.png is inside the public/ folder
+              alt="Dar Cape Logo"
+              width={120} // adjust size as needed
+              height={120}
+              className="rounded-lg"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

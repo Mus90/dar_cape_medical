@@ -52,7 +52,7 @@ Create a `.env.local` file in the root directory:
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 
 # WhatsApp Business Number (update in WhatsAppButton component)
-NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
+NEXT_PUBLIC_WHATSAPP_NUMBER=+27749548756
 
 # Site URL for SEO
 NEXT_PUBLIC_SITE_URL=https://www.darcape.com
@@ -111,7 +111,7 @@ dar_cape_website/
 
 ### WhatsApp Business Setup
 1. Update the phone number in `src/components/ui/WhatsAppButton.tsx`
-2. Replace `+27817394084` with your actual WhatsApp Business number
+2. Replace `+27749548756` with your actual WhatsApp Business number
 
 ### Google Maps Setup
 1. Get a Google Maps API key from [Google Cloud Console](https://console.cloud.google.com/)
@@ -211,7 +211,7 @@ Required environment variables:
 
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key
-NEXT_PUBLIC_WHATSAPP_NUMBER=+27817394084
+NEXT_PUBLIC_WHATSAPP_NUMBER=+27749548756
 NEXT_PUBLIC_SITE_URL=https://www.darcape.com
 ```
 
@@ -240,7 +240,7 @@ The website is optimized for:
 
 For technical support or customization requests, contact:
 - **Email**: developer@darcape.com
-- **Phone**: +27817394084
+- **Phone**: +27749548756
 
 ## 📄 License
 

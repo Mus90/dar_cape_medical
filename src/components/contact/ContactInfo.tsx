@@ -37,11 +37,11 @@ const ContactInfo = () => {
       icon: PhoneIcon,
       title: t('info.phone'),
       content: [
-        '+27817394084'
+        '+27749548756'
       ],
       color: 'from-green-500 to-emerald-500',
       links: [
-        'tel:+27817394084'
+        'tel:+27749548756'
       ]
     },
     {
@@ -186,11 +186,11 @@ const ContactInfo = () => {
           {t('emergency.description')}
         </p>
         <a
-          href="tel:+27817394084"
+          href="tel:+27749548756"
           className="inline-flex items-center text-accent-800 font-medium hover:text-accent-900"
         >
           <PhoneIcon className="h-4 w-4 mr-2 rtl:mr-0 rtl:ml-2" />
-          <span dir="ltr" className="font-mono">+27817394084</span>
+          <span dir="ltr" className="font-mono">+27749548756</span>
         </a>
       </motion.div>
     </motion.div>

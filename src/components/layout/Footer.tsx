@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   MapPinIcon,
   PhoneIcon,
@@ -25,7 +26,6 @@ const Footer = () => {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: '📘' },
     { name: 'Instagram', href: '#', icon: '📷' },
-    { name: 'Twitter', href: '#', icon: '🐦' },
     { name: 'YouTube', href: '#', icon: '📺' },
   ];
 
@@ -35,12 +35,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2 rtl:space-x-reverse">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">CH</span>
-              </div>
-              <span className="text-2xl font-bold">Dar Cape</span>
-            </div>
+            <Link href={`/${locale}`} className="flex items-center space-x-2 rtl:space-x-reverse">
+              <Image
+                src="/images/DarCapeLogo.png" // make sure logo.png is inside the public/ folder
+                alt="Dar Cape Logo"
+                width={60} // adjust size as needed
+                height={60}
+                className="rounded-lg"
+                priority
+              />
+            </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               {t('footer.description')}
             </p>
@@ -82,14 +86,13 @@ const Footer = () => {
               <div className="flex items-start space-x-3 rtl:space-x-reverse">
                 <MapPinIcon className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  Cape Town, South Africa <br />
-                  CBD
+                  CBD, Cape Town, South Africa <br />
                 </p>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <PhoneIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  <span dir="ltr" className="font-mono">+27817394084</span>
+                  <span dir="ltr" className="font-mono">+27749548756</span>
                 </p>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
