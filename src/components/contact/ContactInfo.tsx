@@ -48,13 +48,11 @@ const ContactInfo = () => {
       icon: EnvelopeIcon,
       title: t('info.email'),
       content: [
-        'info@darcape.com',
-        'bookings@darcape.com'
+        'admin@darcape.com.com',
       ],
       color: 'from-purple-500 to-indigo-500',
       links: [
-        'mailto:info@darcape.com',
-        'mailto:bookings@darcape.com'
+        'mailto:admin@darcape.com.com',
       ]
     },
     {

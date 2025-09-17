@@ -469,7 +469,7 @@ const OverviewTab = ({ t }: { t: any }) => {
 const SettingsTab = ({ t }: { t: any }) => {
   const [settings, setSettings] = React.useState({
     siteTitle: 'Dar Cape Tourism',
-    contactEmail: 'info@darcape.com',
+    contactEmail: 'admin@darcape.com.com',
     whatsappNumber: '+27749548756',
     googleMapsApiKey: '',
     adminPassword: '••••••••••••', // Hidden for security
@@ -637,7 +637,7 @@ const SettingsTab = ({ t }: { t: any }) => {
                   localStorage.removeItem('dar_cape_settings');
                   setSettings({
                     siteTitle: 'Dar Cape Tourism',
-                    contactEmail: 'info@darcape.com',
+                    contactEmail: 'admin@darcape.com.com',
                     whatsappNumber: '+27749548756',
                     googleMapsApiKey: '',
                     adminPassword: 'darcape2024',
