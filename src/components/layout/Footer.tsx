@@ -12,14 +12,13 @@ import {
 
 const Footer = () => {
   const t = useTranslations();
+  const tCommon = useTranslations('common');
   const locale = useLocale();
 
   const quickLinks = [
     { name: t('navigation.home'), href: `/${locale}` },
     { name: t('navigation.about'), href: `/${locale}/about` },
     { name: t('navigation.services'), href: `/${locale}/services` },
-    { name: t('navigation.gallery'), href: `/${locale}/gallery` },
-    { name: t('navigation.blog'), href: `/${locale}/blog` },
     { name: t('navigation.contact'), href: `/${locale}/contact` },
   ];
 
@@ -35,15 +34,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href={`/${locale}`} className="flex items-center space-x-2 rtl:space-x-reverse">
-              <Image
-                src="/images/DarCapeLogo.png" // make sure logo.png is inside the public/ folder
-                alt="Dar Cape Logo"
-                width={60} // adjust size as needed
-                height={60}
-                className="rounded-lg"
-                priority
-              />
+            <Link href={`/${locale}`} className="flex items-center">
+              <span className="text-xl font-extrabold tracking-tight text-white">{tCommon('brandName')}</span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               {t('footer.description')}
@@ -92,16 +84,16 @@ const Footer = () => {
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <PhoneIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  <span dir="ltr" className="font-mono">+27749548756</span>
+                  <span dir="ltr" className="font-mono">+27817394084</span>
                 </p>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <EnvelopeIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">admin@darcape.com.com</p>
+                <p className="text-gray-300 text-sm">admin@darcape.com</p>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <GlobeAltIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">www.darcape.com</p>
+                <p className="text-gray-300 text-sm">www.darcapemedical.com</p>
               </div>
             </div>
           </div>
@@ -112,7 +104,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Dar Cape Tourism. {t('footer.rights')}.
+              © {new Date().getFullYear()} {tCommon('brandName')}. {t('footer.rights')}.
             </p>
             <div className="flex space-x-6 rtl:space-x-reverse">
               <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">

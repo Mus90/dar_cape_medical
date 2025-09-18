@@ -14,6 +14,8 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
+  country?: string;
+  specialty?: string;
   message: string;
 }
 
@@ -118,6 +120,35 @@ const ContactForm = () => {
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
             placeholder={t('phonePlaceholder')}
           />
+        </div>
+
+        {/* Country and Specialty - Two Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-2">
+              {t('country')}
+            </label>
+            <input
+              type="text"
+              id="country"
+              {...register('country')}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+              placeholder={t('countryPlaceholder')}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="specialty" className="block text-sm font-medium text-gray-700 mb-2">
+              {t('specialty')}
+            </label>
+            <input
+              type="text"
+              id="specialty"
+              {...register('specialty')}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+              placeholder={t('specialtyPlaceholder')}
+            />
+          </div>
         </div>
 
         {/* Message Field */}

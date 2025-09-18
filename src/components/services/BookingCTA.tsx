@@ -64,7 +64,7 @@ const BookingCTA = () => {
                 href="mailto:admin@darcape.com.com"
                 className="text-white font-medium hover:underline"
               >
-                admin@darcape.com.com
+                admin@darcape.com
               </a>
             </motion.div>
 

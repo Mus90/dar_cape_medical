@@ -6,11 +6,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LanguageToggle from '@/components/ui/LanguageToggle';
-import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations('navigation');
+  const tCommon = useTranslations('common');
   const locale = useLocale();
   const pathname = usePathname();
 
@@ -18,8 +18,6 @@ const Header = () => {
     { name: t('home'), href: `/${locale}` },
     { name: t('about'), href: `/${locale}/about` },
     { name: t('services'), href: `/${locale}/services` },
-    { name: t('gallery'), href: `/${locale}/gallery` },
-    { name: t('blog'), href: `/${locale}/blog` },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
@@ -34,16 +32,9 @@ const Header = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <nav className="container-max section-padding py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-2 rtl:space-x-reverse">
-            <Image
-              src="/images/DarCapeLogo.png" // make sure logo.png is inside the public/ folder
-              alt="Dar Cape Logo"
-              width={120} // adjust size as needed
-              height={120}
-              className="rounded-lg"
-              priority
-            />
+          {/* Logo Placeholder */}
+          <Link href={`/${locale}`} className="flex items-center">
+            <span className="text-xl md:text-2xl font-extrabold tracking-tight text-primary-600">{tCommon('brandName')}</span>
           </Link>
 
           {/* Desktop Navigation */}

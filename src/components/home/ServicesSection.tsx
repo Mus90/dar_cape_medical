@@ -4,38 +4,35 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  CameraIcon,
-  GlobeAltIcon,
-  HeartIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  ClipboardDocumentListIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
 const ServicesSection = () => {
-  const t = useTranslations('home.services');
+  const t = useTranslations('servicesSimple');
   const tCommon = useTranslations('common');
   const locale = useLocale();
 
   const services = [
     {
-      icon: CameraIcon,
-      title: t('safari.title'),
-      description: t('safari.description'),
-      image: 'https://images.unsplash.com/photo-1730397454774-87a43568e255?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      color: 'from-green-500 to-green-600'
+      icon: DocumentTextIcon,
+      title: t('items.info.title'),
+      description: t('items.info.description'),
+      color: 'from-sky-500 to-sky-600'
     },
     {
-      icon: GlobeAltIcon,
-      title: t('Grape.title'),
-      description: t('Grape.description'),
-      image: 'https://images.unsplash.com/photo-1585254589738-aff16702b974?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      color: 'from-purple-500 to-purple-600'
+      icon: AcademicCapIcon,
+      title: t('items.consultation.title'),
+      description: t('items.consultation.description'),
+      color: 'from-emerald-500 to-emerald-600'
     },
     {
-      icon: HeartIcon,
-      title: t('culture.title'),
-      description: t('culture.description'),
-      image: 'https://images.unsplash.com/photo-1570527141186-e391a3914c42?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      color: 'from-orange-500 to-orange-600'
+      icon: ClipboardDocumentListIcon,
+      title: t('items.review.title'),
+      description: t('items.review.description'),
+      color: 'from-indigo-500 to-indigo-600'
     }
   ];
 
@@ -67,18 +64,11 @@ const ServicesSection = () => {
               viewport={{ once: true }}
               className="group card overflow-hidden hover:scale-105 transition-transform duration-300"
             >
-              <div className="relative h-64 overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url('${service.image}')` }}
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300" />
-                <div className={`absolute top-4 left-4 w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center`}>
+              <div className="p-6">
+                <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>
                   <service.icon className="h-6 w-6 text-white" />
                 </div>
-              </div>
 
-              <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   {service.title}
                 </h3>
@@ -86,10 +76,10 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
                 <Link
-                  href={`/${locale}/services`}
+                  href={`/${locale}/contact`}
                   className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group"
                 >
-                  {tCommon('learnMore')}
+                  {t('cta')}
                   <ArrowRightIcon className="h-4 w-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform duration-200" />
                 </Link>
               </div>
@@ -105,10 +95,10 @@ const ServicesSection = () => {
           className="text-center mt-12"
         >
           <Link
-            href={`/${locale}/services`}
+            href={`/${locale}/contact`}
             className="btn-primary text-lg px-8 py-4"
           >
-            {tCommon('viewAllServices')}
+            {t('cta')}
             <ArrowRightIcon className="h-5 w-5 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180" />
           </Link>
         </motion.div>

@@ -7,20 +7,13 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   const t = useTranslations('home.hero');
+  const navT = useTranslations('navigation');
   const locale = useLocale();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1579872940640-ff920dd71c7d?q=80&w=1117&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
-          }}
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
-      </div>
+      {/* Background Gradient Placeholder (no images) */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary-900 via-primary-700 to-primary-500" />
 
       {/* Content */}
       <div className="relative z-10 container-max section-padding text-center text-white">
@@ -54,20 +47,14 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Link
-              href={`/${locale}/contact`}
-              className="btn-primary text-lg px-8 py-4 group"
-            >
-              {t('cta')}
-              <ArrowRightIcon className="h-5 w-5 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform duration-200" />
-            </Link>
-
-            <Link
-              href={`/${locale}/services`}
-              className="btn-secondary text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20"
-            >
-              {t('explore')}
-            </Link>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href={`/${locale}/services`} className="btn-primary px-8 py-4 text-lg">
+                {t('explore')}
+              </Link>
+              <Link href={`/${locale}/about`} className="btn-secondary px-8 py-4 text-lg">
+                {navT('about')}
+              </Link>
+            </div>
           </motion.div>
         </motion.div>
 
