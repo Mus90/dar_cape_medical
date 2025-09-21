@@ -91,7 +91,7 @@
     "subtitle": "Dar Cape Tourism Company",
     "mission": {
       "title": "Our Mission",
-      "description": "At Medical Training South Africa, we understand that pursuing specialist medical training abroad is a significant decision. We are here to be your bridge to South Africa, offering invaluable guidance to Arab medical professionals. Our mission is to simplify complex processes, from understanding HPCSA requirements to securing your place in a prestigious training program. We pride ourselves on providing culturally sensitive support, with a deep understanding of the unique challenges and opportunities you face. Trust us to make your ambitions a reality."
+      "description": "At Dar Cape Medica, we understand that pursuing specialist medical training abroad is a significant decision. We are here to be your bridge to South Africa, offering invaluable guidance to Arab medical professionals. Our mission is to simplify complex processes, from understanding HPCSA requirements to securing your place in a prestigious training program. We pride ourselves on providing culturally sensitive support, with a deep understanding of the unique challenges and opportunities you face. Trust us to make your ambitions a reality."
     },
     "vision": {
       "title": "Our Vision",
@@ -294,7 +294,7 @@
     "tooltip": "Contact us via WhatsApp"
   },
   "footer": {
-    "description": "Medical Training South Africa provides expert guidance and comprehensive support for Arab medical professionals pursuing postgraduate and specialist training in South Africa.",
+    "description": "Dar Cape Medica provides expert guidance and comprehensive support for Arab medical professionals pursuing postgraduate and specialist training in South Africa.",
     "quickLinks": "Quick Links",
     "contact": "Contact Info",
     "followUs": "Follow Us",
@@ -366,7 +366,7 @@
     }
   },
   "common": {
-    "brandName": "Medical Training South Africa",
+    "brandName": "Dar Cape Medica",
     "loading": "Loading...",
     "error": "An error occurred",
     "tryAgain": "Try Again",
@@ -405,15 +405,14 @@
     }
   },
   "whyChooseUs": {
-    "title": "Why Medical Training South Africa?",
+    "title": "Why Dar Cape Medica?",
     "content": "Choosing the right partner for your journey is crucial. We offer more than just services; we provide a deep understanding of cultural nuances, personalized support, and a proven track record of success. With a team that understands the needs of Arab professionals, we ensure you receive not only expert guidance but also culturally sensitive support every step of the way. Our success stories speak for themselves, having helped countless doctors achieve their dreams in South Africa."
   },
   "successStories": {
     "title": "Success Stories from Our Arab Medical Community",
     "content": "Hear from Arab doctors who have achieved their dreams of medical training in South Africa with our assistance. Their stories inspire and illustrate how our dedicated support can make a difference.",
     "empty": "Success stories coming soon."
-  }
-  ,
+  },
   "insightPages": {
     "hpcsa": {
       "title": "HPCSA Registration Guide for Foreign Doctors",
@@ -449,8 +448,13 @@
         "secondary": "Request Full Checklist"
       },
       "sidebar": {
-        "resources": { "title": "Resources" },
-        "help": { "title": "Need Help?", "desc": "Speak with an advisor about eligibility, EPIC and training routes." }
+        "resources": {
+          "title": "Resources"
+        },
+        "help": {
+          "title": "Need Help?",
+          "desc": "Speak with an advisor about eligibility, EPIC and training routes."
+        }
       }
     },
     "training": {
@@ -479,8 +483,13 @@
         "secondary": "Get Readiness Checklist"
       },
       "sidebar": {
-        "resources": { "title": "Resources" },
-        "help": { "title": "Need Help?", "desc": "We’ll help shortlist programs and clarify requirements." }
+        "resources": {
+          "title": "Resources"
+        },
+        "help": {
+          "title": "Need Help?",
+          "desc": "We’ll help shortlist programs and clarify requirements."
+        }
       }
     }
   }
