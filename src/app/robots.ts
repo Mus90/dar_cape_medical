@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://darcape.com/sitemap.xml',
+    sitemap: 'https://edu.darcape.com/sitemap.xml',
   }
 }

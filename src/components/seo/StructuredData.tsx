@@ -11,7 +11,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
   const locale = useLocale();
 
   const getStructuredData = () => {
-    const baseUrl = 'https://www.darcape.com';
+    const baseUrl = 'https://edu.darcape.com';
 
     switch (type) {
       case 'organization':

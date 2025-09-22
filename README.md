@@ -55,7 +55,7 @@ NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 NEXT_PUBLIC_WHATSAPP_NUMBER=+27749548756
 
 # Site URL for SEO
-NEXT_PUBLIC_SITE_URL=https://www.darcape.com
+NEXT_PUBLIC_SITE_URL=https://edu.darcape.com
 ```
 
 4. **Run the development server**
@@ -212,7 +212,7 @@ Required environment variables:
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key
 NEXT_PUBLIC_WHATSAPP_NUMBER=+27749548756
-NEXT_PUBLIC_SITE_URL=https://www.darcape.com
+NEXT_PUBLIC_SITE_URL=https://edu.darcape.com
 ```
 
 ## 📊 Performance

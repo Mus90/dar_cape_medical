@@ -23,7 +23,7 @@ export async function generateMetadata({
       default: 'Dar Cape Tourism - Discover Cape Town',
     },
     description: 'Experience the beauty of Cape Town with Dar Cape Tourism. Professional tour services, safari adventures, Strawberry tours, and cultural experiences.',
-    keywords: 'Cape Town tourism, Cape Town tours, safari, Strawberry tours, travel agency, www.darcape.com',
+    keywords: 'Cape Town tourism, Cape Town tours, safari, Strawberry tours, travel agency, edu.darcape.com',
     authors: [{ name: 'Dar Cape Tourism' }],
     creator: 'Dar Cape Tourism',
     publisher: 'Dar Cape Tourism',
@@ -31,7 +31,7 @@ export async function generateMetadata({
     openGraph: {
       type: 'website',
       locale: locale === 'ar' ? 'ar_SA' : 'en_US',
-      url: 'https://www.darcape.com',
+      url: 'https://edu.darcape.com',
       siteName: 'Dar Cape Tourism',
       title: 'Dar Cape Tourism - Discover Cape Town',
       description: 'Experience the beauty of Cape Town with Dar Cape Tourism.',
@@ -51,10 +51,10 @@ export async function generateMetadata({
       images: ['/images/og-image.jpg'],
     },
     alternates: {
-      canonical: 'https://www.darcape.com',
+      canonical: 'https://edu.darcape.com',
       languages: {
-        'ar': 'https://www.darcape.com/ar',
-        'en': 'https://www.darcape.com/en',
+        'ar': 'https://edu.darcape.com/ar',
+        'en': 'https://edu.darcape.com/en',
       },
     },
   };
