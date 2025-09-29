@@ -5,14 +5,14 @@ describe('TeamSection Data', () => {
       {
         name: 'Mustafa',
         position: 'CEO & Founder',
-        image: '/images/team/mustafa.png',
+        image: '',
         email: 'mustafa@darcape.com',
         phone: '+27749548756'
       },
       {
         name: 'Mujahid',
         position: 'CTO',
-        image: '/images/team/mujahid.jpg',
+        image: '',
         email: 'mujahid@darcape.com',
         phone: '+27 123 456 790'
       }
@@ -20,9 +20,9 @@ describe('TeamSection Data', () => {
 
     expect(teamData).toHaveLength(2)
     expect(teamData[0].name).toBe('Mustafa')
-    expect(teamData[0].image).toBe('/images/team/mustafa.png')
+    expect(teamData[0].image).toBe('')
     expect(teamData[1].name).toBe('Mujahid')
-    expect(teamData[1].image).toBe('/images/team/mujahid.jpg')
+    expect(teamData[1].image).toBe('')
   })
 
   it('validates email formats', () => {

@@ -88,7 +88,7 @@
   },
   "about": {
     "title": "About Us: Your Trusted Partner in Medical Journey",
-    "subtitle": "Dar Cape Tourism Company",
+    "subtitle": "Dar Cape Medica",
     "mission": {
       "title": "Our Mission",
       "description": "At Dar Cape Medica, we understand that pursuing specialist medical training abroad is a significant decision. We are here to be your bridge to South Africa, offering invaluable guidance to Arab medical professionals. Our mission is to simplify complex processes, from understanding HPCSA requirements to securing your place in a prestigious training program. We pride ourselves on providing culturally sensitive support, with a deep understanding of the unique challenges and opportunities you face. Trust us to make your ambitions a reality."
@@ -111,23 +111,23 @@
     },
     "team": {
       "title": "Meet Our Team",
-      "subtitle": "Our passionate team of tourism professionals is dedicated to creating unforgettable experiences for every guest.",
+      "subtitle": "Our experienced medical advisory team guides your journey from eligibility to successful placement.",
       "experience": "Experience",
       "members": {
         "Mustafa": {
           "name": "Mustafa Ali",
-          "position": "Founder & CEO",
-          "description": "With over 15 years in tourism, Mustafa leads Dar Cape with passion for showcasing Cape Town's beauty."
+          "position": "Founder & Lead Medical Advisor",
+          "description": "Supporting international doctors with HPCSA registration, pathway planning, and placement into South African training programs."
         },
         "mujahid": {
           "name": "Mujahid Mohamed",
-          "position": "Head of Operations",
-          "description": "Mohamed ensures every tour runs smoothly and exceeds our guests' expectations with his attention to detail."
+          "position": "Operations & Compliance Lead",
+          "description": "Oversees timelines, documentation, and regulatory requirements to keep applications accurate and on track."
         },
         "Ahmed": {
           "name": "Ahmed Ali",
-          "position": "Senior Tour Guide",
-          "description": "A wildlife expert and storyteller, Ahmed brings Cape Town culture and nature to life for our guests."
+          "position": "Admissions & Partnerships Coordinator",
+          "description": "Coordinates with universities and teaching hospitals, prepares candidate profiles, and manages communication until acceptance."
         }
       }
     }

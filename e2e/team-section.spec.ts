@@ -5,8 +5,7 @@ test.describe('Team Section', () => {
     await page.goto('/about');
 
     // Check if team section is visible
-    await expect(page.locator('text=Our Team')).toBeVisible();
-    await expect(page.locator('text=Meet our dedicated professionals')).toBeVisible();
+    await expect(page.locator('text=Meet Our Team')).toBeVisible();
   });
 
   test('should display all team members', async ({ page }) => {
@@ -22,24 +21,17 @@ test.describe('Team Section', () => {
     await page.goto('/about');
 
     // Check for positions
-    await expect(page.locator('text=CEO & Founder')).toBeVisible();
-    await expect(page.locator('text=CTO')).toBeVisible();
-    await expect(page.locator('text=Operations Manager')).toBeVisible();
+    await expect(page.locator('text=Founder & Lead Medical Advisor')).toBeVisible();
+    await expect(page.locator('text=Operations & Compliance Lead')).toBeVisible();
+    await expect(page.locator('text=Admissions & Partnerships Coordinator')).toBeVisible();
   });
 
-  test('should load team member images', async ({ page }) => {
+  test('should render avatar placeholders instead of photos', async ({ page }) => {
     await page.goto('/about');
 
-    // Check if images are loaded
-    const mustafaImage = page.locator('img[alt="Mustafa"]');
-    const mujahidImage = page.locator('img[alt="Mujahid"]');
-
-    await expect(mustafaImage).toBeVisible();
-    await expect(mujahidImage).toBeVisible();
-
-    // Check image sources
-    await expect(mustafaImage).toHaveAttribute('src', '/images/team/mustafa.png');
-    await expect(mujahidImage).toHaveAttribute('src', '/images/team/mujahid.jpg');
+    // Ensure no <img> elements are present within the team section (avatars are styled divs)
+    const teamSection = page.locator('section:has-text("Meet Our Team")');
+    await expect(teamSection.locator('img')).toHaveCount(0);
   });
 
   test('should show contact information on hover', async ({ page }) => {
