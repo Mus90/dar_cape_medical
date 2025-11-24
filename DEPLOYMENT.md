@@ -30,7 +30,7 @@ Vercel is the easiest deployment option for Next.js applications.
 
 3. **Custom Domain**
    - Go to Project Settings → Domains
-   - Add `edu.darcape.com`
+   - Add `darcape.com`
    - Configure DNS records as instructed
 
 ### Option 2: Netlify
@@ -51,7 +51,7 @@ Vercel is the easiest deployment option for Next.js applications.
 
 4. **Custom Domain**
    - Go to Domain Settings
-   - Add custom domain `edu.darcape.com`
+   - Add custom domain `darcape.com`
 
 ### Option 3: Traditional Hosting
 
@@ -74,7 +74,7 @@ Create these environment variables in your deployment platform:
 ```env
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_actual_api_key
 NEXT_PUBLIC_WHATSAPP_NUMBER=+27749548756
-NEXT_PUBLIC_SITE_URL=https://edu.darcape.com
+NEXT_PUBLIC_SITE_URL=https://darcape.com
 NEXT_PUBLIC_CONTACT_EMAIL=admin@darcape.com
 ```
 
@@ -90,7 +90,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=admin@darcape.com
 
 2. **Configure API Key**
    - Set HTTP referrers restriction
-   - Add your domain: `edu.darcape.com/*`
+   - Add your domain: `darcape.com/*`
    - Add localhost for development: `localhost:3000/*`
 
 3. **Update Map Location**
