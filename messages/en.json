@@ -44,7 +44,7 @@
   "home": {
     "hero": {
       "title": "Chart Your Path to Medical Excellence in South Africa",
-      "subtitle": "Expert guidance and comprehensive support for ambitious Arab medical professionals seeking postgraduate and specialist training. Let us unlock your future.",
+      "subtitle": "Expert guidance and comprehensive support for ambitious Medical professionals seeking postgraduate and specialist training. Let us unlock your future.",
       "cta": "Book Your Consultation Now",
       "explore": "Explore Our Services"
     },
@@ -91,7 +91,7 @@
     "subtitle": "Dar Cape Medica",
     "mission": {
       "title": "Our Mission",
-      "description": "At Dar Cape Medica, we understand that pursuing specialist medical training abroad is a significant decision. We are here to be your bridge to South Africa, offering invaluable guidance to Arab medical professionals. Our mission is to simplify complex processes, from understanding HPCSA requirements to securing your place in a prestigious training program. We pride ourselves on providing culturally sensitive support, with a deep understanding of the unique challenges and opportunities you face. Trust us to make your ambitions a reality."
+      "description": "At Dar Cape Medica, we understand that pursuing specialist medical training abroad is a significant decision. We are here to be your bridge to South Africa, offering invaluable guidance to Medical professionals. Our mission is to simplify complex processes, from understanding HPCSA requirements to securing your place in a prestigious training program. We pride ourselves on providing culturally sensitive support, with a deep understanding of the unique challenges and opportunities you face. Trust us to make your ambitions a reality."
     },
     "vision": {
       "title": "Our Vision",
@@ -295,7 +295,7 @@
     "tooltip": "Contact us via WhatsApp"
   },
   "footer": {
-    "description": "Dar Cape Medica provides expert guidance and comprehensive support for Arab medical professionals pursuing postgraduate and specialist training in South Africa.",
+    "description": "Dar Cape Medica provides expert guidance and comprehensive support for Medical professionals pursuing postgraduate and specialist training in South Africa.",
     "quickLinks": "Quick Links",
     "contact": "Contact Info",
     "followUs": "Follow Us",
@@ -411,7 +411,7 @@
   },
   "keyEntities": "Key Entities",
   "successStories": {
-    "title": "Success Stories from Our Arab Medical Community",
+    "title": "Success Stories from Our Medical Community",
     "content": "Hear from Arab doctors who have achieved their dreams of medical training in South Africa with our assistance. Their stories inspire and illustrate how our dedicated support can make a difference.",
     "empty": "Success stories coming soon."
   },

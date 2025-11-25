@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const HeroSection = () => {
   const t = useTranslations('home.hero');
@@ -11,9 +12,19 @@ const HeroSection = () => {
   const locale = useLocale();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient Placeholder (no images) */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary-900 via-primary-700 to-primary-500" />
+    <section className="relative min-h-[65vh] md:min-h-[75vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=1920&auto=format&fit=crop"
+          alt={locale === 'ar' ? 'أطباء يتعاونون في تدريب سريري' : 'Doctors collaborating in clinical training'}
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover"
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-primary-900/60 to-primary-600/40" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 container-max section-padding text-center text-white">
@@ -71,7 +82,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary-500/20 rounded-full animate-float" />
       <div className="absolute bottom-20 right-10 w-16 h-16 bg-accent-500/20 rounded-full animate-float" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-20 w-12 h-12 bg-secondary-500/20 rounded-full animate-float" style={{ animationDelay: '2s' }} />

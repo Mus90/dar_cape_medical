@@ -6,12 +6,12 @@ export default function RootPage() {
     const router = useRouter();
 
     useEffect(() => {
-        router.replace('/ar');
+        router.replace('/en');
     }, [router]);
 
     return (
         <noscript>
-            <meta httpEquiv="refresh" content="0; url=/ar" />
+            <meta httpEquiv="refresh" content="0; url=/en" />
         </noscript>
     );
 }
