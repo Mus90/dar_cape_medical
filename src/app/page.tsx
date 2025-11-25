@@ -1,6 +1,17 @@
-import { redirect } from 'next/navigation';
+"use client";
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function RootPage() {
-    // Redirect to the default locale (Arabic)
-    redirect('/ar');
+    const router = useRouter();
+
+    useEffect(() => {
+        router.replace('/ar');
+    }, [router]);
+
+    return (
+        <noscript>
+            <meta httpEquiv="refresh" content="0; url=/ar" />
+        </noscript>
+    );
 }

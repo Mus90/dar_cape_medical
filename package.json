@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "next build && next export -o docs && node -e \"const fs=require('fs');fs.mkdirSync('docs',{recursive:true});const idx='docs/index.html';if(fs.existsSync(idx)){fs.copyFileSync(idx,'docs/404.html');}fs.writeFileSync('docs/.nojekyll','');fs.writeFileSync('docs/CNAME','darcape.com');\"",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",

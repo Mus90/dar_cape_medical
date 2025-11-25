@@ -1,6 +1,4 @@
-const withNextIntl = require('next-intl/plugin')(
-  './src/i18n.ts'
-);
+const withNextIntl = require('next-intl/plugin')("./src/i18n.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -14,8 +12,21 @@ const nextConfig = {
     // there are type errors.
     ignoreBuildErrors: true,
   },
+  // Static export for GitHub Pages
+  output: 'export',
   images: {
+    unoptimized: true,
     domains: ['images.unsplash.com', 'via.placeholder.com'],
+  },
+  trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/ar',
+        permanent: false,
+      },
+    ];
   },
 }
 
