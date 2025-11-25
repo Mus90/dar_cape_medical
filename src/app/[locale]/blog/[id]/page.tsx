@@ -1,13 +1,13 @@
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+
+// Ensure this route is statically rendered for export
+export const dynamic = 'force-static';
 import BlogPost from '@/components/blog/BlogPost';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 // This would typically come from a CMS or database
 const getBlogPost = async (id: string, locale: string) => {
-  const t = await getTranslations({ locale, namespace: 'blog' });
-
   const postMap: { [key: string]: string } = {
     '1': 'destinations',
     '2': 'photography',
@@ -190,14 +190,9 @@ const getBlogPost = async (id: string, locale: string) => {
 };
 
 export async function generateStaticParams() {
-  return [
-    { id: '1' },
-    { id: '2' },
-    { id: '3' },
-    { id: '4' },
-    { id: '5' },
-    { id: '6' }
-  ];
+  const locales = ['ar', 'en'];
+  const ids = ['1', '2', '3', '4', '5', '6'];
+  return locales.flatMap((locale) => ids.map((id) => ({ locale, id })));
 }
 
 export async function generateMetadata({

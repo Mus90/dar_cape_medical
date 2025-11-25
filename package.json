@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:pages": "next build && next export -o docs && node -e \"const fs=require('fs');fs.mkdirSync('docs',{recursive:true});const idx='docs/index.html';if(fs.existsSync(idx)){fs.copyFileSync(idx,'docs/404.html');}fs.writeFileSync('docs/.nojekyll','');fs.writeFileSync('docs/CNAME','darcape.com');\"",
+    "build:pages": "next build && node -e \"const fs=require('fs');const path=require('path');const out='out';const docs='docs';try{if(fs.existsSync(docs)){fs.rmSync(docs,{recursive:true,force:true});}if(!fs.existsSync(out)){console.error('Missing out/ directory. Ensure next.config.js has output:\\'export\\'.');process.exit(1);}fs.renameSync(out,docs);}catch(e){console.error('Move out->docs failed:',e);process.exit(1);}const idx=path.join(docs,'index.html');if(fs.existsSync(idx)){fs.copyFileSync(idx,path.join(docs,'404.html'));}fs.writeFileSync(path.join(docs,'.nojekyll'),'');fs.writeFileSync(path.join(docs,'CNAME'),'darcape.com');\"",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",

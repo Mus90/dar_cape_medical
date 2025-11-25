@@ -238,6 +238,7 @@
   "contact": {
     "title": "Ready to Begin Your Journey?",
     "subtitle": "Contact us today to book your Consultation. Let's discuss your goals and plan your future in South Africa.",
+    "hours": "Business Hours",
     "getInTouch": {
       "title": "Get in Touch",
       "description": "We're here to help you plan your perfect Cape Town adventure. Contact us through any of the methods below, and our friendly team will get back to you as soon as possible."
@@ -408,6 +409,7 @@
     "title": "Why Dar Cape Medica?",
     "content": "Choosing the right partner for your journey is crucial. We offer more than just services; we provide a deep understanding of cultural nuances, personalized support, and a proven track record of success. With a team that understands the needs of Arab professionals, we ensure you receive not only expert guidance but also culturally sensitive support every step of the way. Our success stories speak for themselves, having helped countless doctors achieve their dreams in South Africa."
   },
+  "keyEntities": "Key Entities",
   "successStories": {
     "title": "Success Stories from Our Arab Medical Community",
     "content": "Hear from Arab doctors who have achieved their dreams of medical training in South Africa with our assistance. Their stories inspire and illustrate how our dedicated support can make a difference.",

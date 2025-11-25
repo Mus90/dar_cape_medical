@@ -19,15 +19,6 @@ const nextConfig = {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
   },
   trailingSlash: true,
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/ar',
-        permanent: false,
-      },
-    ];
-  },
 }
 
 module.exports = withNextIntl(nextConfig);
