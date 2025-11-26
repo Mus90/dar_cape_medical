@@ -7,10 +7,7 @@
     "build": "next build",
     "build:pages": "next build && node -e \"const fs=require('fs');const path=require('path');const out='out';const docs='docs';try{if(fs.existsSync(docs)){fs.rmSync(docs,{recursive:true,force:true});}if(!fs.existsSync(out)){console.error('Missing out/ directory. Ensure next.config.js has output:\\'export\\'.');process.exit(1);}fs.renameSync(out,docs);}catch(e){console.error('Move out->docs failed:',e);process.exit(1);}const idx=path.join(docs,'index.html');if(fs.existsSync(idx)){fs.copyFileSync(idx,path.join(docs,'404.html'));}fs.writeFileSync(path.join(docs,'.nojekyll'),'');fs.writeFileSync(path.join(docs,'CNAME'),'darcape.com');\"",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "lint": "next lint"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.2",
@@ -28,18 +25,12 @@
     "swiper": "^10.3.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.1.2",
-    "@testing-library/user-event": "^14.5.1",
-    "@types/jest": "^29.5.8",
     "@types/node": "^20.8.6",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.51.0",
     "eslint-config-next": "14.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"

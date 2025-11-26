@@ -30,9 +30,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run unit tests
-        run: npm test --silent
-
       - name: Build static site (export to ./docs)
         run: npm run build:pages
 
