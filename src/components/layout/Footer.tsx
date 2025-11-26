@@ -89,7 +89,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <EnvelopeIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">admin@darcape.com</p>
+                <p className="text-gray-300 text-sm">support@darcape.com</p>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <GlobeAltIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />

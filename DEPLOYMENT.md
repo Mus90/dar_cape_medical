@@ -75,7 +75,7 @@ Create these environment variables in your deployment platform:
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_actual_api_key
 NEXT_PUBLIC_WHATSAPP_NUMBER=+27749548756
 NEXT_PUBLIC_SITE_URL=https://darcape.com
-NEXT_PUBLIC_CONTACT_EMAIL=admin@darcape.com
+NEXT_PUBLIC_CONTACT_EMAIL=support@darcape.com
 ```
 
 ## 🗺️ Google Maps API Setup
