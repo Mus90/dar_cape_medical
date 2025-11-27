@@ -114,11 +114,11 @@ const MapSection = () => {
         ]
       });
 
-      // Add marker for Dar Cape Tourism office
+      // Add marker for Dar Cape   office
       const marker = new (window as any).google.maps.Marker({
         position: capeTown,
         map: map,
-        title: 'Dar Cape Tourism',
+        title: 'Dar Cape  ',
         icon: {
           path: (window as any).google.maps.SymbolPath.CIRCLE,
           scale: 10,
@@ -133,7 +133,7 @@ const MapSection = () => {
       const infoWindow = new (window as any).google.maps.InfoWindow({
         content: `
           <div style="padding: 10px; font-family: Arial, sans-serif;">
-            <h3 style="margin: 0 0 8px 0; color: #0ea5e9;">Dar Cape Tourism</h3>
+            <h3 style="margin: 0 0 8px 0; color: #0ea5e9;">Dar Cape  </h3>
             <p style="margin: 0 0 4px 0; color: #666;">CBD</p>
             <p style="margin: 0 0 4px 0; color: #666;">Cape Town, 8001</p>
             <p style="margin: 0 0 8px 0; color: #666;">Cape Town</p>
@@ -199,7 +199,7 @@ const MapSection = () => {
                 <MapPinIcon className="h-5 w-5" />
                 {t('directions')}
               </button>
-              <h3 className="font-bold text-gray-900">Dar Cape Tourism</h3>
+              <h3 className="font-bold text-gray-900">Dar Cape  </h3>
             </div>
             <div className="space-y-1 text-sm text-gray-600">
               <p>CBD</p>
@@ -224,7 +224,7 @@ const MapSection = () => {
           className="mt-8 text-center"
         >
           <a
-            href="https://maps.google.com/?q=Cape+Town+Tourism+Office"
+            href="https://maps.google.com/?q=Cape+Town+ +Office"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center"

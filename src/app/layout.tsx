@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'Dar Cape Medical',
-    description: 'Medical Tourism in Cape Town',
+    description: 'Medical   in Cape Town',
 };
 
 export default function RootLayout({

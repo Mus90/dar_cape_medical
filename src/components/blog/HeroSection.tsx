@@ -8,7 +8,7 @@ export default function HeroSection() {
           Our Blog
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Insights, tips, and stories from Dar Cape Tourism.
+          Insights, tips, and stories from Dar Cape  .
         </p>
       </div>
     </section>

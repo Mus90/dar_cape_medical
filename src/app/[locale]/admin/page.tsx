@@ -4,7 +4,7 @@ import AdminDashboard from '@/components/admin/AdminDashboard';
 
 export const metadata: Metadata = {
   title: 'Admin Dashboard',
-  description: 'Content management system for Dar Cape Tourism website.',
+  description: 'Content management system for Dar Cape   website.',
   robots: 'noindex, nofollow', // Prevent search engine indexing
 };
 

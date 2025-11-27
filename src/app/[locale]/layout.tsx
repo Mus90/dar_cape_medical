@@ -18,35 +18,35 @@ export async function generateMetadata({
 }) {
   return {
     title: {
-      template: '%s | Dar Cape Tourism',
-      default: 'Dar Cape Tourism - Discover Cape Town',
+      template: '%s | Dar Cape  ',
+      default: 'Dar Cape   - Discover Cape Town',
     },
-    description: 'Experience the beauty of Cape Town with Dar Cape Tourism. Professional tour services, safari adventures, Strawberry tours, and cultural experiences.',
-    keywords: 'Cape Town tourism, Cape Town tours, safari, Strawberry tours, travel agency, darcape.com',
-    authors: [{ name: 'Dar Cape Tourism' }],
-    creator: 'Dar Cape Tourism',
-    publisher: 'Dar Cape Tourism',
+    description: 'Experience the beauty of Cape Town with Dar Cape  . Professional tour services, safari adventures, Strawberry tours, and cultural experiences.',
+    keywords: 'Cape Town  , Cape Town tours, safari, Strawberry tours, travel agency, darcape.com',
+    authors: [{ name: 'Dar Cape  ' }],
+    creator: 'Dar Cape  ',
+    publisher: 'Dar Cape  ',
     robots: 'index, follow',
     openGraph: {
       type: 'website',
       locale: locale === 'ar' ? 'ar_SA' : 'en_US',
       url: 'https://darcape.com',
-      siteName: 'Dar Cape Tourism',
-      title: 'Dar Cape Tourism - Discover Cape Town',
-      description: 'Experience the beauty of Cape Town with Dar Cape Tourism.',
+      siteName: 'Dar Cape  ',
+      title: 'Dar Cape   - Discover Cape Town',
+      description: 'Experience the beauty of Cape Town with Dar Cape  .',
       images: [
         {
           url: '/images/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: 'Dar Cape Tourism',
+          alt: 'Dar Cape  ',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Dar Cape Tourism - Discover Cape Town',
-      description: 'Experience the beauty of Cape Town with Dar Cape Tourism.',
+      title: 'Dar Cape   - Discover Cape Town',
+      description: 'Experience the beauty of Cape Town with Dar Cape  .',
       images: ['/images/og-image.jpg'],
     },
     alternates: {

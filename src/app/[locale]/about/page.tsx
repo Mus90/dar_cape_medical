@@ -8,7 +8,7 @@ import TeamSection from '@/components/about/TeamSection';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Dar Cape Tourism - our mission, vision, values, and the team that makes your Cape Town adventure unforgettable.',
+  description: 'Learn about Dar Cape   - our mission, vision, values, and the team that makes your Cape Town adventure unforgettable.',
 };
 
 type Props = {

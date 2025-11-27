@@ -468,7 +468,7 @@ const OverviewTab = ({ t }: { t: any }) => {
 
 const SettingsTab = ({ t }: { t: any }) => {
   const [settings, setSettings] = React.useState({
-    siteTitle: 'Dar Cape Tourism',
+    siteTitle: 'Dar Cape  ',
     contactEmail: 'support@darcape.com.com',
     whatsappNumber: '+27749548756',
     googleMapsApiKey: '',
@@ -636,7 +636,7 @@ const SettingsTab = ({ t }: { t: any }) => {
                 if (confirm('This will reset all settings to defaults. Are you sure?')) {
                   localStorage.removeItem('dar_cape_settings');
                   setSettings({
-                    siteTitle: 'Dar Cape Tourism',
+                    siteTitle: 'Dar Cape  ',
                     contactEmail: 'support@darcape.com.com',
                     whatsappNumber: '+27749548756',
                     googleMapsApiKey: '',

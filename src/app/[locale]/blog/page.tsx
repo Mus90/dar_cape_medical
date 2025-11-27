@@ -7,7 +7,7 @@ import BlogCategories from '@/components/blog/BlogCategories';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Read our latest travel tips, destination guides, and tourism insights for Cape Town. Stay updated with Dar Cape Tourism blog.',
+  description: 'Read our latest travel tips, destination guides, and   insights for Cape Town. Stay updated with Dar Cape   blog.',
 };
 
 type Props = {

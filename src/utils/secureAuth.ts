@@ -2,7 +2,7 @@
 
 export class SecureAuth {
   private static readonly SALT = 'darcape2024_SecureSalt_!@#$%';
-  private static readonly PEPPER = 'Tourism_Security_Pepper_&*()';
+  private static readonly PEPPER = ' _Security_Pepper_&*()';
 
   // Hash password with salt and pepper for maximum security
   static async hashPassword(password: string): Promise<string> {

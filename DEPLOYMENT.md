@@ -1,6 +1,6 @@
-# Deployment Guide - Dar Cape Tourism Website
+# Deployment Guide - Dar Cape   Website
 
-This guide covers deployment options for the Dar Cape Tourism website built with Next.js 14.
+This guide covers deployment options for the Dar Cape   website built with Next.js 14.
 
 ## 🚀 Quick Deployment Options
 
@@ -216,4 +216,4 @@ NEXT_PUBLIC_CONTACT_EMAIL=support@darcape.com
 
 **Deployment completed successfully! 🎉**
 
-Your Dar Cape Tourism website is now ready to welcome visitors from around the world.
+Your Dar Cape   website is now ready to welcome visitors from around the world.

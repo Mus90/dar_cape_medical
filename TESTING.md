@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the comprehensive testing framework for the Dar Cape Tourism website. The framework includes unit tests, integration tests, end-to-end tests, and performance monitoring.
+This document outlines the comprehensive testing framework for the Dar Cape   website. The framework includes unit tests, integration tests, end-to-end tests, and performance monitoring.
 
 ## Testing Stack
 

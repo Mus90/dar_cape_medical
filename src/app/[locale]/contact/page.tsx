@@ -6,7 +6,7 @@ import ContactInfo from '@/components/contact/ContactInfo';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Dar Cape Tourism. Contact us for bookings, inquiries, or to plan your perfect Cape Town adventure.',
+  description: 'Get in touch with Dar Cape  . Contact us for bookings, inquiries, or to plan your perfect Cape Town adventure.',
 };
 
 type Props = {

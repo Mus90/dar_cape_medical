@@ -24,19 +24,19 @@ const ContentManager = () => {
 
   const [homeContent, setHomeContent] = useState({
     heroTitle: 'Discover the Beauty of Cape Town with Dar Cape',
-    heroSubtitle: 'Exceptional tourism experiences and unforgettable adventures in Cape Town\'s most beautiful destinations',
+    heroSubtitle: 'Exceptional   experiences and unforgettable adventures in Cape Town\'s most beautiful destinations',
     heroButtonText: 'Book Your Trip Now',
-    servicesTitle: 'Our Tourism Services',
+    servicesTitle: 'Our   Services',
     servicesSubtitle: 'We offer a diverse range of tours and travel experiences'
   });
 
   const [aboutContent, setAboutContent] = useState({
-    title: 'About Dar Cape Tourism',
+    title: 'About Dar Cape  ',
     description: 'We are passionate about showcasing the beauty of Cape Town and South Africa.'
   });
 
   const [servicesContent, setServicesContent] = useState({
-    title: 'Our Tourism Services'
+    title: 'Our   Services'
   });
 
   const [contactContent, setContactContent] = useState({
@@ -45,7 +45,7 @@ const ContentManager = () => {
   });
 
   const [footerContent, setFooterContent] = useState({
-    copyright: '© 2024 Dar Cape Tourism. All rights reserved.'
+    copyright: '© 2024 Dar Cape  . All rights reserved.'
   });
 
   const handleSave = () => {

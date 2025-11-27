@@ -26,7 +26,7 @@ const ContactInfo = () => {
       icon: MapPinIcon,
       title: t('info.address'),
       content: [
-        'Dar Cape Tourism',
+        'Dar Cape  ',
         'CBD',
         'Cape Town, 8001',
         'Cape Town'
@@ -69,11 +69,11 @@ const ContactInfo = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', url: 'https://facebook.com/darcapetourism', icon: FaceBookIcon, color: 'text-blue-600 hover:text-blue-700' },
-    { name: 'Instagram', url: 'https://instagram.com/darcapetourism', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
-    { name: 'Twitter', url: 'https://twitter.com/darcapetourism', icon: TwitterIcon, color: 'text-gray-900 hover:text-gray-700' },
-    { name: 'YouTube', url: 'https://youtube.com/@darcapetourism', icon: YouTubeIcon, color: 'text-red-600 hover:text-red-700' },
-    { name: 'TikTok', url: 'https://tiktok.com/@darcapetourism', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
+    { name: 'Facebook', url: 'https://facebook.com/darcape ', icon: FaceBookIcon, color: 'text-blue-600 hover:text-blue-700' },
+    { name: 'Instagram', url: 'https://instagram.com/darcape ', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
+    { name: 'Twitter', url: 'https://twitter.com/darcape ', icon: TwitterIcon, color: 'text-gray-900 hover:text-gray-700' },
+    { name: 'YouTube', url: 'https://youtube.com/@darcape ', icon: YouTubeIcon, color: 'text-red-600 hover:text-red-700' },
+    { name: 'TikTok', url: 'https://tiktok.com/@darcape ', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
   ];
 
   return (

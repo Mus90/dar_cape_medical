@@ -1,7 +1,7 @@
-# Cape Home Tourism Website - Style Guide & Design System
+# Cape Home   Website - Style Guide & Design System
 
 ## Overview
-This style guide extracts the complete design system, layout patterns, and styling instructions from the Cape Home Tourism website. Use this as a reference to replicate the design aesthetic and user experience patterns in other projects.
+This style guide extracts the complete design system, layout patterns, and styling instructions from the Cape Home   website. Use this as a reference to replicate the design aesthetic and user experience patterns in other projects.
 
 ## 🎨 Design Framework
 
@@ -489,7 +489,7 @@ body {
 
 ## 📞 Usage Notes
 
-This style guide provides a complete foundation for replicating the Cape Home Tourism website's design system. The patterns are modular and can be adapted for different content types while maintaining visual consistency.
+This style guide provides a complete foundation for replicating the Cape Home   website's design system. The patterns are modular and can be adapted for different content types while maintaining visual consistency.
 
 Key implementation files to reference:
 - `tailwind.config.js` - Color system and custom utilities

@@ -18,12 +18,12 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
         return {
           "@context": "https://schema.org",
           "@type": "TravelAgency",
-          "name": "Dar Cape Tourism",
+          "name": "Dar Cape  ",
           "alternateName": "Dar Cape",
           "url": baseUrl,
           "logo": `${baseUrl}/images/logo.png`,
           "image": `${baseUrl}/images/og-image.jpg`,
-          "description": "Professional tourism services in Cape Town. Safari tours, Strawberry tours, cultural experiences, and adventure packages.",
+          "description": "Professional   services in Cape Town. Safari tours, Strawberry tours, cultural experiences, and adventure packages.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "CBD",
@@ -38,9 +38,9 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
             "availableLanguage": ["English", "Arabic"]
           },
           "sameAs": [
-            "https://facebook.com/darcapetourism",
-            "https://instagram.com/darcapetourism",
-            "https://twitter.com/darcapetourism"
+            "https://facebook.com/darcape ",
+            "https://instagram.com/darcape ",
+            "https://twitter.com/darcape "
           ],
           "priceRange": "$$",
           "servesCuisine": "Cape Town",
@@ -54,9 +54,9 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
         return {
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Dar Cape Tourism",
+          "name": "Dar Cape  ",
           "url": baseUrl,
-          "description": "Discover Cape Town with Dar Cape Tourism. Professional tour services, safari adventures, Strawberry tours, and cultural experiences.",
+          "description": "Discover Cape Town with Dar Cape  . Professional tour services, safari adventures, Strawberry tours, and cultural experiences.",
           "inLanguage": [locale === 'ar' ? 'ar' : 'en'],
           "potentialAction": {
             "@type": "SearchAction",
@@ -69,17 +69,17 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
         return {
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": data?.name || "Tourism Services",
-          "description": data?.description || "Professional tourism services in Cape Town",
+          "name": data?.name || "  Services",
+          "description": data?.description || "Professional   services in Cape Town",
           "provider": {
             "@type": "TravelAgency",
-            "name": "Dar Cape Tourism"
+            "name": "Dar Cape  "
           },
           "areaServed": {
             "@type": "Country",
             "name": "Cape Town"
           },
-          "serviceType": "Tourism",
+          "serviceType": " ",
           "offers": {
             "@type": "Offer",
             "availability": "https://schema.org/InStock",
@@ -100,7 +100,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Dar Cape Tourism",
+            "name": "Dar Cape  ",
             "logo": {
               "@type": "ImageObject",
               "url": `${baseUrl}/images/logo.png`

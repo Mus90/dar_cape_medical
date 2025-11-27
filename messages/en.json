@@ -49,7 +49,7 @@
       "explore": "Explore Our Services"
     },
     "services": {
-      "title": "Our Tourism Services",
+      "title": "Our   Services",
       "subtitle": "We offer a diverse range of tours and travel experiences",
       "safari": {
         "title": "Safari Tours",
@@ -95,7 +95,7 @@
     },
     "vision": {
       "title": "Our Vision",
-      "description": "To be the leading tourism company in Cape Town, known for our outstanding services and unique experiences."
+      "description": "To be the leading   company in Cape Town, known for our outstanding services and unique experiences."
     },
     "values": {
       "title": "Our Values",
@@ -105,7 +105,7 @@
       "authenticity": "Authenticity",
       "authenticityDesc": "We showcase the genuine culture and natural beauty of Cape Town with respect and integrity.",
       "sustainability": "Sustainability",
-      "sustainabilityDesc": "We are committed to responsible tourism that preserves our environment for future generations.",
+      "sustainabilityDesc": "We are committed to responsible   that preserves our environment for future generations.",
       "excellence": "Excellence",
       "excellenceDesc": "We strive for excellence in every aspect of our service, from planning to execution."
     },
@@ -153,7 +153,7 @@
     },
     "grid": {
       "title": "Our Complete Service Range",
-      "subtitle": "From wildlife safaris to cultural immersion, we offer comprehensive tourism experiences that showcase the best of Cape Town."
+      "subtitle": "From wildlife safaris to cultural immersion, we offer comprehensive   experiences that showcase the best of Cape Town."
     },
     "packages": {
       "title": "Featured Tour Packages",
@@ -164,12 +164,12 @@
   },
   "gallery": {
     "title": "Photo Gallery",
-    "subtitle": "See the most beautiful moments from our tourism trips",
+    "subtitle": "See the most beautiful moments from our   trips",
     "photos": "Photos"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Tourism tips and articles",
+    "subtitle": "  tips and articles",
     "readMore": "Read More",
     "latestPosts": "Latest Posts",
     "loadMore": "Load More Posts",
@@ -304,7 +304,7 @@
   "admin": {
     "login": {
       "title": "Admin Login",
-      "subtitle": "Dar Cape Tourism CMS",
+      "subtitle": "Dar Cape   CMS",
       "password": "Password",
       "placeholder": "Enter admin password",
       "loginButton": "Login",

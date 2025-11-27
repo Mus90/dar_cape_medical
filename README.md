@@ -1,6 +1,6 @@
-# Dar Cape Tourism Website
+# Dar Cape   Website
 
-A professional, modern, and fully responsive website for Dar Cape Tourism company built with Next.js 14, TypeScript, and Tailwind CSS.
+A professional, modern, and fully responsive website for Dar Cape   company built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## 🌟 Features
 
@@ -12,7 +12,7 @@ A professional, modern, and fully responsive website for Dar Cape Tourism compan
 ### Pages & Components
 - **Home Page**: Hero section, services overview, testimonials, and CTA
 - **About Us**: Company mission, vision, values, and team
-- **Services**: Tourism packages with detailed descriptions and pricing
+- **Services**:   packages with detailed descriptions and pricing
 - **Gallery**: Photo and video galleries with lightbox functionality
 - **Blog**: Dynamic blog system with categories and individual post pages
 - **Contact**: Contact form, business information, and Google Maps integration
@@ -244,8 +244,8 @@ For technical support or customization requests, contact:
 
 ## 📄 License
 
-This project is proprietary software developed for Dar Cape Tourism.
+This project is proprietary software developed for Dar Cape  .
 
 ---
 
-**Built with ❤️ for Dar Cape Tourism**
+**Built with ❤️ for Dar Cape  **
