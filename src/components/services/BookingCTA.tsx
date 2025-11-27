@@ -61,7 +61,7 @@ const BookingCTA = () => {
               <h3 className="text-xl font-semibold mb-2">{t('email.title')}</h3>
               <p className="text-white/80 mb-4">{t('email.description')}</p>
               <a
-                href="mailto:support@darcape.com.com"
+                href="mailto:support@darcape.com"
                 className="text-white font-medium hover:underline"
               >
                 support@darcape.com

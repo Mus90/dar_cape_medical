@@ -41,7 +41,7 @@ const ContentManager = () => {
 
   const [contactContent, setContactContent] = useState({
     title: 'Get in Touch',
-    email: 'support@darcape.com.com'
+    email: 'support@darcape.com'
   });
 
   const [footerContent, setFooterContent] = useState({
