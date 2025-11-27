@@ -84,7 +84,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <PhoneIcon className="h-5 w-5 text-primary-400 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  <span dir="ltr" className="font-mono">+27817394084</span>
+                  <span dir="ltr" className="font-mono">+2774954 8756</span>
                 </p>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
