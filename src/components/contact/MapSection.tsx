@@ -135,7 +135,7 @@ const MapSection = () => {
           <div style="padding: 10px; font-family: Arial, sans-serif;">
             <h3 style="margin: 0 0 8px 0; color: #0ea5e9;">Dar Cape  </h3>
             <p style="margin: 0 0 4px 0; color: #666;">CBD</p>
-            <p style="margin: 0 0 4px 0; color: #666;">Cape Town, 8001</p>
+            <p style="margin: 0 0 4px 0; color: #666;">Cape Town, 7925</p>
             <p style="margin: 0 0 8px 0; color: #666;">Cape Town</p>
             <p style="margin: 0; color: #0ea5e9; font-weight: bold;">+27749548756</p>
           </div>
@@ -203,7 +203,7 @@ const MapSection = () => {
             </div>
             <div className="space-y-1 text-sm text-gray-600">
               <p>CBD</p>
-              <p>Cape Town, 8001, Cape Town</p>
+              <p>Cape Town, 7925, South Africa</p>
               <p className="font-medium text-primary-600">+27749548756</p>
             </div>
             <div className="mt-4 pt-4 border-t border-gray-200">

@@ -28,7 +28,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
             "@type": "PostalAddress",
             "streetAddress": "CBD",
             "addressLocality": "Cape Town",
-            "postalCode": "8001",
+            "postalCode": "7925",
             "addressCountry": "ZA"
           },
           "contactPoint": {

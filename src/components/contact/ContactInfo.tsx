@@ -26,10 +26,9 @@ const ContactInfo = () => {
       icon: MapPinIcon,
       title: t('info.address'),
       content: [
-        'Dar Cape  ',
-        'CBD',
-        'Cape Town, 8001',
-        'Cape Town'
+        'Dar Cape',
+        'Cape Town, 7925',
+        'South Africa'
       ],
       color: 'from-blue-500 to-cyan-500'
     },
