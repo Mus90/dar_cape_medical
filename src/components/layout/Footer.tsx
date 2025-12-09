@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -23,9 +23,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: '📘' },
-    { name: 'Instagram', href: '#', icon: '📷' },
-    { name: 'YouTube', href: '#', icon: '📺' },
+    { name: 'Facebook', href: '#', icon: '' },
+    { name: 'Instagram', href: '#', icon: '' },
+    { name: 'YouTube', href: '#', icon: '' },
   ];
 
   return (
@@ -104,7 +104,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} {tCommon('brandName')}. {t('footer.rights')}.
+              Â© {new Date().getFullYear()} {tCommon('brandName')}. {t('footer.rights')}.
             </p>
             <div className="flex space-x-6 rtl:space-x-reverse">
               <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
@@ -122,3 +122,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

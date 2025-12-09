@@ -1,4 +1,4 @@
-// Admin authentication tests
+﻿// Admin authentication tests
 describe('Admin Authentication', () => {
   it('validates password requirements', () => {
     const validPasswords = ['darcape2024', 'admin123', 'demo2024']
@@ -47,3 +47,5 @@ describe('Admin Authentication', () => {
     expect(checkSessionTimeout(oldTime, timeoutDuration)).toBe(true)
   })
 })
+
+

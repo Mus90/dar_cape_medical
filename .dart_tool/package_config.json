@@ -1,4 +1,4 @@
-{
+﻿{
   "configVersion": 2,
   "packages": [
     {
@@ -182,3 +182,4 @@
   "flutterVersion": "3.35.4",
   "pubCache": "file:///C:/Users/musta/AppData/Local/Pub/Cache"
 }
+

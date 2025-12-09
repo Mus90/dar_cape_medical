@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from 'react';
 
 const tabs = [
@@ -45,3 +45,5 @@ export default function GalleryTabs() {
     </section>
   );
 }
+
+

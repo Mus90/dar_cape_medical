@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 
 test.describe('Homepage', () => {
   test('should load homepage successfully', async ({ page }) => {
@@ -39,3 +39,4 @@ test.describe('Homepage', () => {
     await expect(page.locator('h1')).toBeVisible();
   });
 });
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -100,3 +100,5 @@ const MissionSection = () => {
 };
 
 export default MissionSection;
+
+

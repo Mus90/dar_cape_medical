@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 
 test.describe('Admin Portal', () => {
   test('should authenticate with valid credentials', async ({ page }) => {
@@ -73,3 +73,4 @@ test.describe('Admin Portal', () => {
     await expect(page.locator('input[type="password"]')).toBeVisible();
   });
 });
+

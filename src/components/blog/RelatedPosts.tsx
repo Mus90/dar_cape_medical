@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 interface RelatedPostsProps {
   currentPostId: string;
@@ -17,3 +17,5 @@ export default function RelatedPosts({ currentPostId, category }: RelatedPostsPr
     </section>
   );
 }
+
+

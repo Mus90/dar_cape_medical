@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import React from 'react';
@@ -19,27 +19,27 @@ const BlogManager = () => {
   const [blogPosts, setBlogPosts] = useState([
     {
       id: '1',
-      title: 'Top 10 Must-Visit Destinations in Cape Town',
-      excerpt: 'Discover the most breathtaking locations that should be on every traveler\'s Cape Town itinerary.',
+      title: 'Top 10 Must-Visit s in Cape Town',
+      excerpt: 'Discover the most breathtaking locations that should be on every er\'s Cape Town .',
       author: 'Mujahid Mohamed',
       date: '2024-01-15',
       status: 'published',
-      category: 'destinations',
+      category: 's',
       tags: ['Cape Town', 'Kruger', 'Garden Route']
     },
     {
       id: '2',
-      title: 'Safari Photography: Capturing the Big 5',
+      title: ' Photography: Capturing the Big 5',
       excerpt: 'Professional tips and techniques for photographing Africa\'s most magnificent wildlife.',
       author: 'Mustafa Ali',
       date: '2024-01-12',
       status: 'published',
       category: 'photography',
-      tags: ['Safari', 'Photography', 'Wildlife']
+      tags: ['', 'Photography', 'Wildlife']
     },
     {
       id: '3',
-      title: 'Strawberry Tasting Guide: Stellenbosch vs Franschhoek',
+      title: 'Strawberry Tasting : Stellenbosch vs Franschhoek',
       excerpt: 'Compare two of Cape Town\'s premier Strawberryregions and discover which suits your taste.',
       author: 'Mustafa Ali',
       date: '2024-01-10',
@@ -54,7 +54,7 @@ const BlogManager = () => {
     excerpt: '',
     content: '',
     author: 'Admin',
-    category: 'destinations',
+    category: 's',
     tags: '',
     status: 'draft'
   });
@@ -85,7 +85,7 @@ const BlogManager = () => {
       excerpt: '',
       content: '',
       author: 'Admin',
-      category: 'destinations',
+      category: 's',
       tags: '',
       status: 'draft'
     });
@@ -187,12 +187,12 @@ const BlogManager = () => {
                     onChange={(e) => setEditPost({ ...editPost, category: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
-                    <option value="destinations">Destinations</option>
+                    <option value="s">s</option>
                     <option value="photography">Photography</option>
                     <option value="Grape">Grape & Food</option>
                     <option value="culture">Culture</option>
                     <option value="adventure">Adventure</option>
-                    <option value="tips">Travel Tips</option>
+                    <option value="tips"> Tips</option>
                   </select>
                 </div>
               </div>
@@ -278,12 +278,12 @@ const BlogManager = () => {
                     onChange={(e) => setNewPost({ ...newPost, category: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
-                    <option value="destinations">Destinations</option>
+                    <option value="s">s</option>
                     <option value="photography">Photography</option>
                     <option value="Grape">Strawberry& Food</option>
                     <option value="culture">Culture</option>
                     <option value="adventure">Adventure</option>
-                    <option value="tips">Travel Tips</option>
+                    <option value="tips"> Tips</option>
                   </select>
                 </div>
               </div>
@@ -306,7 +306,7 @@ const BlogManager = () => {
                   value={newPost.tags}
                   onChange={(e) => setNewPost({ ...newPost, tags: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="e.g. Cape Town, Safari, Adventure"
+                  placeholder="e.g. Cape Town, , Adventure"
                 />
               </div>
 
@@ -452,3 +452,5 @@ const BlogManager = () => {
 };
 
 export default BlogManager;
+
+

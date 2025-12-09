@@ -1,4 +1,4 @@
-# Testing Framework Documentation
+﻿# Testing Framework Documentation
 
 ## Overview
 
@@ -193,7 +193,7 @@ test('user workflow', async ({ page }) => {
 ### Test Matrix
 
 **Node.js Versions**: 18.x, 20.x
-**Browsers**: Chrome, Firefox, Safari, Mobile Chrome, Mobile Safari
+**Browsers**: Chrome, Firefox, , Mobile Chrome, Mobile 
 
 ## Best Practices
 
@@ -294,3 +294,4 @@ npx playwright test --debug
 ---
 
 This testing framework ensures code quality, prevents regressions, and maintains confidence in deployments. Regular maintenance and updates keep the tests effective and reliable.
+

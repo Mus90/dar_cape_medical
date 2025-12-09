@@ -1,4 +1,4 @@
-/// <reference types="jest" />
+﻿/// <reference types="jest" />
 
 declare global {
   var describe: jest.Describe;
@@ -12,3 +12,5 @@ declare global {
 }
 
 export {};
+
+

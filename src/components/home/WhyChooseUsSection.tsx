@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
@@ -27,3 +27,5 @@ export default function WhyChooseUsSection() {
     </section>
   );
 }
+
+

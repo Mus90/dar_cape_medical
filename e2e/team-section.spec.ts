@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 
 test.describe('Team Section', () => {
   test('should display team section on about page', async ({ page }) => {
@@ -68,3 +68,4 @@ test.describe('Team Section', () => {
     await expect(page.locator('text=Mujahid')).toBeVisible();
   });
 });
+

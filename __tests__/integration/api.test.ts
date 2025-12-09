@@ -1,4 +1,4 @@
-// Integration tests for API endpoints and data flow
+﻿// Integration tests for API endpoints and data flow
 import { NextRequest } from 'next/server'
 
 describe('API Integration Tests', () => {
@@ -20,7 +20,7 @@ describe('API Integration Tests', () => {
       const formData = {
         name: 'John Doe',
         email: 'john@example.com',
-        message: 'I would like to book a tour',
+        message: 'I would like to book a ',
         phone: '+27749548756'
       }
 
@@ -107,3 +107,4 @@ describe('API Integration Tests', () => {
     })
   })
 })
+

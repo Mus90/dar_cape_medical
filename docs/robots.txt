@@ -1,6 +1,7 @@
-User-Agent: *
+﻿User-Agent: *
 Allow: /
 Disallow: /private/
 Disallow: /admin/
 
 Sitemap: https://darcape.com/sitemap.xml
+

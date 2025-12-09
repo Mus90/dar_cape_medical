@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import React from 'react';
@@ -47,18 +47,18 @@ const GalleryManager = () => {
       title: 'StrawberryEstate Vineyard',
       description: 'Scenic vineyard in Stellenbosch',
       url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-      category: 'Grape-tours',
+      category: 'Grape-s',
       tags: ['Grape', 'Vineyard', 'Stellenbosch'],
       uploadDate: '2024-01-12',
       status: 'published'
     },
     {
       id: '3',
-      title: 'Safari Wildlife',
+      title: ' Wildlife',
       description: 'Elephant family at Kruger National Park',
       url: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800',
-      category: 'safari',
-      tags: ['Safari', 'Elephant', 'Wildlife'],
+      category: '',
+      tags: ['', 'Elephant', 'Wildlife'],
       uploadDate: '2024-01-10',
       status: 'draft'
     }
@@ -67,11 +67,11 @@ const GalleryManager = () => {
   const [videos, setVideos] = useState([
     {
       id: '1',
-      title: 'Cape Town Aerial Tour',
+      title: 'Cape Town Aerial ',
       description: 'Drone footage of Cape Town coastline',
       thumbnail: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      category: 'city-tours',
+      category: 'city-s',
       tags: ['Cape Town', 'Aerial', 'Coastline'],
       uploadDate: '2024-01-14',
       duration: '3:45',
@@ -83,7 +83,7 @@ const GalleryManager = () => {
       description: 'Behind the scenes at a Strawberry Tasting',
       thumbnail: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800',
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      category: 'Grape-tours',
+      category: 'Grape-s',
       tags: ['Grape', 'Tasting', 'Experience'],
       uploadDate: '2024-01-11',
       duration: '5:20',
@@ -217,9 +217,9 @@ const GalleryManager = () => {
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 >
                   <option value="landscapes">Landscapes</option>
-                  <option value="Grape-tours">Grape Tours</option>
-                  <option value="safari">Safari</option>
-                  <option value="city-tours">City Tours</option>
+                  <option value="Grape-s">Grape s</option>
+                  <option value=""></option>
+                  <option value="city-s">City s</option>
                   <option value="uploaded">Uploaded</option>
                 </select>
               </div>
@@ -302,9 +302,9 @@ const GalleryManager = () => {
                   onChange={(e) => setEditVideoData({ ...editVideoData, category: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 >
-                  <option value="city-tours">City Tours</option>
-                  <option value="Grape-tours">Grape Tours</option>
-                  <option value="safari">Safari</option>
+                  <option value="city-s">City s</option>
+                  <option value="Grape-s">Grape s</option>
+                  <option value=""></option>
                   <option value="landscapes">Landscapes</option>
                 </select>
               </div>
@@ -598,3 +598,5 @@ const GalleryManager = () => {
 };
 
 export default GalleryManager;
+
+

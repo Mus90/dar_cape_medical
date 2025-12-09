@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function LatestInsightsSection() {
   const locale = useLocale();
 
   const items = [
-    { key: "hpcsaGuide", href: `/${locale}/insights/hpcsa-registration` },
+    { key: "hpcsa", href: `/${locale}/insights/hpcsa-registration` },
     { key: "trainingOverview", href: `/${locale}/insights/training-overview` }
   ] as const;
 
@@ -59,3 +59,5 @@ export default function LatestInsightsSection() {
     </section>
   );
 }
+
+

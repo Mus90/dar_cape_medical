@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -56,3 +56,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import React from 'react';
@@ -22,7 +22,7 @@ const ServicesManager = () => {
     price: 0,
     duration: '',
     maxGuests: 1,
-    category: 'city-tours',
+    category: 'city-s',
     features: '',
     status: 'draft'
   });
@@ -30,25 +30,25 @@ const ServicesManager = () => {
   const [services, setServices] = useState([
     {
       id: '1',
-      name: 'Cape Town City Tour',
-      description: 'Explore the vibrant city of Cape Town with our comprehensive city tour.',
+      name: 'Cape Town City ',
+      description: 'Explore the vibrant city of Cape Town with our comprehensive city .',
       price: 850,
       duration: '8 hours',
       maxGuests: 12,
-      category: 'city-tours',
-      features: ['Table Mountain', 'V&A Waterfront', 'Bo-Kaap District', 'Professional Guide'],
+      category: 'city-s',
+      features: ['Table Mountain', 'V&A Waterfront', 'Bo-Kaap District', 'Professional '],
       rating: 4.8,
       status: 'active'
     },
     {
       id: '2',
-      name: 'Strawberry Tasting Safari',
+      name: 'Strawberry Tasting ',
       description: 'Discover the finest Strawberries in Stellenbosch and Franschhoek regions.',
       price: 1200,
       duration: '10 hours',
       maxGuests: 8,
-      category: 'Grape-tours',
-      features: ['3 StrawberryEstates', 'Gourmet Lunch', 'Transportation', 'StrawberryExpert Guide'],
+      category: 'Grape-s',
+      features: ['3 StrawberryEstates', 'Gourmet Lunch', 'Transportation', 'StrawberryExpert '],
       rating: 4.9,
       status: 'active'
     },
@@ -72,7 +72,7 @@ const ServicesManager = () => {
     price: 0,
     duration: '',
     maxGuests: 1,
-    category: 'city-tours',
+    category: 'city-s',
     features: '',
     status: 'draft'
   });
@@ -93,7 +93,7 @@ const ServicesManager = () => {
       price: 0,
       duration: '',
       maxGuests: 1,
-      category: 'city-tours',
+      category: 'city-s',
       features: '',
       status: 'draft'
     });
@@ -168,9 +168,9 @@ const ServicesManager = () => {
                     onChange={(e) => setEditServiceData({ ...editServiceData, category: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
-                    <option value="city-tours">City Tours</option>
-                    <option value="Grape-tours">Grape Tours</option>
-                    <option value="safari">Safari</option>
+                    <option value="city-s">City s</option>
+                    <option value="Grape-s">Grape s</option>
+                    <option value=""></option>
                     <option value="adventure">Adventure</option>
                     <option value="cultural">Cultural</option>
                     <option value="photography">Photography</option>
@@ -312,9 +312,9 @@ const ServicesManager = () => {
                     onChange={(e) => setNewService({ ...newService, category: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
-                    <option value="city-tours">City Tours</option>
-                    <option value="Grape-tours">Strawberry Tours</option>
-                    <option value="safari">Safari</option>
+                    <option value="city-s">City s</option>
+                    <option value="Grape-s">Strawberry s</option>
+                    <option value=""></option>
                     <option value="adventure">Adventure</option>
                     <option value="cultural">Cultural</option>
                     <option value="photography">Photography</option>
@@ -375,7 +375,7 @@ const ServicesManager = () => {
                   value={newService.features}
                   onChange={(e) => setNewService({ ...newService, features: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="e.g. Professional Guide, Transportation, Lunch"
+                  placeholder="e.g. Professional , Transportation, Lunch"
                 />
               </div>
             </div>
@@ -512,3 +512,5 @@ const ServicesManager = () => {
 };
 
 export default ServicesManager;
+
+

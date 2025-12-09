@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=1920&auto=format&fit=crop"
-          alt={locale === 'ar' ? 'أطباء يتعاونون في تدريب سريري' : 'Doctors collaborating in clinical training'}
+          alt={locale === 'ar' ? 'Ø£Ø·Ø¨Ø§Ø¡ ÙŠØªØ¹Ø§ÙˆÙ†ÙˆÙ† ÙÙŠ ØªØ¯Ø±ÙŠØ¨ Ø³Ø±ÙŠØ±ÙŠ' : 'Doctors collaborating in clinical training'}
           fill
           sizes="100vw"
           priority
@@ -90,3 +90,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+

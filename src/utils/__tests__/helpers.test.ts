@@ -1,4 +1,4 @@
-// Utility functions tests
+﻿// Utility functions tests
 describe('Utility Functions', () => {
   describe('formatPhoneNumber', () => {
     const formatPhoneNumber = (phone: string) => {
@@ -60,3 +60,5 @@ describe('Utility Functions', () => {
     })
   })
 })
+
+

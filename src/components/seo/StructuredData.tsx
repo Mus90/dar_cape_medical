@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useLocale } from 'next-intl';
 
@@ -17,13 +17,13 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
       case 'organization':
         return {
           "@context": "https://schema.org",
-          "@type": "TravelAgency",
+          "@type": "Agency",
           "name": "Dar Cape  ",
           "alternateName": "Dar Cape",
           "url": baseUrl,
           "logo": `${baseUrl}/images/logo.png`,
           "image": `${baseUrl}/images/og-image.jpg`,
-          "description": "Professional   services in Cape Town. Safari tours, Strawberry tours, cultural experiences, and adventure packages.",
+          "description": "Professional   services in Cape Town.  s, Strawberry s, cultural experiences, and adventure packages.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "CBD",
@@ -56,7 +56,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "@type": "WebSite",
           "name": "Dar Cape  ",
           "url": baseUrl,
-          "description": "Discover Cape Town with Dar Cape  . Professional tour services, safari adventures, Strawberry tours, and cultural experiences.",
+          "description": "Discover Cape Town with Dar Cape  . Professional  services,  adventures, Strawberry s, and cultural experiences.",
           "inLanguage": [locale === 'ar' ? 'ar' : 'en'],
           "potentialAction": {
             "@type": "SearchAction",
@@ -72,7 +72,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "name": data?.name || "  Services",
           "description": data?.description || "Professional   services in Cape Town",
           "provider": {
-            "@type": "TravelAgency",
+            "@type": "Agency",
             "name": "Dar Cape  "
           },
           "areaServed": {
@@ -134,3 +134,5 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
 };
 
 export default StructuredData;
+
+

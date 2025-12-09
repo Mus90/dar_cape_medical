@@ -1,7 +1,7 @@
-import React from 'react';
+﻿import React from 'react';
 
 export default function BlogCategories() {
-  const categories = ['News', 'Guides', 'Tours', 'Tips'];
+  const categories = ['News', 's', 's', 'Tips'];
   return (
     <aside className="p-5 bg-white rounded-lg shadow-sm border border-gray-100">
       <h2 className="text-xl font-semibold mb-4">Categories</h2>
@@ -15,3 +15,5 @@ export default function BlogCategories() {
     </aside>
   );
 }
+
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import React from 'react';
@@ -17,17 +17,17 @@ const ContentManager = () => {
   const contentSections = [
     { id: 'home', name: 'Home Page', description: 'Hero section, services overview' },
     { id: 'about', name: 'About Us', description: 'Company information, team, values' },
-    { id: 'services', name: 'Services', description: 'Tour packages and descriptions' },
+    { id: 'services', name: 'Services', description: ' packages and descriptions' },
     { id: 'contact', name: 'Contact', description: 'Contact information and forms' },
     { id: 'footer', name: 'Footer', description: 'Footer links and information' },
   ];
 
   const [homeContent, setHomeContent] = useState({
     heroTitle: 'Discover the Beauty of Cape Town with Dar Cape',
-    heroSubtitle: 'Exceptional   experiences and unforgettable adventures in Cape Town\'s most beautiful destinations',
+    heroSubtitle: 'Exceptional   experiences and unforgettable adventures in Cape Town\'s most beautiful s',
     heroButtonText: 'Book Your Trip Now',
     servicesTitle: 'Our   Services',
-    servicesSubtitle: 'We offer a diverse range of tours and travel experiences'
+    servicesSubtitle: 'We offer a diverse range of s and  experiences'
   });
 
   const [aboutContent, setAboutContent] = useState({
@@ -45,7 +45,7 @@ const ContentManager = () => {
   });
 
   const [footerContent, setFooterContent] = useState({
-    copyright: '© 2024 Dar Cape  . All rights reserved.'
+    copyright: 'Â© 2024 Dar Cape  . All rights reserved.'
   });
 
   const handleSave = () => {
@@ -387,3 +387,5 @@ const ContentManager = () => {
 };
 
 export default ContentManager;
+
+

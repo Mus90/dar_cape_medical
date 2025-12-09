@@ -1,4 +1,4 @@
-// Simple test to verify team data structure
+﻿// Simple test to verify team data structure
 describe('TeamSection Data', () => {
   it('has correct team member data structure', () => {
     const teamData = [
@@ -46,3 +46,5 @@ describe('TeamSection Data', () => {
     expect(formatPhone('123')).toBe(false)
   })
 })
+
+

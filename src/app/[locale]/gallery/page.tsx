@@ -8,7 +8,7 @@ import GalleryTabs from '@/components/gallery/GalleryTabs';
 
 export const metadata: Metadata = {
   title: 'Gallery',
-  description: 'Explore our stunning photo and video gallery showcasing the beauty of Cape Town and unforgettable moments from our tours.',
+  description: 'Explore our photo and video gallery highlighting medical training journeys, clinical environments, and professional milestones.',
 };
 
 type Props = {

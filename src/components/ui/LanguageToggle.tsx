@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
@@ -19,14 +19,16 @@ const LanguageToggle = () => {
     <button
       onClick={toggleLanguage}
       className="flex items-center space-x-2 rtl:space-x-reverse px-3 py-2 rounded-lg border border-gray-300 hover:border-primary-500 hover:bg-primary-50 transition-colors duration-200"
-      title={locale === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'}
+      title={locale === 'ar' ? 'Switch to English' : 'Ø§Ù„ØªØ¨Ø¯ÙŠÙ„ Ø¥Ù„Ù‰ Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©'}
     >
       <GlobeAltIcon className="h-5 w-5 text-gray-600" />
       <span className="text-sm font-medium text-gray-700">
-        {locale === 'ar' ? 'EN' : 'عر'}
+        {locale === 'ar' ? 'EN' : 'Ø¹Ø±'}
       </span>
     </button>
   );
 };
 
 export default LanguageToggle;
+
+

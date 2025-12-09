@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+﻿import { defineConfig, devices } from '@playwright/test';
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -41,7 +41,7 @@ export default defineConfig({
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: { ...devices['Desktop '] },
     },
 
     /* Test against mobile viewports. */
@@ -50,7 +50,7 @@ export default defineConfig({
       use: { ...devices['Pixel 5'] },
     },
     {
-      name: 'Mobile Safari',
+      name: 'Mobile ',
       use: { ...devices['iPhone 12'] },
     },
 
@@ -72,3 +72,4 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
 });
+

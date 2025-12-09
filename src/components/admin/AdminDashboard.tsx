@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import React from 'react';
@@ -435,7 +435,7 @@ const OverviewTab = ({ t }: { t: any }) => {
           <div className="space-y-3">
             <div className="flex items-center text-sm">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-              <span className="text-gray-600">{t('overview.recentActivity.newBlogPost')} "Safari Photography Tips"</span>
+              <span className="text-gray-600">{t('overview.recentActivity.newBlogPost')} " Photography Tips"</span>
             </div>
             <div className="flex items-center text-sm">
               <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
@@ -472,7 +472,7 @@ const SettingsTab = ({ t }: { t: any }) => {
     contactEmail: 'support@darcape.com',
     whatsappNumber: '+27749548756',
     googleMapsApiKey: '',
-    adminPassword: '••••••••••••', // Hidden for security
+    adminPassword: 'â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢', // Hidden for security
     sessionTimeout: 30,
     maxLoginAttempts: 3
   });
@@ -670,3 +670,5 @@ const SettingsTab = ({ t }: { t: any }) => {
 };
 
 export default AdminDashboard;
+
+

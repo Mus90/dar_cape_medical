@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -26,7 +26,7 @@ const PackagesSection = () => {
       image: 'https://images.unsplash.com/photo-1588097364416-f79243f2b3f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fENhcGUlMjBUb3dufGVufDB8fDB8fHwy',
       highlights: [
         'Table Mountain Cable Car',
-        'V&A Waterfront Tour',
+        'V&A Waterfront ',
         'Robben Island Visit',
         'Bo-Kaap Cultural Walk',
         'Strawberry Tasting in Stellenbosch'
@@ -34,7 +34,7 @@ const PackagesSection = () => {
       badge: 'Most Popular'
     },
     {
-      name: 'Big 5 Safari Adventure',
+      name: 'Big 5  Adventure',
       duration: '2 Days/1 Nights',
       price: 'R 8,900',
       groupSize: '4-12 People',
@@ -44,8 +44,8 @@ const PackagesSection = () => {
       highlights: [
         'Kruger National Park',
         'Big 5 Game Drives',
-        'Luxury Safari Lodge',
-        'Professional Guide',
+        'Luxury  Lodge',
+        'Professional ',
         'All Meals Included'
       ],
       badge: 'Premium'
@@ -163,3 +163,5 @@ const PackagesSection = () => {
 };
 
 export default PackagesSection;
+
+

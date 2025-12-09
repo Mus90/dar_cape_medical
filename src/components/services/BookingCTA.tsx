@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -116,3 +116,5 @@ const BookingCTA = () => {
 };
 
 export default BookingCTA;
+
+

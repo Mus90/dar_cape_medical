@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 interface BlogPostProps {
   post: any;
@@ -11,7 +11,7 @@ export default function BlogPost({ post }: BlogPostProps) {
         <h1 className="text-3xl font-bold text-gray-900 mb-2">{post.title}</h1>
         <p className="text-gray-500 text-sm">
           <span>{post.date}</span>
-          {post.readTime ? <span> • {post.readTime}</span> : null}
+          {post.readTime ? <span> â€¢ {post.readTime}</span> : null}
         </p>
       </header>
       {post.image ? (
@@ -28,3 +28,5 @@ export default function BlogPost({ post }: BlogPostProps) {
     </article>
   );
 }
+
+

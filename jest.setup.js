@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom'
+﻿import '@testing-library/jest-dom'
 
 // Mock next-intl
 jest.mock('next-intl', () => ({
@@ -77,3 +77,4 @@ const sessionStorageMock = {
   clear: jest.fn(),
 }
 global.sessionStorage = sessionStorageMock
+

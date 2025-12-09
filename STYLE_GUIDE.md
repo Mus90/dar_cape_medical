@@ -1,4 +1,4 @@
-# Cape Home   Website - Style Guide & Design System
+﻿# Cape Home   Website - Style Guide & Design System
 
 ## Overview
 This style guide extracts the complete design system, layout patterns, and styling instructions from the Cape Home   website. Use this as a reference to replicate the design aesthetic and user experience patterns in other projects.
@@ -300,7 +300,7 @@ className="group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
 }
 
 /* Service card gradients */
-.from-green-500.to-green-600    /* Safari/Nature */
+.from-green-500.to-green-600    /* /Nature */
 .from-purple-500.to-purple-600  /* Wine/Culture */
 .from-orange-500.to-orange-600  /* Adventure/Culture */
 ```
@@ -497,3 +497,4 @@ Key implementation files to reference:
 - Component files - Layout and animation patterns
 
 For RTL support, ensure proper text direction attributes and use the provided RTL utility classes throughout your implementation.
+

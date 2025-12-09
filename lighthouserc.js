@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
   ci: {
     collect: {
       url: ['http://localhost:3000', 'http://localhost:3000/about', 'http://localhost:3000/services'],
@@ -18,3 +18,4 @@ module.exports = {
     },
   },
 };
+

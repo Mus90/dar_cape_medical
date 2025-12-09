@@ -1,4 +1,4 @@
-// Simple admin functionality tests
+﻿// Simple admin functionality tests
 describe('Admin Content Management', () => {
   it('validates content structure', () => {
     const contentSections = ['home', 'about', 'services', 'contact', 'footer']
@@ -40,3 +40,5 @@ describe('Admin Content Management', () => {
     expect(retrieved.title).toBe('Test Title')
   })
 })
+
+

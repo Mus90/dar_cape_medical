@@ -1,4 +1,4 @@
-// Simple UI component tests
+﻿// Simple UI component tests
 describe('UI Components', () => {
   it('validates button properties', () => {
     const buttonVariants = ['primary', 'secondary', 'outline']
@@ -41,3 +41,5 @@ describe('UI Components', () => {
     expect(mockProps.disabled).toBe(false)
   })
 })
+
+

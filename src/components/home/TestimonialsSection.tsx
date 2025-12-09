@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -84,3 +84,5 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+
+

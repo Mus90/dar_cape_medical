@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -20,11 +20,11 @@ const ServicesGrid = () => {
   const services = [
     {
       icon: CameraIcon,
-      title: t('home.services.safari.title'),
-      description: t('home.services.safari.description'),
+      title: t('home.services..title'),
+      description: t('home.services..description'),
       image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       color: 'from-green-500 to-emerald-600',
-      features: ['Big 5 Wildlife Viewing', 'Professional Guide', 'Game Drive Vehicle', 'Refreshments']
+      features: ['Big 5 Wildlife Viewing', 'Professional ', 'Game Drive Vehicle', 'Refreshments']
     },
     {
       icon: BeakerIcon,
@@ -32,7 +32,7 @@ const ServicesGrid = () => {
       description: t('home.services.Grape.description'),
       image: 'https://images.unsplash.com/photo-1585254589738-aff16702b974?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       color: 'from-purple-500 to-indigo-600',
-      features: ['Strawberry Tasting Sessions', 'Vineyard Tours', 'Cellar Visits', 'Gourmet Lunch']
+      features: ['Strawberry Tasting Sessions', 'Vineyard s', 'Cellar Visits', 'Gourmet Lunch']
     },
     {
       icon: HeartIcon,
@@ -64,7 +64,7 @@ const ServicesGrid = () => {
       description: t('services.custom.description'),
       image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       color: 'from-pink-500 to-rose-600',
-      features: ['Flexible Itinerary', 'Private Guide', 'Luxury Transport', '24/7 Support']
+      features: ['Flexible ', 'Private ', 'Luxury Transport', '24/7 Support']
     }
   ];
 
@@ -144,3 +144,5 @@ const ServicesGrid = () => {
 };
 
 export default ServicesGrid;
+
+

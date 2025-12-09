@@ -1,4 +1,4 @@
-# Testing Framework Implementation Results
+﻿# Testing Framework Implementation Results
 
 ## 📊 Test Execution Summary
 
@@ -117,8 +117,8 @@ The GitHub Actions workflow automatically runs:
 - **Statements**: 70%
 
 ### Browser Matrix (E2E)
-- Desktop: Chrome, Firefox, Safari
-- Mobile: Chrome (Pixel 5), Safari (iPhone 12)
+- Desktop: Chrome, Firefox, 
+- Mobile: Chrome (Pixel 5),  (iPhone 12)
 
 ### Performance Thresholds
 - **Performance**: >80%
@@ -181,3 +181,4 @@ This testing framework provides:
 - **Confidence in deployments** with comprehensive validation
 
 The framework is now ready for production use and will help maintain the high quality of your Dar Cape   website as it continues to evolve.
+
