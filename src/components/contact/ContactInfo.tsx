@@ -72,7 +72,7 @@ const ContactInfo = () => {
     { name: 'Instagram', url: 'https://instagram.com/darcape ', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
     { name: 'Twitter', url: 'https://twitter.com/darcape ', icon: TwitterIcon, color: 'text-gray-900 hover:text-gray-700' },
     { name: 'YouTube', url: 'https://youtube.com/@darcape ', icon: YouTubeIcon, color: 'text-red-600 hover:text-red-700' },
-    { name: 'TikTok', url: 'https://tiktok.com/@darcape ', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
+    { name: 'TikTok', url: 'https://tiktok.com/@dar_cape ', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
   ];
 
   return (
