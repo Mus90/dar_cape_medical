@@ -1,21 +1,27 @@
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { DocumentTextIcon, AcademicCapIcon, ClipboardDocumentListIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Our Services',
-  description: 'Curated information packages, initial consultation & eligibility assessment, and document review service for medical training in South Africa.',
-};
-
 type Props = {
   params: { locale: string };
 };
 
+export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+  setRequestLocale(locale);
+  const t = await getTranslations();
+  return {
+    title: t('services.title'),
+    description: t('services.subtitle'),
+  };
+}
+
 export default function ServicesPage({ params: { locale } }: Props) {
   setRequestLocale(locale);
   const t = useTranslations('servicesSimple');
+  const tCommon = useTranslations();
 
   return (
     <main className="section-padding">
@@ -23,7 +29,10 @@ export default function ServicesPage({ params: { locale } }: Props) {
         {/* Heading */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h1>
-          <p className="text-gray-600 text-lg">{t('subtitle')}</p>
+          <p className="text-gray-600 text-lg mb-4">{t('subtitle')}</p>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            {tCommon('services.description')}
+          </p>
         </div>
 
         {/* Services Grid */}
@@ -40,15 +49,26 @@ export default function ServicesPage({ params: { locale } }: Props) {
             icon: ClipboardDocumentListIcon,
             title: t('items.review.title'),
             description: t('items.review.description')
-          }].map((svc) => (
+          }].map((svc, index) => (
             <div key={svc.title} className="card p-6">
               <div className="w-12 h-12 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
                 <svc.icon className="w-6 h-6" />
               </div>
               <h2 className="text-2xl font-semibold mb-2">{svc.title}</h2>
               <p className="text-gray-600 mb-4">{svc.description}</p>
-              <Link href={`/${locale}/contact`} className="text-primary-600 font-medium hover:text-primary-700">
-                {t('cta')}
+              <Link
+                href={
+                  index === 0
+                    ? `/${locale}/how-it-works`
+                    : index === 1
+                      ? `/${locale}/pricing`
+                      : `/${locale}/contact`
+                }
+                className="text-primary-600 font-medium hover:text-primary-700"
+              >
+                {index === 0 && tCommon('services.howItWorks')}
+                {index === 1 && tCommon('services.pricing')}
+                {index === 2 && tCommon('services.contact')}
               </Link>
             </div>
           ))}

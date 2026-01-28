@@ -3,6 +3,8 @@
     "home": "Home",
     "about": "About Us",
     "services": "Our Services",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
     "gallery": "Gallery",
     "blog": "Blog",
     "contact": "Contact",
@@ -10,21 +12,21 @@
     "successStories": "Success Stories"
   },
   "servicesSimple": {
-    "title": "Our Services",
-    "subtitle": "We offer a range of services specifically designed to meet your needs, from initial consultation to document readiness.",
-    "cta": "Get Started Today",
+    "title": "Our Core Support Services",
+    "subtitle": "Practical, step-aligned support for international doctors â€“ from understanding your options, to confirming eligibility, to preparing compliant documentation.",
+    "cta": "Discuss Your Case",
     "items": {
       "info": {
-        "title": "Curated Information Packages",
-        "description": "Access detailed digital s on HPCSA registration, program overviews, and application checklists. Save time and reduce confusion with expertly compiled resources."
+        "title": "Orientation & Information Packages",
+        "description": "Structured guidance on South African specialist training, regulators, and pathways. Clarifies what is realistically possible before you commit time or money."
       },
       "consultation": {
-        "title": "Initial Consultation & Eligibility Assessment",
-        "description": "Personalized one-on-one virtual sessions to discuss your qualifications, career goals, and assess preliminary eligibility for South African training and HPCSA registration."
+        "title": "Initial Consultation & Eligibility Review",
+        "description": "One-on-one advisory session to review your profile, discuss career goals, and assess whether you are likely to meet Stage 1 and South African training requirements."
       },
       "review": {
-        "title": "Document Review Service",
-        "description": "Ensure your CV, personal statement, and HPCSA forms are complete, accurate, and meet South African standards before submission."
+        "title": "Document & Application Review",
+        "description": "Detailed check of CVs, motivation letters and key forms so they are complete, consistent, and aligned with South African institutional and regulator expectations."
       }
     }
   },
@@ -32,8 +34,8 @@
     "title": "Latest Insights",
     "items": {
       "hpcsa": {
-        "title": "HPCSA Registration  for Foreign Doctors",
-        "excerpt": "A comprehensive  to understanding the HPCSA registration process, ECFMG EPIC verification, and required documents."
+        "title": "HPCSA Registration Guide for Foreign Doctors",
+        "excerpt": "A comprehensive guide to understanding the HPCSA registration process, ECFMG EPIC verification, and required documents."
       },
       "trainingOverview": {
         "title": "South African Medical Training Landscape: An Overview",
@@ -49,39 +51,39 @@
       "explore": "Explore Our Services"
     },
     "services": {
-      "title": "Our   Services",
-      "subtitle": "We offer a diverse range of s and  experiences",
-      "": {
-        "title": " s",
-        "description": "Explore African wildlife in the most beautiful nature reserves"
+      "title": "Our Medical Services",
+      "subtitle": "We offer a diverse range of medical training and advisory services",
+      "medical": {
+        "title": "Medical Training",
+        "description": "Explore comprehensive medical training programs in South African hospitals"
       },
-      "Grape": {
-        "title": "Strawberry s",
-        "description": "Discover the finest farms and taste authentic Cape Town Strawberries"
+      "advisory": {
+        "title": "Career Advisory",
+        "description": "Discover the best medical career paths and specialty options"
       },
-      "culture": {
-        "title": "Cultural s",
-        "description": "Learn about Cape Town's rich history and culture"
+      "support": {
+        "title": "Registration Support",
+        "description": "Learn about HPCSA registration and medical licensing requirements"
       }
     },
     "testimonials": {
-      "title": "Customer Reviews",
-      "subtitle": "What our customers say about their experience with us",
+      "title": "Client Reviews",
+      "subtitle": "What our clients say about their experience with us",
       "items": {
         "Ali": {
           "name": "Ali Al-Shamrani",
           "location": "Saudi Arabia",
-          "comment": "An incredible experience! Dar Cape made our Cape Town adventure unforgettable. The   was amazing and the s were very knowledgeable."
+          "comment": "An incredible experience! Dar Cape made my medical career journey successful. The guidance was amazing and the team was very knowledgeable."
         },
         "OmNoura": {
           "name": "Om Noura",
           "location": "Saudi Arabia",
-          "comment": "Professional service and breathtaking s. The Strawberry was exceptional and we learned so much about Cape Town culture."
+          "comment": "Professional service and comprehensive support. The registration assistance was exceptional and we learned so much about South African medical training."
         },
         "AbdallahAlmardi": {
           "name": "Abdallah Almardi",
           "location": "Saudi Arabia",
-          "comment": "Dar Cape exceeded all our expectations. The cultural s were enlightening and the hospitality was outstanding. Highly recommended!"
+          "comment": "Dar Cape exceeded all our expectations. The career guidance was enlightening and the support was outstanding. Highly recommended!"
         }
       }
     }
@@ -134,118 +136,95 @@
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Choose from a variety of s and experiences",
-    "book": "Book Now",
-    "from": "From",
-    "duration": "Duration",
-    "includes": "Includes",
-    "adventure": {
-      "title": "Adventure s",
-      "description": "Thrilling outdoor adventures including hiking, rock climbing, and extreme sports"
-    },
-    "city": {
-      "title": "City s",
-      "description": "Explore Cape Town and other major cities with our comprehensive urban experiences"
-    },
-    "custom": {
-      "title": "Custom Packages",
-      "description": "Personalized itineraries tailored to your interests and preferences"
-    },
-    "grid": {
-      "title": "Our Complete Service Range",
-      "subtitle": "From wildlife s to cultural immersion, we offer comprehensive   experiences that showcase the best of Cape Town."
-    },
-    "packages": {
-      "title": "Featured  Packages",
-      "subtitle": "Carefully crafted experiences that combine the best attractions, activities, and accommodations for unforgettable journeys.",
-      "highlights": "Package Highlights:",
-      "perPerson": "per person"
-    }
+    "description": "These core services support different points in your journey – from understanding your options, to confirming eligibility, to getting your documents ready. For a full step-by-step view of our three-stage support model, please see the How It Works page.",
+    "howItWorks": "See How Our Process Works",
+    "pricing": "View Stage-Based Pricing",
+    "contact": "Talk to Our Team"
   },
   "gallery": {
     "title": "Photo Gallery",
-    "subtitle": "See the most beautiful moments from our   trips",
+    "subtitle": "See the most beautiful moments from our medical training programs",
     "photos": "Photos"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "  tips and articles",
+    "subtitle": "Medical tips and articles",
     "readMore": "Read More",
     "latestPosts": "Latest Posts",
     "loadMore": "Load More Posts",
     "categories": {
       "title": "Categories",
       "all": "All Posts",
-      "s": "s",
-      "photography": "Photography",
-      "Grape": "Strawberry& Food",
-      "culture": "Culture",
-      "adventure": "Adventure",
-      "tips": " Tips"
+      "s": "Specialties",
+      "photography": "Interviews",
+      "Grape": "Training",
+      "culture": "Healthcare System",
+      "adventure": "Career Paths",
+      "tips": "Application Tips"
     },
     "sidebar": {
       "recent": "Recent Posts",
       "tags": "Popular Tags",
       "newsletter": {
         "title": "Stay Updated",
-        "description": "Subscribe to our newsletter for the latest  tips and  s.",
+        "description": "Subscribe to our newsletter for the latest medical tips and program updates.",
         "placeholder": "Enter your email",
         "subscribe": "Subscribe"
       }
     },
     "posts": {
       "post1": {
-        "title": "Top 10 Must-Visit s in Cape Town"
+        "title": "HPCSA Registration Guide for Foreign Doctors"
       },
       "post2": {
-        "title": " Photography: Capturing Wildlife in Their Natural Habitat"
+        "title": "Medical Training Overview in South Africa"
       },
       "post3": {
-        "title": "Grape Tasting in Stellenbosch: A Complete "
+        "title": "Guidelines for Choosing the Right Medical Specialty"
       },
       "s": {
-        "title": "Top 10 Must-Visit s in Cape Town",
-        "excerpt": "Discover the most breathtaking locations that should be on every er's Cape Town .",
-        "content": "<h2>Introduction</h2><p>Cape Town is a land of incredible diversity, offering everything from bustling cities to pristine wilderness areas. Whether you're seeking adventure, culture, or relaxation, this beautiful country has something for everyone.</p><h2>1. Cape Town and Table Mountain</h2><p>No visit to Cape Town is complete without experiencing the mother city. Cape Town offers stunning natural beauty, rich history, and world-class dining.</p><h2>2. Kruger National Park</h2><p>Home to the Big 5 and countless other species, Kruger is one of Africa's premier  s.</p><h2>3. Garden Route</h2><p>This scenic coastal drive offers breathtaking landscapes, charming towns, and outdoor adventures.</p><h2>4. Stellenbosch StrawberryRegion</h2><p>Experience world-class Strawberries in one of the most beautiful Strawberryregions on earth.</p><h2>5. Drakensberg Mountains</h2><p>A UNESCO World Heritage site offering hiking, rock art, and stunning mountain scenery.</p><h2>Conclusion</h2><p>These s represent just a fraction of what Cape Town has to offer. Each location provides unique experiences that will create lasting memories.</p>"
+        "title": "HPCSA Registration Guide for Foreign Doctors",
+        "excerpt": "A comprehensive guide to understanding the HPCSA registration process, ECFMG EPIC verification, and required documents.",
+        "content": "<h2>Introduction</h2><p>HPCSA registration is a crucial step for foreign doctors who wish to practice medicine in South Africa. We'll guide you through each step of the process.</p><h2>Basic Requirements</h2><p>You must have a recognized medical degree and have completed your internship period.</p><h2>Registration Process</h2><p>The process starts with creating an account on the HPCSA portal and submitting all required documents.</p>"
       },
       "photography": {
-        "title": " Photography: Capturing the Big 5",
-        "excerpt": "Professional tips and techniques for photographing Africa's most magnificent wildlife.",
-        "content": "<h2>Getting Started with  Photography</h2><p>Wildlife photography in Africa is an incredible experience that requires patience, skill, and the right equipment. Here's your complete  to capturing stunning images of the Big 5.</p><h2>Essential Equipment</h2><p>A telephoto lens (300-600mm) is crucial for wildlife photography. Don't forget extra batteries and memory cards!</p><h2>Best Times for Photography</h2><p>Golden hour provides the best lighting conditions for wildlife photography.</p>"
+        "title": "Medical Interview Guidelines",
+        "excerpt": "Professional tips and techniques for succeeding in medical interviews in South Africa.",
+        "content": "<h2>Preparing for Your Interview</h2><p>Medical interviews require thorough preparation and knowledge of local requirements. Here's your complete guide to success.</p><h2>Common Questions</h2><p>Be prepared to answer questions about your experience, qualifications, and career goals.</p><h2>Important Tips</h2><p>Dress professionally, arrive on time, and show confidence in your medical knowledge.</p>"
       },
-      "Grape": {
-        "title": "Strawberry Tasting : Stellenbosch vs Franschhoek",
-        "excerpt": "Compare two of Cape Town's premier Strawberryregions and discover which suits your taste.",
-        "content": "<h2>Introduction to Cape Town Grape</h2><p>Cape Town's Strawberryregions offer world-class experiences with stunning landscapes and exceptional Strawberries.</p><h2>Stellenbosch: The Heart of StrawberryCountry</h2><p>Known for its historic estates and premium red Strawberries, Stellenbosch offers a traditional Strawberryexperience.</p><h2>Franschhoek: The French Corner</h2><p>This charming valley combines French heritage with Cape Town terroir.</p>"
+      "grape": {
+        "title": "Medical Specialties Guide: Choosing the Right Path",
+        "excerpt": "Compare different medical specialties in South Africa and discover which one suits your goals.",
+        "content": "<h2>Introduction to Medical Specialties</h2><p>South Africa's medical specialties offer world-class opportunities with excellent training programs.</p><h2>Popular Specialties</h2><p>Internal Medicine, Surgery, Pediatrics, and Obstetrics & Gynecology are among the most sought-after specialties.</p><h2>Training Requirements</h2><p>Each specialty has specific training requirements and examination processes.</p>"
       },
       "culture": {
-        "title": "Cultural Immersion: Understanding Cape Town Heritage",
-        "excerpt": "Dive deep into the rich cultural tapestry that makes Cape Town unique.",
-        "content": "<h2>The Relegious Tolerance</h2><p>Cape Town's cultural diversity is one of its greatest treasures, with 11 official languages and countless traditions.</p><h2>Historical Sites to Visit</h2><p>From Robben Island to the Cradle of Humankind, Cape Town offers profound historical experiences.</p><h2>Living Culture</h2><p>Experience traditional music, dance, and cuisine that tell the story of this remarkable nation.</p>"
+        "title": "Understanding South Africa's Healthcare System",
+        "excerpt": "Immerse yourself in the unique healthcare system that makes South Africa exceptional in medical care.",
+        "content": "<h2>Healthcare Structure</h2><p>South Africa's healthcare diversity is one of its greatest assets, with both public and private systems.</p><h2>Teaching Hospitals</h2><p>From Groote Schuur to Chris Hani Baragwanath, South Africa offers profound medical training experiences.</p><h2>Medical Culture</h2><p>Experience local medical practices, protocols, and procedures that tell the story of this remarkable healthcare system.</p>"
       },
       "adventure": {
-        "title": "Adventure Activities: Adrenaline Rush in Cape Town",
-        "excerpt": "From bungee jumping to shark cage diving, discover Cape Town's thrilling adventures.",
-        "content": "<h2>Cape Town: Adventure Capital</h2><p>Cape Town offers world-class adventure activities for thrill-seekers of all levels.</p><h2>Top Adventure Activities</h2><p>Bungee jumping, shark cage diving, paragliding, and rock climbing await the brave.</p><h2>Safety First</h2><p>All activities are conducted by certified operators with excellent safety records.</p>"
+        "title": "In-Demand Medical Specialties",
+        "excerpt": "From internship to residency, discover exciting medical specialties in South Africa.",
+        "content": "<h2>South Africa: Medical Excellence Destination</h2><p>South Africa offers world-class medical training programs for medical enthusiasts of all levels.</p><h2>Top Training Programs</h2><p>Internship, residency, surgical training, and research opportunities await the dedicated.</p><h2>Safety First</h2><p>All training programs are conducted by accredited institutions with excellent safety records.</p>"
       },
       "tips": {
-        "title": "Best Time to Visit Cape Town: Seasonal ",
-        "excerpt": "Plan your perfect trip with our comprehensive  to Cape Town's seasons.",
-        "content": "<h2>Understanding Cape Town Seasons</h2><p>Cape Town's diverse climate means there's always a perfect time to visit different regions.</p><h2>Summer (December - April)</h2><p>Perfect for coastal activities and Strawberryharvest season.</p><h2>Winter (June - August)</h2><p>Ideal for  as animals gather around water sources.</p>"
+        "title": "Best Time to Apply for Medical Programs: Seasonal Guide",
+        "excerpt": "Plan your application timeline with our comprehensive guide to medical program admission seasons in South Africa.",
+        "content": "<h2>Understanding Application Seasons</h2><p>South Africa's medical programs have specific application windows throughout the year.</p><h2>Summer Applications (December - April)</h2><p>Perfect for internship applications and residency program submissions.</p><h2>Winter Applications (June - August)</h2><p>Ideal for specialist training applications as positions become available.</p>"
       }
     }
   },
   "contact": {
-    "title": "Ready to Begin Your Journey?",
-    "subtitle": "Contact us today to book your Consultation. Let's discuss your goals and plan your future in South Africa.",
+    "title": "Ready to Begin Your Medical Journey?",
+    "subtitle": "Contact us today to book your consultation. Let's discuss your goals and plan your medical career in South Africa.",
     "hours": "Business Hours",
     "getInTouch": {
       "title": "Get in Touch",
-      "description": "We're here to help you plan your perfect Cape Town adventure. Contact us through any of the methods below, and our friendly team will get back to you as soon as possible."
+      "description": "We're here to help you plan your medical career path. Contact us through any of the methods below, and our friendly team will get back to you as soon as possible."
     },
     "visitOffice": {
       "title": "Visit Our Office",
-      "description": "Located in the heart of Cape Town, our office is easily accessible and we welcome walk-in consultations. Schedule an appointment or drop by to discuss your  plans in person."
+      "description": "Located in the heart of Cape Town, our office is easily accessible and we welcome walk-in consultations. Schedule an appointment or drop by to discuss your medical career plans in person."
     },
     "form": {
       "name": "Name",
@@ -378,15 +357,15 @@
   },
   "cta": {
     "title": "Ready for Your Medical Training?",
-    "subtitle": "Contact us today to plan your perfect medical training journey. Our expert team is ready to create unforgettable experiences tailored just for you.",
+    "subtitle": "Contact us today to plan your medical career journey. Our expert team is ready to create tailored training programs designed just for you.",
     "callNow": "Call Now",
     "social": {
       "title": "Follow Us on Social Media",
-      "description": "Stay updated with our latest news and resources!"
+      "description": "Stay updated with our latest news and medical resources!"
     },
     "emergency": {
       "title": "24/7 Emergency Support",
-      "description": "For urgent matters during your relocation or training:"
+      "description": "For urgent matters during your training or application:"
     },
     "directions": "Get Directions",
     "loadingMap": "Loading map...",
@@ -407,13 +386,153 @@
   },
   "whyChooseUs": {
     "title": "Why Dar Cape Medica?",
-    "content": "Choosing the right partner for your journey is crucial. We offer more than just services; we provide a deep understanding of cultural nuances, personalized support, and a proven track record of success. With a team that understands the needs of Arab professionals, we ensure you receive not only expert guidance but also culturally sensitive support every step of the way. Our success stories speak for themselves, having helped countless doctors achieve their dreams in South Africa."
+    "content": "Choosing the right partner for your medical career is crucial. We offer more than just services; we provide a deep understanding of cultural nuances, personalized support, and a proven track record of success. With a team that understands the needs of Arab professionals, we ensure you receive not only expert guidance but also culturally sensitive support every step of the way. Our success stories speak for themselves, having helped countless doctors achieve their dreams in South Africa."
+  },
+  "howItWorksPage": {
+    "hero": {
+      "title": "Medical Training & Placement Support",
+      "subtitle": "Step-by-Step Service Model (Stage 1 → Stage 3)",
+      "supporting": "A tiered approach designed to build trust and ensure eligibility before financial commitment."
+    },
+    "intro": {
+      "title": "How Our Process Works",
+      "body": "DAR CAPE MEDICA supports international doctors pursuing specialist training in South Africa. Our process is structured into three clear stages, allowing you to start small and only proceed if you're eligible, with no obligation to continue after any stage."
+    },
+    "stages": {
+      "stage1": {
+        "label": "Stage 1",
+        "title": "Eligibility & Career Assessment",
+        "purpose": "To evaluate the candidate's background and determine the best-fit specialization and South African training pathway.",
+        "includes": {
+          "review": "Detailed Review: Comprehensive CV and clinical experience audit",
+          "analysis": "Pathway Analysis: Eligibility evaluation for South African medical training routes",
+          "matching": "Specialty Matching: Suitability assessment",
+          "mapping": "Institutional Mapping: Matching with appropriate universities and teaching hospitals",
+          "advisory": "Strategic Advisory: Honest assessment of success probability, timelines, and potential risks"
+        },
+        "deliverables": {
+          "summary": "Written Assessment Summary",
+          "specialization": "Recommended Specialization(s)",
+          "roadmap": "Roadmap to Proceed"
+        },
+        "duration": "5–7 Working Days",
+        "cta": "Stage 1",
+        "note": "Only candidates who meet eligibility criteria proceed to Stage 2."
+      },
+      "stage2": {
+        "label": "Stage 2",
+        "title": "Application Readiness & Faculty Outreach",
+        "purpose": "To build a competitive application profile and initiate formal communication with academic departments.",
+        "includes": {
+          "cv": "CV Enhancement: Professional medical-format CV optimization",
+          "letters": "Motivation Letters: Tailored letters per specialization",
+          "strategy": "Communication Strategy: Faculty/Department email drafting and follow-up timing",
+          "mastery": "Document Mastery: Checklists for HPCSA, university, and hospital compliance"
+        },
+        "deliverables": {
+          "cv": "Final CV",
+          "letters": "Motivation Letters",
+          "templates": "Outreach Email Templates"
+        },
+        "duration": "10–14 Working Days",
+        "cta": "Stage 2"
+      },
+      "stage3": {
+        "label": "Stage 3",
+        "title": "Full Application & Placement Support",
+        "purpose": "End-to-end management until an offer, interview, or placement outcome is secured.",
+        "includes": {
+          "application": "Submission Management: Support through university and hospital application portals",
+          "liaison": "Faculty Liaison: Tracking communication and managing departmental queries",
+          "administrative": "Administrative Logistics: Assistance with notarization, document handling, and offer review",
+          "preArrival": "Pre-Arrival Guidance: Onboarding support, housing advice, and arrival timelines"
+        },
+        "deliverables": {
+          "confirmation": "Submission Confirmation",
+          "support": "Placement Support & Outcome Guidance"
+        },
+        "duration": "Ongoing until outcome",
+        "cta": "Stage 3"
+      }
+    },
+    "includes": "Includes",
+    "deliverables": "Deliverables",
+    "price": "Price",
+    "note": "Note",
+    "payment": {
+      "title": "Payment & Policy Structure",
+      "commitment": "Our Commitment to You",
+      "points": {
+        "modular": "Modular Billing",
+        "modularDesc": "Each stage is paid separately to minimize financial risk",
+        "obligation": "No Obligation",
+        "obligationDesc": "Applicants may pause or stop after any stage",
+        "transparency": "Transparency",
+        "transparencyDesc": "No hidden costs; clear deliverables at every milestone"
+      },
+      "methodsTitle": "Accepted Payment Methods",
+      "methods": {
+        "transfer": "Bank Transfer (manual confirmation)"
+      },
+      "ctaText": "Have questions about our process or ready to get started? Our team is here to help."
+    }
   },
   "keyEntities": "Key Entities",
   "successStories": {
     "title": "Success Stories from Our Medical Community",
     "content": "Hear from Arab doctors who have achieved their dreams of medical training in South Africa with our assistance. Their stories inspire and illustrate how our dedicated support can make a difference.",
     "empty": "Success stories coming soon."
+  },
+  "pricingPage": {
+    "hero": {
+      "title": "Transparent Pricing",
+      "subtitle": "Pay only for the stage you are in. Upgrade when ready."
+    },
+    "stages": {
+      "stage1": {
+        "title": "Stage 1 – Eligibility & Career Assessment",
+        "price": "USD 200",
+        "duration": "5–7 Working Days",
+        "cta": "Stage 1"
+      },
+      "stage2": {
+        "title": "Stage 2 – Application Readiness & Faculty Outreach",
+        "price": "USD 400",
+        "duration": "10–14 Working Days",
+        "cta": "Stage 2"
+      },
+      "stage3": {
+        "title": "Stage 3 – Full Application & Placement Support",
+        "price": "USD 700",
+        "duration": "Until outcome",
+        "cta": "Stage 3"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Do you guarantee placement?",
+          "a": "No, we do not guarantee placement. Our role is to provide expert guidance and support throughout the application process, but final decisions are made by the respective medical institutions and regulatory bodies."
+        },
+        {
+          "q": "Can I stop after Stage 1?",
+          "a": "Yes, absolutely. Our process is designed to be flexible. You can stop after any stage with no obligation to continue. Each stage provides value on its own."
+        },
+        {
+          "q": "Who is this service for?",
+          "a": "Our services are designed for international medical graduates (IMGs) who are serious about pursuing specialist training in South Africa. This includes doctors who value expert guidance, want to avoid common application pitfalls, and are committed to putting in the work required for a successful application."
+        },
+        {
+          "q": "Who is it not for?",
+          "a": "This service is not suitable for individuals seeking guaranteed outcomes, those unwilling to invest time in the application process, or those not meeting the basic requirements for medical practice in South Africa."
+        },
+        {
+          "q": "What happens if I’m not eligible after Stage 1?",
+          "a": "If our assessment determines that you don’t meet the basic eligibility criteria for specialist training in South Africa, we will provide you with a detailed explanation of the gaps and may suggest alternative pathways or additional qualifications that could improve your chances in the future."
+        }
+      ]
+    }
   },
   "insightPages": {
     "hpcsa": {
@@ -490,7 +609,7 @@
         },
         "help": {
           "title": "Need Help?",
-          "desc": "Weâ€™ll help shortlist programs and clarify requirements."
+          "desc": "We will help shortlist programs and clarify requirements."
         }
       }
     }

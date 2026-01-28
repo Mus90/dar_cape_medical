@@ -40,7 +40,7 @@ const ContactInfo = () => {
       ],
       color: 'from-green-500 to-emerald-500',
       links: [
-        'tel:+27749548756'
+        'https://wa.me/27749548756'
       ]
     },
     {
@@ -183,7 +183,7 @@ const ContactInfo = () => {
           {t('emergency.description')}
         </p>
         <a
-          href="tel:+27749548756"
+          href="https://wa.me/27749548756"
           className="inline-flex items-center text-accent-800 font-medium hover:text-accent-900"
         >
           <PhoneIcon className="h-4 w-4 mr-2 rtl:mr-0 rtl:ml-2" />

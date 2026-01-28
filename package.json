@@ -1,38 +1,40 @@
 {
-    "name":  "dar-cape-website",
-    "version":  "0.1.0",
-    "private":  true,
-    "scripts":  {
-                    "dev":  "next dev",
-                    "build":  "next build",
-                    "build:pages":  "next build \u0026\u0026 node -e \"const fs=require(\u0027fs\u0027);const path=require(\u0027path\u0027);const out=\u0027out\u0027;const docs=\u0027docs\u0027;try{if(fs.existsSync(docs)){fs.rmSync(docs,{recursive:true,force:true});}if(!fs.existsSync(out)){console.error(\u0027Missing out/ directory. Ensure next.config.js has output:\\\u0027export\\\u0027.\u0027);process.exit(1);}fs.renameSync(out,docs);}catch(e){console.error(\u0027Move out-\u003edocs failed:\u0027,e);process.exit(1);}const idx=path.join(docs,\u0027index.html\u0027);if(fs.existsSync(idx)){fs.copyFileSync(idx,path.join(docs,\u0027404.html\u0027));}fs.writeFileSync(path.join(docs,\u0027.nojekyll\u0027),\u0027\u0027);fs.writeFileSync(path.join(docs,\u0027CNAME\u0027),\u0027darcape.com\u0027);\"",
-                    "start":  "next start",
-                    "lint":  "next lint"
-                },
-    "dependencies":  {
-                         "@googlemaps/js-api-loader":  "^1.16.2",
-                         "@headlessui/react":  "^1.7.17",
-                         "@heroicons/react":  "^2.0.18",
-                         "framer-motion":  "^10.18.0",
-                         "gray-matter":  "^4.0.3",
-                         "next":  "^14.2.32",
-                         "next-intl":  "^3.0.0",
-                         "react":  "^18.2.0",
-                         "react-dom":  "^18.2.0",
-                         "react-hook-form":  "^7.47.0",
-                         "remark":  "^15.0.1",
-                         "remark-html":  "^16.0.1",
-                         "swiper":  "^10.3.1"
-                     },
-    "devDependencies":  {
-                            "@types/node":  "^20.8.6",
-                            "@types/react":  "^18.2.28",
-                            "@types/react-dom":  "^18.2.13",
-                            "autoprefixer":  "^10.4.16",
-                            "eslint":  "^8.51.0",
-                            "eslint-config-next":  "14.0.0",
-                            "postcss":  "^8.4.31",
-                            "tailwindcss":  "^3.3.5",
-                            "typescript":  "^5.2.2"
-                        }
+    "name": "dar-cape-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "build:pages": "next build && node -e \"const fs=require('fs');const path=require('path');const out='out';const docs='docs';try{if(fs.existsSync(docs)){fs.rmSync(docs,{recursive:true,force:true});}if(!fs.existsSync(out)){console.error('Missing out/ directory. Ensure next.config.js has output:\\'export\\'.');process.exit(1);}fs.renameSync(out,docs);}catch(e){console.error('Move out->docs failed:',e);process.exit(1);}const idx=path.join(docs,'index.html');if(fs.existsSync(idx)){fs.copyFileSync(idx,path.join(docs,'404.html'));}fs.writeFileSync(path.join(docs,'.nojekyll'),'');fs.writeFileSync(path.join(docs,'CNAME'),'darcape.com');\"",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@googlemaps/js-api-loader": "^1.16.2",
+        "@headlessui/react": "^1.7.17",
+        "@heroicons/react": "^2.0.18",
+        "framer-motion": "^10.18.0",
+        "gray-matter": "^4.0.3",
+        "next": "^14.2.32",
+        "next-intl": "^3.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.47.0",
+        "remark": "^15.0.1",
+        "remark-html": "^16.0.1",
+        "swiper": "^10.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.30",
+        "@types/react": "^18.2.28",
+        "@types/react-dom": "^18.2.13",
+        "autoprefixer": "^10.4.16",
+        "clsx": "^2.1.1",
+        "eslint": "^8.51.0",
+        "eslint-config-next": "14.0.0",
+        "postcss": "^8.4.31",
+        "tailwind-merge": "^3.4.0",
+        "tailwindcss": "^3.3.5",
+        "typescript": "^5.2.2"
+    }
 }

@@ -18,6 +18,8 @@ const Header = () => {
     { name: t('home'), href: `/${locale}` },
     { name: t('about'), href: `/${locale}/about` },
     { name: t('services'), href: `/${locale}/services` },
+    { name: t('howItWorks'), href: `/${locale}/how-it-works` },
+    { name: t('pricing'), href: `/${locale}/pricing` },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
