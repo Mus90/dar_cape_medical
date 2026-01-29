@@ -24,19 +24,19 @@ export default function ServicesPage({ params: { locale } }: Props) {
   const tCommon = useTranslations();
 
   return (
-    <main className="section-padding">
+    <main className="section-padding pt-36">
       <div className="container-max">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h1>
-          <p className="text-gray-600 text-lg mb-4">{t('subtitle')}</p>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-16 mt-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('title')}</h1>
+          <p className="text-gray-600 text-lg mb-6">{t('subtitle')}</p>
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
             {tCommon('services.description')}
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[{
             icon: DocumentTextIcon,
             title: t('items.info.title'),

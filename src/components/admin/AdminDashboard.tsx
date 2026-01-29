@@ -97,7 +97,7 @@ const ForgotPasswordForm = ({
             value={resetEmail}
             onChange={(e) => setResetEmail(e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-            placeholder="support@darcape.com"
+            placeholder="mustafa@darcape.com"
             required
           />
         </div>
@@ -265,7 +265,7 @@ const AdminDashboard = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="support@darcape.com"
+                  placeholder="mustafa@darcape.com"
                   required
                 />
               </div>
@@ -469,7 +469,7 @@ const OverviewTab = ({ t }: { t: any }) => {
 const SettingsTab = ({ t }: { t: any }) => {
   const [settings, setSettings] = React.useState({
     siteTitle: 'Dar Cape  ',
-    contactEmail: 'support@darcape.com',
+    contactEmail: 'mustafa@darcape.com',
     whatsappNumber: '+27749548756',
     googleMapsApiKey: '',
     adminPassword: 'â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢', // Hidden for security
@@ -637,7 +637,7 @@ const SettingsTab = ({ t }: { t: any }) => {
                   localStorage.removeItem('dar_cape_settings');
                   setSettings({
                     siteTitle: 'Dar Cape  ',
-                    contactEmail: 'support@darcape.com',
+                    contactEmail: 'mustafa@darcape.com',
                     whatsappNumber: '+27749548756',
                     googleMapsApiKey: '',
                     adminPassword: 'darcape2024',

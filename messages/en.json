@@ -13,7 +13,7 @@
   },
   "servicesSimple": {
     "title": "Our Core Support Services",
-    "subtitle": "Practical, step-aligned support for international doctors â€“ from understanding your options, to confirming eligibility, to preparing compliant documentation.",
+    "subtitle": "Practical, step-aligned support for international doctors from understanding your options, to confirming eligibility, to preparing compliant documentation.",
     "cta": "Discuss Your Case",
     "items": {
       "info": {
@@ -136,6 +136,7 @@
   },
   "services": {
     "title": "Our Services",
+    "subtitle": "Choose from a variety of medical training and consulting programs",
     "description": "These core services support different points in your journey – from understanding your options, to confirming eligibility, to getting your documents ready. For a full step-by-step view of our three-stage support model, please see the How It Works page.",
     "howItWorks": "See How Our Process Works",
     "pricing": "View Stage-Based Pricing",

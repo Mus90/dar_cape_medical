@@ -12,8 +12,6 @@ const nextConfig = {
     // there are type errors.
     ignoreBuildErrors: true,
   },
-  // Static export for GitHub Pages
-  output: 'export',
   images: {
     unoptimized: true,
     domains: ['images.unsplash.com', 'via.placeholder.com'],

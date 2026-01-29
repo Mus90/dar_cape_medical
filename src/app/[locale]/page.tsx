@@ -12,7 +12,7 @@ type Props = {
 
 export default function HomePage({ params: { locale } }: Props) {
   setRequestLocale(locale);
-  
+
   return (
     <div className="min-h-screen">
       <HeroSection />

@@ -64,7 +64,6 @@ export default function PricingPage({ params: { locale } }: Props) {
                 t('stages.stage3.features.submission'),
                 t('stages.stage3.features.liaison'),
                 t('stages.stage3.features.handling'),
-                t('stages.stage3.features.interview'),
                 t('stages.stage3.features.offer'),
                 t('stages.stage3.features.preArrival')
             ],
@@ -77,15 +76,15 @@ export default function PricingPage({ params: { locale } }: Props) {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+            <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 pt-36">
                 <div className="container-max section-padding text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('hero.title')}</h1>
-                    <p className="text-xl text-primary-100">{t('hero.subtitle')}</p>
+                    <p className="text-xl text-primary-100 max-w-3xl mx-auto">{t('hero.subtitle')}</p>
                 </div>
             </section>
 
             {/* Pricing Plans */}
-            <section className="py-16">
+            <section className="py-8">
                 <div className="container-max section-padding">
                     <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {pricingPlans.map((plan) => (
@@ -93,7 +92,7 @@ export default function PricingPage({ params: { locale } }: Props) {
                                 key={plan.id}
                                 className="relative"
                             >
-                                <Card className="h-full flex flex-col overflow-hidden border-2 border-gray-200">
+                                <Card className="h-full flex flex-col overflow-hidden border-2 border-gray-200 hover:shadow-lg transition-shadow">
                                     <div className="p-6">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.title}</h3>
                                         <div className="mb-4">
@@ -128,22 +127,22 @@ export default function PricingPage({ params: { locale } }: Props) {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-16 bg-white">
+            <section className="py-8 bg-white">
                 <div className="container-max section-padding">
                     <div className="max-w-3xl mx-auto">
-                        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">{t('faq.title')}</h2>
+                        <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">{t('faq.title')}</h2>
 
-                        <div className="space-y-6">
+                        <div className="space-y-4 mb-12">
                             {faqs.map((faq: { q: string, a: string }, index: number) => (
-                                <div key={index} className="border-b border-gray-200 pb-6">
+                                <div key={index} className="border-b border-gray-200 pb-4">
                                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.q}</h3>
                                     <p className="text-gray-600">{faq.a}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="mt-12 text-center">
-                            <div className="space-y-4 sm:space-y-0 sm:space-x-4">
+                        <div className="text-center">
+                            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
                                 <Link
                                     href={`/${locale}/contact`}
                                     className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 md:py-3 md:text-lg md:px-8 transition-colors"

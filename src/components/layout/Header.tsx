@@ -5,6 +5,8 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import LanguageToggle from '@/components/ui/LanguageToggle';
 
 const Header = () => {
@@ -31,12 +33,26 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <nav className="container-max section-padding py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      {/* Glass morphism backdrop */}
+      <div className="absolute inset-0 backdrop-blur-xl bg-white/80 border-b border-white/20" />
+
+      <nav className="relative container-max section-padding py-4">
         <div className="flex items-center justify-between">
-          {/* Logo Placeholder */}
-          <Link href={`/${locale}`} className="flex items-center">
-            <span className="text-xl md:text-2xl font-extrabold tracking-tight text-primary-600">{tCommon('brandName')}</span>
+          {/* Logo */}
+          <Link href={`/${locale}`} className="flex items-center group">
+            <div className="relative h-32 w-auto">
+              <div className="absolute -inset-3 bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md" />
+              <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 shadow-xl" />
+              <Image
+                src="/images/logo.jpeg"
+                alt="DAR CAPE MEDICA Logo"
+                width={480}
+                height={160}
+                className="relative h-32 w-auto transition-transform duration-300 group-hover:scale-105 p-3"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -45,24 +61,45 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 ${isActive(item.href)
-                  ? 'text-primary-600 border-b-2 border-primary-600 pb-1'
+                className={`relative font-medium transition-all duration-300 py-2 px-1 ${isActive(item.href)
+                  ? 'text-primary-600'
                   : 'text-gray-700 hover:text-primary-600'
                   }`}
               >
                 {item.name}
+                {/* Animated underline */}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary-600 to-primary-700 transition-all duration-300 ${isActive(item.href) ? 'w-full' : 'w-0 hover:w-full'
+                    }`}
+                />
               </Link>
             ))}
           </div>
 
-          {/* Language Toggle & Mobile Menu Button */}
+          {/* Right side actions */}
           <div className="flex items-center space-x-4 rtl:space-x-reverse">
-            <LanguageToggle />
+            {/* CTA Button */}
+            <div className="hidden md:block">
+              <Link
+                href={`/${locale}/contact`}
+                className="relative group/btn px-6 py-2.5 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:scale-105"
+              >
+                <span className="relative z-10">{t('contact')}</span>
+                {/* Button shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
+              </Link>
+            </div>
+
+            {/* Language Toggle */}
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full opacity-0 hover:opacity-20 transition-opacity duration-300" />
+              <LanguageToggle />
+            </div>
 
             {/* Mobile menu button */}
             <button
               type="button"
-              className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100"
+              className="lg:hidden relative p-2 rounded-xl text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -76,25 +113,43 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
-            <div className="pt-4 space-y-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${isActive(item.href)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-100'
-                    }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden mt-4 border-t border-gray-200/50"
+            >
+              <div className="pt-4 space-y-1">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${isActive(item.href)
+                      ? 'text-primary-600 bg-primary-50 border-l-4 border-primary-600'
+                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                      }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                {/* Mobile CTA */}
+                <div className="pt-2 mt-2 border-t border-gray-200">
+                  <Link
+                    href={`/${locale}/contact`}
+                    className="block w-full mx-4 px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium rounded-xl text-center transition-all duration-300 hover:shadow-lg"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {t('contact')}
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );

@@ -11,7 +11,17 @@ const LanguageToggle = () => {
 
   const toggleLanguage = () => {
     const newLocale = locale === 'ar' ? 'en' : 'ar';
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+
+    // Get the current path without locale
+    const pathWithoutLocale = pathname.replace(/^\/(en|ar)/, '') || '/';
+
+    // Construct new path with new locale
+    const newPath = `/${newLocale}${pathWithoutLocale}`;
+
+    console.log('Switching language from', locale, 'to', newLocale);
+    console.log('Current pathname:', pathname);
+    console.log('New path:', newPath);
+
     router.push(newPath);
   };
 

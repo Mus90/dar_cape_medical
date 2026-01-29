@@ -87,20 +87,20 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
-                <div className="container-max section-padding">
+            <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 pt-36">
+                <div className="container-max section-padding text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('hero.title')}</h1>
-                    <p className="text-xl md:text-2xl text-primary-100 mb-6">{t('hero.supporting')}</p>
-                    <p className="text-lg max-w-3xl">{t('hero.subtitle')}</p>
+                    <p className="text-xl md:text-2xl text-primary-100 mb-4 max-w-4xl mx-auto">{t('hero.supporting')}</p>
+                    <p className="text-lg max-w-3xl mx-auto">{t('hero.subtitle')}</p>
                 </div>
             </section>
 
             {/* Introduction Section */}
-            <section className="py-16 bg-white">
+            <section className="py-12 bg-white">
                 <div className="container-max section-padding">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('intro.title')}</h2>
-                        <p className="text-lg text-gray-600 mb-8">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('intro.title')}</h2>
+                        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                             {t('intro.body')}
                         </p>
                     </div>
@@ -108,9 +108,9 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
             </section>
 
             {/* Stages Section */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-12 bg-gray-50">
                 <div className="container-max section-padding">
-                    <div className="max-w-5xl mx-auto space-y-12">
+                    <div className="max-w-5xl mx-auto space-y-8">
                         {stages.map((stage) => (
                             <Card key={stage.id} className="overflow-hidden border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <div className="p-6 md:p-8">
