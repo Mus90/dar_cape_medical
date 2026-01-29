@@ -12,7 +12,8 @@ const LanguageToggle = () => {
   const toggleLanguage = () => {
     const newLocale = locale === 'ar' ? 'en' : 'ar';
 
-    // Get the current path without locale
+    // For static export, we need to handle routing differently
+    // Get the current path without locale prefix
     const pathWithoutLocale = pathname.replace(/^\/(en|ar)/, '') || '/';
 
     // Construct new path with new locale
@@ -22,7 +23,12 @@ const LanguageToggle = () => {
     console.log('Current pathname:', pathname);
     console.log('New path:', newPath);
 
-    router.push(newPath);
+    // For static export, use window.location for full page reload
+    if (typeof window !== 'undefined') {
+      window.location.href = newPath;
+    } else {
+      router.push(newPath);
+    }
   };
 
   return (

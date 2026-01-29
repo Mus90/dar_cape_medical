@@ -239,7 +239,7 @@ The website is optimized for:
 ## 📞 Support
 
 For technical support or customization requests, contact:
-- **Email**: developer@darcape.com
+- **Email**: mustafa@darcape.com
 - **Phone**: +27749548756
 
 ## 📄 License
