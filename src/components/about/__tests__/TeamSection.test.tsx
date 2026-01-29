@@ -10,10 +10,10 @@ describe('TeamSection Data', () => {
         phone: '+27749548756'
       },
       {
-        name: 'Mujahid',
+        name: 'Joy',
         position: 'CTO',
         image: '',
-        email: 'mujahid@darcape.com',
+        email: 'Joy@darcape.com',
         phone: '+27 123 456 790'
       }
     ]
@@ -21,7 +21,7 @@ describe('TeamSection Data', () => {
     expect(teamData).toHaveLength(2)
     expect(teamData[0].name).toBe('Mustafa')
     expect(teamData[0].image).toBe('')
-    expect(teamData[1].name).toBe('Mujahid')
+    expect(teamData[1].name).toBe('Joy')
     expect(teamData[1].image).toBe('')
   })
 
@@ -32,7 +32,7 @@ describe('TeamSection Data', () => {
     }
 
     expect(validateEmail('mustafa@darcape.com')).toBe(true)
-    expect(validateEmail('mujahid@darcape.com')).toBe(true)
+    expect(validateEmail('Joy@darcape.com')).toBe(true)
     expect(validateEmail('invalid-email')).toBe(false)
   })
 

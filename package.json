@@ -10,19 +10,14 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@googlemaps/js-api-loader": "^1.16.2",
         "@headlessui/react": "^1.7.17",
         "@heroicons/react": "^2.0.18",
         "framer-motion": "^10.18.0",
-        "gray-matter": "^4.0.3",
         "next": "^14.2.32",
         "next-intl": "^3.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-hook-form": "^7.47.0",
-        "remark": "^15.0.1",
-        "remark-html": "^16.0.1",
-        "swiper": "^10.3.1"
+        "react-hook-form": "^7.47.0"
     },
     "devDependencies": {
         "@types/node": "^20.19.30",

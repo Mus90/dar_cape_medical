@@ -10,12 +10,12 @@ jest.mock('next-intl', () => ({
       'about.team.members.Mustafa.name': 'Mustafa',
       'about.team.members.Mustafa.position': 'CEO & Founder',
       'about.team.members.Mustafa.description': 'Leading Dar Cape with vision and expertise',
-      'about.team.members.mujahid.name': 'Mujahid',
-      'about.team.members.mujahid.position': 'CTO',
-      'about.team.members.mujahid.description': 'Technical excellence and innovation',
-      'about.team.members.Ahmed.name': 'Ahmed',
-      'about.team.members.Ahmed.position': 'Operations Manager',
-      'about.team.members.Ahmed.description': 'Ensuring smooth operations',
+      'about.team.members.Joy.name': 'Joy',
+      'about.team.members.Joy.position': 'CTO',
+      'about.team.members.Joy.description': 'Technical excellence and innovation',
+      'about.team.members.Kay.name': 'Kay',
+      'about.team.members.Kay.position': 'Operations Manager',
+      'about.team.members.Kay.description': 'Ensuring smooth operations',
     }
     return translations[`${namespace}.${key}`] || key
   },

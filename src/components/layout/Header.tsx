@@ -77,29 +77,16 @@ const Header = () => {
           </div>
 
           {/* Right side actions */}
-          <div className="flex items-center space-x-4 rtl:space-x-reverse">
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <Link
-                href={`/${locale}/contact`}
-                className="relative group/btn px-6 py-2.5 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:scale-105"
-              >
-                <span className="relative z-10">{t('contact')}</span>
-                {/* Button shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
-              </Link>
-            </div>
-
+          <div className="flex items-center space-x-4 rtl:space-x-reverse z-10">
             {/* Language Toggle */}
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full opacity-0 hover:opacity-20 transition-opacity duration-300" />
+            <div className="relative z-20">
               <LanguageToggle />
             </div>
 
             {/* Mobile menu button */}
             <button
               type="button"
-              className="lg:hidden relative p-2 rounded-xl text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300"
+              className="lg:hidden relative p-2 rounded-xl text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300 z-20"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>

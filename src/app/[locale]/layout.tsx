@@ -75,25 +75,15 @@ export default async function LocaleLayout({
   const isRTL = locale === 'ar';
 
   return (
-    <html lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0ea5e9" />
-      </head>
-      <body className={`${isRTL ? 'font-arabic' : 'font-english'} bg-gray-50`}>
-        <NextIntlClientProvider messages={messages}>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-            <WhatsAppButton />
-          </div>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <div className={`min-h-screen flex flex-col ${isRTL ? 'font-arabic' : 'font-english'} bg-gray-50`} data-locale={locale} data-dir={isRTL ? 'rtl' : 'ltr'}>
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </NextIntlClientProvider>
   );
 }

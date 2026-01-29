@@ -21,19 +21,19 @@ const TeamSection = () => {
       phone: '+27749548756'
     },
     {
-      name: t('members.mujahid.name'),
-      position: t('members.mujahid.position'),
-      description: t('members.mujahid.description'),
+      name: t('members.Joy.name'),
+      position: t('members.Joy.position'),
+      description: t('members.Joy.description'),
       image: '',
-      email: 'mujahid@darcape.com',
+      email: 'Joy@darcape.com',
       phone: '+27 123 456 790'
     },
     {
-      name: t('members.Ahmed.name'),
-      position: t('members.Ahmed.position'),
-      description: t('members.Ahmed.description'),
+      name: t('members.Kay.name'),
+      position: t('members.Kay.position'),
+      description: t('members.Kay.description'),
       image: '',
-      email: 'Ahmed@darcape.com',
+      email: 'Kay@darcape.com',
       phone: '+27 123 456 791'
     }
   ];

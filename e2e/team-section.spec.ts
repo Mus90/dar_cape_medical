@@ -13,8 +13,8 @@ test.describe('Team Section', () => {
 
     // Check for team member names
     await expect(page.locator('text=Mustafa')).toBeVisible();
-    await expect(page.locator('text=Mujahid')).toBeVisible();
-    await expect(page.locator('text=Ahmed')).toBeVisible();
+    await expect(page.locator('text=Joy')).toBeVisible();
+    await expect(page.locator('text=Kay')).toBeVisible();
   });
 
   test('should display team member positions', async ({ page }) => {
@@ -65,7 +65,7 @@ test.describe('Team Section', () => {
     // Check if team section is still visible and functional on mobile
     await expect(page.locator('text=Our Team')).toBeVisible();
     await expect(page.locator('text=Mustafa')).toBeVisible();
-    await expect(page.locator('text=Mujahid')).toBeVisible();
+    await expect(page.locator('text=Joy')).toBeVisible();
   });
 });
 

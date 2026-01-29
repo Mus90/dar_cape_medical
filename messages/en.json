@@ -121,13 +121,13 @@
           "position": "Founder & Lead Medical Advisor",
           "description": "Supporting international doctors with HPCSA registration, pathway planning, and placement into South African training programs."
         },
-        "mujahid": {
-          "name": "Mujahid Mohamed",
+        "Joy": {
+          "name": "Joy C Idu",
           "position": "Operations & Compliance Lead",
           "description": "Oversees timelines, documentation, and regulatory requirements to keep applications accurate and on track."
         },
-        "Ahmed": {
-          "name": "Ahmed Ali",
+        "Kay": {
+          "name": "Kay D Kwalie",
           "position": "Admissions & Partnerships Coordinator",
           "description": "Coordinates with universities and teaching hospitals, prepares candidate profiles, and manages communication until acceptance."
         }
@@ -478,7 +478,28 @@
       "ctaText": "Have questions about our process or ready to get started? Our team is here to help."
     }
   },
-  "keyEntities": "Key Entities",
+  "keyEntities": {
+    "title": "Key Entities",
+    "subtitle": "Important regulatory bodies and organizations for medical training in South Africa",
+    "items": {
+      "hpcsa": {
+        "title": "Health Professions Council of South Africa (HPCSA)",
+        "description": "The statutory body regulating healthcare professions in South Africa, responsible for registration, ethics, and professional conduct."
+      },
+      "ecfmg": {
+        "title": "Educational Commission for Foreign Medical Graduates (ECFMG)",
+        "description": "Organization that certifies international medical graduates for residency training and practice in the United States."
+      },
+      "saqa": {
+        "title": "South African Qualifications Authority (SAQA)",
+        "description": "National body responsible for evaluating foreign qualifications and ensuring they meet South African standards."
+      },
+      "dha": {
+        "title": "Department of Home Affairs (DHA)",
+        "description": "Government department handling immigration, visas, and work permits for international medical professionals."
+      }
+    }
+  },
   "successStories": {
     "title": "Success Stories from Our Medical Community",
     "content": "Hear from Arab doctors who have achieved their dreams of medical training in South Africa with our assistance. Their stories inspire and illustrate how our dedicated support can make a difference.",

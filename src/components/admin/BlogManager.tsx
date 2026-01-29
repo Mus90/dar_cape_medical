@@ -21,7 +21,7 @@ const BlogManager = () => {
       id: '1',
       title: 'Top 10 Must-Visit s in Cape Town',
       excerpt: 'Discover the most breathtaking locations that should be on every er\'s Cape Town .',
-      author: 'Mujahid Mohamed',
+      author: 'Joy C Idu',
       date: '2024-01-15',
       status: 'published',
       category: 's',

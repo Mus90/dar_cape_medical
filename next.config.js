@@ -19,6 +19,14 @@ const nextConfig = {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
   },
   trailingSlash: true,
+  // Performance optimizations
+  experimental: {
+    optimizePackageImports: ['@heroicons/react', 'framer-motion']
+  },
+  // Reduce bundle size
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+  }
 }
 
 module.exports = withNextIntl(nextConfig);
