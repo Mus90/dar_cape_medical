@@ -159,13 +159,14 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
                                         </div>
                                     </div>
 
-                                    {stage.note && (
+                                    {/* Note section - Commented out until note property is added to stage type */}
+                                    {/* {stage.note && (
                                         <div className="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r">
                                             <p className="text-sm text-blue-700">
                                                 <span className="font-medium">{t('note')}:</span> {stage.note}
                                             </p>
                                         </div>
-                                    )}
+                                    )} */}
                                 </div>
                             </Card>
                         ))}
