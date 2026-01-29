@@ -28,7 +28,7 @@ export default function PricingPage({ params: { locale } }: Props) {
         {
             id: 1,
             title: t('stages.stage1.title'),
-            price: 200,
+            price: 159,
             duration: t('stages.stage1.duration'),
             features: [
                 t('stages.stage1.features.cv'),
@@ -43,7 +43,7 @@ export default function PricingPage({ params: { locale } }: Props) {
         {
             id: 2,
             title: t('stages.stage2.title'),
-            price: 400,
+            price: 369,
             duration: t('stages.stage2.duration'),
             features: [
                 t('stages.stage2.features.cv'),
@@ -58,7 +58,7 @@ export default function PricingPage({ params: { locale } }: Props) {
         {
             id: 3,
             title: t('stages.stage3.title'),
-            price: 700,
+            price: 749,
             duration: t('stages.stage3.duration'),
             features: [
                 t('stages.stage3.features.submission'),

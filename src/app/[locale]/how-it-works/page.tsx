@@ -41,7 +41,7 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
                 t('stages.stage1.deliverables.specialization'),
                 t('stages.stage1.deliverables.roadmap')
             ],
-            price: 200,
+            price: 159,
             duration: t('stages.stage1.duration'),
             cta: t('stages.stage1.cta'),
         },
@@ -60,7 +60,7 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
                 t('stages.stage2.deliverables.letters'),
                 t('stages.stage2.deliverables.templates')
             ],
-            price: 400,
+            price: 369,
             duration: t('stages.stage2.duration'),
             cta: t('stages.stage2.cta')
         },
@@ -78,7 +78,7 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
                 t('stages.stage3.deliverables.confirmation'),
                 t('stages.stage3.deliverables.support')
             ],
-            price: 700,
+            price: 749,
             duration: t('stages.stage3.duration'),
             cta: t('stages.stage3.cta')
         }

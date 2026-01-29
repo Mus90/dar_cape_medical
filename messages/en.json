@@ -491,21 +491,42 @@
     "stages": {
       "stage1": {
         "title": "Stage 1 – Eligibility & Career Assessment",
-        "price": "USD 200",
         "duration": "5–7 Working Days",
-        "cta": "Stage 1"
+        "cta": "Stage 1",
+        "features": {
+          "cv": "Comprehensive CV and clinical experience audit",
+          "eligibility": "Eligibility evaluation for SA training routes",
+          "specialty": "Specialty matching assessment",
+          "institution": "Institutional mapping",
+          "summary": "Written assessment summary",
+          "recommended": "Recommended specialization(s)"
+        }
       },
       "stage2": {
         "title": "Stage 2 – Application Readiness & Faculty Outreach",
-        "price": "USD 400",
         "duration": "10–14 Working Days",
-        "cta": "Stage 2"
+        "cta": "Stage 2",
+        "features": {
+          "cv": "Professional CV enhancement",
+          "letters": "Tailored motivation letters",
+          "communication": "Faculty communication strategy",
+          "checklists": "Document compliance checklists",
+          "templates": "Outreach email templates",
+          "timeline": "Application timeline planning"
+        }
       },
       "stage3": {
         "title": "Stage 3 – Full Application & Placement Support",
-        "price": "USD 700",
         "duration": "Until outcome",
-        "cta": "Stage 3"
+        "cta": "Stage 3",
+        "features": {
+          "submission": "Application submission support",
+          "liaison": "Faculty liaison services",
+          "handling": "Document handling assistance",
+          "interview": "Interview preparation",
+          "offer": "Offer review and guidance",
+          "preArrival": "Pre-arrival support"
+        }
       }
     },
     "faq": {
