@@ -24,48 +24,38 @@ export default function PricingPage({ params: { locale } }: Props) {
     const t = useTranslations('pricingPage');
     const tCommon = useTranslations();
 
-    const pricingPlans = [
+    const servicePlans = [
         {
             id: 1,
             title: t('stages.stage1.title'),
-            price: 159,
-            duration: t('stages.stage1.duration'),
+            description: t('stages.stage1.description'),
             features: [
                 t('stages.stage1.features.cv'),
                 t('stages.stage1.features.eligibility'),
                 t('stages.stage1.features.specialty'),
                 t('stages.stage1.features.institution'),
                 t('stages.stage1.features.summary'),
-                t('stages.stage1.features.recommended')
+                t('stages.stage1.features.recommended'),
+                t('stages.stage1.features.cvEnhancement'),
+                t('stages.stage1.features.letters'),
+                t('stages.stage1.features.communication'),
+                t('stages.stage1.features.checklists'),
+                t('stages.stage1.features.templates'),
+                t('stages.stage1.features.timeline')
             ],
             cta: t('stages.stage1.cta')
         },
         {
             id: 2,
-            title: t('stages.stage2.title'),
-            price: 369,
-            duration: t('stages.stage2.duration'),
-            features: [
-                t('stages.stage2.features.cv'),
-                t('stages.stage2.features.letters'),
-                t('stages.stage2.features.communication'),
-                t('stages.stage2.features.checklists'),
-                t('stages.stage2.features.templates'),
-                t('stages.stage2.features.timeline')
-            ],
-            cta: t('stages.stage2.cta')
-        },
-        {
-            id: 3,
             title: t('stages.stage3.title'),
-            price: 749,
-            duration: t('stages.stage3.duration'),
+            description: t('stages.stage3.description'),
             features: [
                 t('stages.stage3.features.submission'),
                 t('stages.stage3.features.liaison'),
                 t('stages.stage3.features.handling'),
                 t('stages.stage3.features.offer'),
-                t('stages.stage3.features.preArrival')
+                t('stages.stage3.features.preArrival'),
+                t('stages.stage3.features.support')
             ],
             cta: t('stages.stage3.cta')
         }
@@ -83,11 +73,11 @@ export default function PricingPage({ params: { locale } }: Props) {
                 </div>
             </section>
 
-            {/* Pricing Plans */}
+            {/* Service Plans */}
             <section className="py-8">
                 <div className="container-max section-padding">
-                    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {pricingPlans.map((plan) => (
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        {servicePlans.map((plan) => (
                             <div
                                 key={plan.id}
                                 className="relative"
@@ -95,11 +85,7 @@ export default function PricingPage({ params: { locale } }: Props) {
                                 <Card className="h-full flex flex-col overflow-hidden border-2 border-gray-200 hover:shadow-lg transition-shadow">
                                     <div className="p-6">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.title}</h3>
-                                        <div className="mb-4">
-                                            <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
-                                            <span className="text-gray-600"> USD</span>
-                                        </div>
-                                        <p className="text-gray-600 text-sm mb-6">{plan.duration}</p>
+                                        <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
 
                                         <ul className="space-y-3 mb-8">
                                             {plan.features.map((feature, index) => (
@@ -112,12 +98,13 @@ export default function PricingPage({ params: { locale } }: Props) {
                                     </div>
 
                                     <div className="mt-auto p-6 pt-0">
-                                        <button
-                                            className={`w-full py-3 px-6 rounded-md font-medium transition-colors flex items-center justify-center bg-white border-2 border-primary-600 text-primary-600 hover:bg-primary-50`}
+                                        <Link
+                                            href={`/${locale}/contact`}
+                                            className={`w-full py-3 px-6 rounded-md font-medium transition-colors flex items-center justify-center bg-primary-600 text-white hover:bg-primary-700`}
                                         >
                                             {plan.cta}
                                             <ArrowRightIcon className="ml-2 h-4 w-4" />
-                                        </button>
+                                        </Link>
                                     </div>
                                 </Card>
                             </div>

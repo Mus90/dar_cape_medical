@@ -392,8 +392,8 @@
   "howItWorksPage": {
     "hero": {
       "title": "Medical Training & Placement Support",
-      "subtitle": "Step-by-Step Service Model (Stage 1 → Stage 3)",
-      "supporting": "A tiered approach designed to build trust and ensure eligibility before financial commitment."
+      "subtitle": "Step-by-Step Service Model (Stage 1 → Stage 2)",
+      "supporting": "A comprehensive approach designed to build trust and ensure eligibility before financial commitment."
     },
     "intro": {
       "title": "How Our Process Works",
@@ -402,44 +402,31 @@
     "stages": {
       "stage1": {
         "label": "Stage 1",
-        "title": "Eligibility & Career Assessment",
-        "purpose": "To evaluate the candidate's background and determine the best-fit specialization and South African training pathway.",
+        "title": "Medical Training & Placement Support",
+        "purpose": "To evaluate the candidate's background and provide comprehensive application and placement support until an offer is secured.",
         "includes": {
           "review": "Detailed Review: Comprehensive CV and clinical experience audit",
           "analysis": "Pathway Analysis: Eligibility evaluation for South African medical training routes",
-          "matching": "Specialty Matching: Suitability assessment",
+          "matching": "Specialty Matching: Suitability assessment for different specializations",
           "mapping": "Institutional Mapping: Matching with appropriate universities and teaching hospitals",
-          "advisory": "Strategic Advisory: Honest assessment of success probability, timelines, and potential risks"
-        },
-        "deliverables": {
-          "summary": "Written Assessment Summary",
-          "specialization": "Recommended Specialization(s)",
-          "roadmap": "Roadmap to Proceed"
-        },
-        "duration": "5–7 Working Days",
-        "cta": "Stage 1",
-        "note": "Only candidates who meet eligibility criteria proceed to Stage 2."
-      },
-      "stage2": {
-        "label": "Stage 2",
-        "title": "Application Readiness & Faculty Outreach",
-        "purpose": "To build a competitive application profile and initiate formal communication with academic departments.",
-        "includes": {
+          "advisory": "Strategic Advisory: Honest assessment of success probability, timelines, and potential risks",
           "cv": "CV Enhancement: Professional medical-format CV optimization",
           "letters": "Motivation Letters: Tailored letters per specialization",
           "strategy": "Communication Strategy: Faculty/Department email drafting and follow-up timing",
           "mastery": "Document Mastery: Checklists for HPCSA, university, and hospital compliance"
         },
         "deliverables": {
-          "cv": "Final CV",
-          "letters": "Motivation Letters",
+          "summary": "Written Assessment Summary",
+          "specialization": "Recommended Specialization(s)",
+          "roadmap": "Roadmap to Proceed",
+          "finalCv": "Final Optimized CV",
+          "motivationLetters": "Motivation Letters",
           "templates": "Outreach Email Templates"
         },
-        "duration": "10–14 Working Days",
-        "cta": "Stage 2"
+        "cta": "Contact Us for Details"
       },
-      "stage3": {
-        "label": "Stage 3",
+      "stage2": {
+        "label": "Stage 2",
         "title": "Full Application & Placement Support",
         "purpose": "End-to-end management until an offer, interview, or placement outcome is secured.",
         "includes": {
@@ -452,30 +439,31 @@
           "confirmation": "Submission Confirmation",
           "support": "Placement Support & Outcome Guidance"
         },
-        "duration": "Ongoing until outcome",
-        "cta": "Stage 3"
+        "cta": "Get Started"
       }
     },
     "includes": "Includes",
     "deliverables": "Deliverables",
-    "price": "Price",
-    "note": "Note",
-    "payment": {
-      "title": "Payment & Policy Structure",
-      "commitment": "Our Commitment to You",
+    "contactUs": "Contact Us",
+    "customPricing": "Custom Pricing",
+    "contact": {
+      "title": "Contact Us for Personalized Assessment",
+      "process": "Our Process",
+      "benefits": "Benefits",
       "points": {
-        "modular": "Modular Billing",
-        "modularDesc": "Each stage is paid separately to minimize financial risk",
-        "obligation": "No Obligation",
-        "obligationDesc": "Applicants may pause or stop after any stage",
-        "transparency": "Transparency",
-        "transparencyDesc": "No hidden costs; clear deliverables at every milestone"
+        "assessment": "Personalized Assessment",
+        "assessmentDesc": "We evaluate your background and provide honest feedback on your eligibility",
+        "flexible": "Flexible Approach",
+        "flexibleDesc": "No obligation to proceed - you control the timeline and decisions",
+        "transparent": "Transparent Process",
+        "transparentDesc": "Clear deliverables and expectations at every step"
       },
-      "methodsTitle": "Accepted Payment Methods",
-      "methods": {
-        "transfer": "Bank Transfer (manual confirmation)"
+      "benefitsPoints": {
+        "personalized": "Personalized service tailored to your specific medical career goals",
+        "comprehensive": "Comprehensive support from assessment to placement",
+        "noObligation": "No financial obligation until you're ready to proceed"
       },
-      "ctaText": "Have questions about our process or ready to get started? Our team is here to help."
+      "ctaText": "Ready to take the next step? Contact us today for a personalized consultation and discover how we can help you achieve your medical career goals in South Africa."
     }
   },
   "keyEntities": {
@@ -507,29 +495,22 @@
   },
   "pricingPage": {
     "hero": {
-      "title": "Transparent Pricing",
-      "subtitle": "Pay only for the stage you are in. Upgrade when ready."
+      "title": "Medical Training & Placement Services",
+      "subtitle": "Contact us for personalized assessment and custom pricing tailored to your specific needs."
     },
     "stages": {
       "stage1": {
-        "title": "Stage 1 – Eligibility & Career Assessment",
-        "duration": "5–7 Working Days",
-        "cta": "Stage 1",
+        "title": "Medical Training & Placement Support",
+        "description": "Comprehensive assessment and application support until placement is secured.",
+        "cta": "Contact Us for Details",
         "features": {
           "cv": "Comprehensive CV and clinical experience audit",
           "eligibility": "Eligibility evaluation for SA training routes",
           "specialty": "Specialty matching assessment",
           "institution": "Institutional mapping",
           "summary": "Written assessment summary",
-          "recommended": "Recommended specialization(s)"
-        }
-      },
-      "stage2": {
-        "title": "Stage 2 – Application Readiness & Faculty Outreach",
-        "duration": "10–14 Working Days",
-        "cta": "Stage 2",
-        "features": {
-          "cv": "Professional CV enhancement",
+          "recommended": "Recommended specialization(s)",
+          "cvEnhancement": "Professional CV enhancement",
           "letters": "Tailored motivation letters",
           "communication": "Faculty communication strategy",
           "checklists": "Document compliance checklists",
@@ -538,16 +519,16 @@
         }
       },
       "stage3": {
-        "title": "Stage 3 – Full Application & Placement Support",
-        "duration": "Until outcome",
-        "cta": "Stage 3",
+        "title": "Full Application & Placement Support",
+        "description": "End-to-end management until an offer or placement outcome is secured.",
+        "cta": "Get Started",
         "features": {
           "submission": "Application submission support",
           "liaison": "Faculty liaison services",
           "handling": "Document handling assistance",
-          "interview": "Interview preparation",
           "offer": "Offer review and guidance",
-          "preArrival": "Pre-arrival support"
+          "preArrival": "Pre-arrival support",
+          "support": "Ongoing placement support"
         }
       }
     },

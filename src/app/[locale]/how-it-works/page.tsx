@@ -34,53 +34,37 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
                 t('stages.stage1.includes.analysis'),
                 t('stages.stage1.includes.matching'),
                 t('stages.stage1.includes.mapping'),
-                t('stages.stage1.includes.advisory')
+                t('stages.stage1.includes.advisory'),
+                t('stages.stage1.includes.cv'),
+                t('stages.stage1.includes.letters'),
+                t('stages.stage1.includes.strategy'),
+                t('stages.stage1.includes.mastery')
             ],
             deliverables: [
                 t('stages.stage1.deliverables.summary'),
                 t('stages.stage1.deliverables.specialization'),
-                t('stages.stage1.deliverables.roadmap')
+                t('stages.stage1.deliverables.roadmap'),
+                t('stages.stage1.deliverables.finalCv'),
+                t('stages.stage1.deliverables.motivationLetters'),
+                t('stages.stage1.deliverables.templates')
             ],
-            price: 159,
-            duration: t('stages.stage1.duration'),
-            cta: t('stages.stage1.cta'),
+            cta: t('stages.stage1.cta')
         },
         {
             id: 2,
             title: t('stages.stage2.title'),
             purpose: t('stages.stage2.purpose'),
             includes: [
-                t('stages.stage2.includes.cv'),
-                t('stages.stage2.includes.letters'),
-                t('stages.stage2.includes.strategy'),
-                t('stages.stage2.includes.mastery')
+                t('stages.stage2.includes.application'),
+                t('stages.stage2.includes.liaison'),
+                t('stages.stage2.includes.administrative'),
+                t('stages.stage2.includes.preArrival')
             ],
             deliverables: [
-                t('stages.stage2.deliverables.cv'),
-                t('stages.stage2.deliverables.letters'),
-                t('stages.stage2.deliverables.templates')
+                t('stages.stage2.deliverables.confirmation'),
+                t('stages.stage2.deliverables.support')
             ],
-            price: 369,
-            duration: t('stages.stage2.duration'),
             cta: t('stages.stage2.cta')
-        },
-        {
-            id: 3,
-            title: t('stages.stage3.title'),
-            purpose: t('stages.stage3.purpose'),
-            includes: [
-                t('stages.stage3.includes.application'),
-                t('stages.stage3.includes.liaison'),
-                t('stages.stage3.includes.administrative'),
-                t('stages.stage3.includes.preArrival')
-            ],
-            deliverables: [
-                t('stages.stage3.deliverables.confirmation'),
-                t('stages.stage3.deliverables.support')
-            ],
-            price: 749,
-            duration: t('stages.stage3.duration'),
-            cta: t('stages.stage3.cta')
         }
     ];
 
@@ -149,13 +133,15 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
                                         </div>
 
                                         <div className="bg-primary-50 p-4 rounded-lg border border-primary-100 min-w-[180px] text-center ml-6">
-                                            <div className="text-sm font-medium text-gray-500 mb-1">{t('price')}</div>
-                                            <div className="text-2xl font-bold text-primary-700 mb-3">USD {stage.price}</div>
-                                            <div className="text-sm text-gray-600 mb-4">{stage.duration}</div>
-                                            <button className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-md transition-colors flex items-center justify-center">
+                                            <div className="text-sm font-medium text-gray-500 mb-1">{t('contactUs')}</div>
+                                            <div className="text-lg font-bold text-primary-700 mb-3">{t('customPricing')}</div>
+                                            <Link
+                                                href={`/${locale}/contact`}
+                                                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-md transition-colors flex items-center justify-center"
+                                            >
                                                 {stage.cta}
                                                 <ArrowRightIcon className="ml-2 h-4 w-4" />
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
 
@@ -174,37 +160,45 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
                 </div>
             </section>
 
-            {/* Payment & Policy Section */}
+            {/* Contact & Policy Section */}
             <section className="py-16 bg-white">
                 <div className="container-max section-padding">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">{t('payment.title')}</h2>
+                        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">{t('contact.title')}</h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="bg-gray-50 p-6 rounded-lg">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('payment.commitment')}</h3>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('contact.process')}</h3>
                                 <ul className="space-y-3">
                                     <li className="flex items-start">
                                         <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                                        <span className="text-gray-700"><strong>{t('payment.points.modular')}:</strong> {t('payment.points.modularDesc')}</span>
+                                        <span className="text-gray-700"><strong>{t('contact.points.assessment')}:</strong> {t('contact.points.assessmentDesc')}</span>
                                     </li>
                                     <li className="flex items-start">
                                         <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                                        <span className="text-gray-700"><strong>{t('payment.points.obligation')}:</strong> {t('payment.points.obligationDesc')}</span>
+                                        <span className="text-gray-700"><strong>{t('contact.points.flexible')}:</strong> {t('contact.points.flexibleDesc')}</span>
                                     </li>
                                     <li className="flex items-start">
                                         <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                                        <span className="text-gray-700"><strong>{t('payment.points.transparency')}:</strong> {t('payment.points.transparencyDesc')}</span>
+                                        <span className="text-gray-700"><strong>{t('contact.points.transparent')}:</strong> {t('contact.points.transparentDesc')}</span>
                                     </li>
                                 </ul>
                             </div>
 
                             <div className="bg-gray-50 p-6 rounded-lg">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('payment.methodsTitle')}</h3>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('contact.benefits')}</h3>
                                 <ul className="space-y-3">
-                                    <li className="flex items-center">
-                                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                                        <span className="text-gray-700">{t('payment.methods.transfer')}</span>
+                                    <li className="flex items-start">
+                                        <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                                        <span className="text-gray-700">{t('contact.benefitsPoints.personalized')}</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                                        <span className="text-gray-700">{t('contact.benefitsPoints.comprehensive')}</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <CheckCircleIcon className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                                        <span className="text-gray-700">{t('contact.benefitsPoints.noObligation')}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -212,7 +206,7 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
 
                         <div className="mt-10 text-center">
                             <p className="text-gray-600 mb-6">
-                                {t('payment.ctaText')}
+                                {t('contact.ctaText')}
                             </p>
                             <Link
                                 href={`/${locale}/contact`}
