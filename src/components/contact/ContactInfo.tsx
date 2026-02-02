@@ -13,8 +13,6 @@ import {
 import {
   FaceBookIcon,
   InstagramIcon,
-  TwitterIcon,
-  YouTubeIcon,
   TikTokIcon
 } from '@/components/icons/SocialIcons';
 
@@ -68,11 +66,9 @@ const ContactInfo = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', url: 'https://facebook.com/darcape ', icon: FaceBookIcon, color: 'text-blue-600 hover:text-blue-700' },
-    { name: 'Instagram', url: 'https://instagram.com/darcape ', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
-    { name: 'Twitter', url: 'https://twitter.com/darcape ', icon: TwitterIcon, color: 'text-gray-900 hover:text-gray-700' },
-    { name: 'YouTube', url: 'https://youtube.com/@darcape ', icon: YouTubeIcon, color: 'text-red-600 hover:text-red-700' },
-    { name: 'TikTok', url: 'https://tiktok.com/@dar_cape ', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
+    { name: 'Facebook', url: 'https://www.facebook.com/DarCapeMedica/', icon: FaceBookIcon, color: 'text-blue-600 hover:text-blue-700' },
+    { name: 'Instagram', url: 'https://www.instagram.com/dar_cape_medica/', icon: InstagramIcon, color: 'text-pink-600 hover:text-pink-700' },
+    { name: 'TikTok', url: 'https://www.tiktok.com/@dar_cape', icon: TikTokIcon, color: 'text-black hover:text-gray-800' }
   ];
 
   return (

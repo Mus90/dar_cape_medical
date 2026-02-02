@@ -38,9 +38,9 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
             "availableLanguage": ["English", "Arabic"]
           },
           "sameAs": [
-            "https://facebook.com/darcape ",
-            "https://instagram.com/darcape ",
-            "https://twitter.com/darcape "
+            "https://www.facebook.com/DarCapeMedica/",
+            "https://www.instagram.com/dar_cape_medica/",
+            "https://www.tiktok.com/@dar_cape"
           ],
           "priceRange": "$$",
           "servesCuisine": "Cape Town",

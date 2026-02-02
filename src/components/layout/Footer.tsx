@@ -9,6 +9,11 @@ import {
   EnvelopeIcon,
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
+import {
+  FaceBookIcon,
+  InstagramIcon,
+  TikTokIcon
+} from '@/components/icons/SocialIcons';
 
 const Footer = () => {
   const t = useTranslations();
@@ -23,9 +28,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: '' },
-    { name: 'Instagram', href: '#', icon: '' },
-    { name: 'YouTube', href: '#', icon: '' },
+    { name: 'Facebook', href: 'https://www.facebook.com/DarCapeMedica/', icon: <FaceBookIcon className="w-6 h-6" /> },
+    { name: 'Instagram', href: 'https://www.instagram.com/dar_cape_medica/', icon: <InstagramIcon className="w-6 h-6" /> },
+    { name: 'TikTok', href: 'https://www.tiktok.com/@dar_cape', icon: <TikTokIcon className="w-6 h-6" /> }
   ];
 
   return (
@@ -45,7 +50,9 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-2xl hover:scale-110 transition-transform duration-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                   title={social.name}
                 >
                   {social.icon}
