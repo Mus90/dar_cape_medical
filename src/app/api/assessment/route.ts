@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendAssessmentFormNotifications, isValidEmail, generateReference } from '@/lib/emailService';
 import { checkRateLimit, getClientIdentifier } from '@/lib/rateLimiter';
+import { normalizeAssessmentPhone } from '@/utils/assessmentPhone';
 
 export async function POST(request: NextRequest) {
   try {
@@ -63,7 +64,7 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!fullName || !email || !whatsapp || !nationality || !currentCountry || 
         !medicalSchool || !qualificationCountry || !graduationYear || 
-        !internship || !desiredPathway || !desiredSpecialty || !selfFunding || !cvFile) {
+        !internship || !desiredPathway || !desiredSpecialty || !selfFunding || !cvFile || cvFile.size === 0) {
       return NextResponse.json(
         { error: 'All required fields must be completed including CV' },
         { status: 400 }
@@ -78,33 +79,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Content validation - detect fake/spam data
-    const suspiciousPatterns = [
-      /test/i,
-      /spam/i,
-      /fake/i,
-      /xxx/i,
-      /example\.com/i,
-      /temp/i,
-      /dummy/i,
-    ];
-
-    const checkField = (value: string) => {
-      if (!value) return false;
-      return suspiciousPatterns.some(pattern => pattern.test(value));
-    };
-
-    if (checkField(fullName) || checkField(email) || checkField(whatsapp) || 
-        checkField(medicalSchool) || checkField(nationality)) {
-      return NextResponse.json(
-        { error: 'Invalid data detected. Please provide accurate information.' },
-        { status: 400 }
-      );
-    }
-
     // Validate phone number format (basic check)
-    const phoneRegex = /^[\d\s\+\-\(\)]{10,20}$/;
-    if (!phoneRegex.test(whatsapp.replace(/\s/g, ''))) {
+    const normalizedPhone = normalizeAssessmentPhone(whatsapp);
+    if (!normalizedPhone) {
       return NextResponse.json(
         { error: 'Invalid phone number format' },
         { status: 400 }
@@ -113,8 +90,8 @@ export async function POST(request: NextRequest) {
 
     // Validate graduation year
     const currentYear = new Date().getFullYear();
-    const gradYear = parseInt(graduationYear);
-    if (isNaN(gradYear) || gradYear < 1950 || gradYear > currentYear + 5) {
+    const gradYear = Number(graduationYear);
+    if (!Number.isInteger(gradYear) || gradYear < 1950 || gradYear > currentYear + 5) {
       return NextResponse.json(
         { error: 'Invalid graduation year' },
         { status: 400 }
@@ -123,8 +100,8 @@ export async function POST(request: NextRequest) {
 
     // Validate target year if provided
     if (targetYear) {
-      const targetYr = parseInt(targetYear);
-      if (isNaN(targetYr) || targetYr < currentYear || targetYr > currentYear + 5) {
+      const targetYr = Number(targetYear);
+      if (!Number.isInteger(targetYr) || targetYr < currentYear || targetYr > currentYear + 5) {
         return NextResponse.json(
           { error: 'Invalid target year' },
           { status: 400 }
@@ -165,7 +142,7 @@ export async function POST(request: NextRequest) {
     const sanitizedData = {
       name: fullName.trim().slice(0, 100),
       email: email.trim().toLowerCase(),
-      whatsapp: whatsapp.trim().slice(0, 50),
+      whatsapp: normalizedPhone,
       nationality: nationality.trim().slice(0, 100),
       currentCountry: currentCountry.trim().slice(0, 100),
       medicalSchool: medicalSchool.trim().slice(0, 200),

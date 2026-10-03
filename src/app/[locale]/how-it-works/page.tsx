@@ -71,7 +71,7 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 pt-36">
+            <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 md:py-24">
                 <div className="container-max section-padding text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('hero.title')}</h1>
                     <p className="text-xl md:text-2xl text-primary-100 mb-4 max-w-4xl mx-auto">{t('hero.supporting')}</p>

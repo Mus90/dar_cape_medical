@@ -101,7 +101,7 @@ const SpecialistTrainingContent = ({ locale }: SpecialistTrainingContentProps) =
         url={`https://darcape.com/${locale === 'en' ? '' : locale + '/'}services/specialist-training`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
-      <main className="section-padding pt-40">
+      <main className="section-padding">
         <div className="container-max">
           {/* Header */}
           <motion.div

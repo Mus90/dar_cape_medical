@@ -893,7 +893,21 @@
         "note": "Accepted formats: PDF, DOC, DOCX (max 5MB)"
       },
       "submit": "Check My Pathway",
-      "disclaimer": "By submitting this form, you agree to our privacy policy. Your information will be used solely for assessment purposes."
+      "disclaimer": "By submitting this form, you agree to our privacy policy. Your information will be used solely for assessment purposes.",
+      "submitting": "Sending…"
+    },
+    "validation": {
+      "required": "Please complete this field.",
+      "email": "Enter a valid email address, such as name@example.com.",
+      "phone": "Enter 7–15 digits. Local numbers or country codes with + or 00 are accepted; spaces, brackets, dots and hyphens are fine.",
+      "year": "Enter a whole year between {min} and {max}.",
+      "number": "Enter a whole number of zero or more.",
+      "fileType": "Choose a PDF, DOC or DOCX file.",
+      "fileSize": "Your CV is too large. Choose a file of 5 MB or less.",
+      "correctFields": "Please correct the highlighted fields. Your other details have been kept.",
+      "tooFast": "Please review your details and try again in a few seconds.",
+      "rateLimit": "Too many submissions. Please try again in an hour or contact us directly.",
+      "submitFailed": "We could not send your assessment. Your details are still here. Check your connection and try again, or contact us directly."
     }
   },
   "home": {

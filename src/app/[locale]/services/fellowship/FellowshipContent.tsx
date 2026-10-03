@@ -104,7 +104,7 @@ const FellowshipContent = ({ locale }: FellowshipContentProps) => {
         url={`https://darcape.com/${locale === 'en' ? '' : locale + '/'}services/fellowship`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
-      <main className="section-padding pt-40">
+      <main className="section-padding">
         <div className="container-max">
           {/* Header */}
           <motion.div

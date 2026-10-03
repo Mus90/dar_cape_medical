@@ -69,8 +69,8 @@ export default function ContactPage({ params: { locale } }: Props) {
         <section className="section-padding bg-white">
           <div className="container-max">
             <div className="grid lg:grid-cols-2 gap-12">
-              <ContactInfo />
-              <AssessmentForm />
+              <div className="lg:order-2 min-w-0"><AssessmentForm /></div>
+              <div className="lg:order-1 min-w-0"><ContactInfo /></div>
             </div>
             <div className="mt-16 text-center">
               <WhatsAppCTA />

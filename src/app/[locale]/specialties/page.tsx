@@ -27,7 +27,7 @@ export default function SpecialtiesPage({ params: { locale } }: Props) {
   ];
 
   return (
-    <main className="section-padding pt-32">
+    <main className="section-padding">
       <div className="container-max">
         {/* Heading */}
         <div className="text-center mb-16">

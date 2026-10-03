@@ -34,30 +34,30 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-stone-200">
-      <nav className="container-max px-6 py-5">
+    <header className="sticky top-0 z-50 shrink-0 bg-white border-b border-stone-200">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center">
-            <div className="relative h-28 w-auto">
+            <div className="relative h-24 w-28 md:h-28 md:w-32 overflow-hidden">
               <Image
                 src="/images/logo.jpeg"
                 alt="DAR CAPE MEDICA Logo"
-                width={480}
-                height={160}
-                className="h-28 w-auto"
+                fill
+                sizes="128px"
+                className="object-contain scale-[1.65]"
                 priority
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 rtl:space-x-reverse">
+          <div className="hidden xl:flex items-center gap-5">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 py-2 px-1 text-sm ${isActive(item.href)
+                className={`whitespace-nowrap font-medium transition-colors duration-200 py-2 px-1 text-base ${isActive(item.href)
                   ? 'text-navy-900 border-b-2 border-navy-900'
                   : 'text-stone-600 hover:text-navy-900'
                   }`}
@@ -75,7 +75,9 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               type="button"
-              className="lg:hidden p-2 rounded-lg text-stone-600 hover:text-navy-900 hover:bg-stone-100 transition-colors"
+              className="xl:hidden p-2 rounded-lg text-stone-600 hover:text-navy-900 hover:bg-stone-100 transition-colors"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -96,14 +98,15 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden mt-6 border-t border-stone-200"
+              id="mobile-navigation"
+              className="xl:hidden mt-4 max-h-[calc(100dvh-9rem)] overflow-y-auto border-t border-stone-200"
             >
               <div className="pt-6 space-y-1">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block px-4 py-3 rounded-lg font-medium transition-colors text-base ${isActive(item.href)
+                    className={`block px-4 py-3 rounded-lg font-medium transition-colors text-lg ${isActive(item.href)
                       ? 'text-navy-900 bg-stone-100'
                       : 'text-stone-600 hover:text-navy-900 hover:bg-stone-50'
                       }`}

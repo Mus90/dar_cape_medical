@@ -36,7 +36,7 @@ const SpecialtyProfile = ({ locale, specialty }: SpecialtyProfileProps) => {
   const t = useTranslations('specialtyProfile');
 
   return (
-    <main className="section-padding pt-32">
+    <main className="section-padding">
       <div className="container-max">
         {/* Header */}
         <motion.div

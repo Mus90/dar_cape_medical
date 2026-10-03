@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -12,7 +12,7 @@ const HeroSection = () => {
   const locale = useLocale();
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-16 md:py-24">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
