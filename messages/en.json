@@ -240,6 +240,9 @@
     }
   },
   "specialtiesPage": {
+    "directoryNote": "Explore 32 primary medical specialties listed by UCT. Subspecialties such as cardiology require a separate pathway after primary specialist training. Current posts and eligibility depend on the department.",
+    "directorySource": "Official UCT specialty and training directory",
+    "trainingBadge": "Specialist training / MMed",
     "title": "Medical Specialties",
     "subtitle": "Explore specialist training pathways in South Africa",
     "description": "Detailed information about medical specialties available for international medical graduates seeking specialist training in South Africa.",
@@ -621,9 +624,11 @@
     }
   },
   "specialtyProfile": {
+    "questionsIntro": "Use these questions when contacting a training department. They help you compare programmes; they are not a list of compulsory rotations or admission requirements.",
     "subtitle": "Specialist Training Pathway in South Africa",
     "eligibilityWarning": "The existence of a training program does not guarantee eligibility. Selection depends on individual qualifications, experience, availability of positions, and institutional requirements. This information is provided for guidance only.",
     "sections": {
+      "departmentQuestions": "Questions to ask about this specialty",
       "overview": "Overview",
       "trainingStructure": "Training Structure in South Africa",
       "cmsaPathway": "CMSA College / Examination Pathway",

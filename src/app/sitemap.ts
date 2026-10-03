@@ -1,5 +1,7 @@
 ﻿import { MetadataRoute } from 'next'
 
+import { specialties } from '@/data/specialties'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://darcape.com'
 
@@ -13,8 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Services
     '/services/hpcsa-registration',
     // Specialties
-    '/specialties/ophthalmology',
-    '/specialties/orthopaedic-surgery',
+    '/specialties',
+    ...specialties.map(specialty => `/specialties/${specialty.slug}`),
     // Universities
     '/universities/uct',
     // Insights / Articles
@@ -32,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = locales.flatMap((locale) =>
     routes.map((route) => ({
-      url: locale === 'en' ? `${baseUrl}${route}` : `${baseUrl}/${locale}${route}`,
+      url: `${baseUrl}/${locale}${route}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: route === '' ? 1 : route.includes('knowledge-centre') || route.includes('specialties') ? 0.9 : 0.8

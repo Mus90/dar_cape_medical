@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import SpecialtyProfile from '@/components/specialties/SpecialtyProfile';
+import { getSpecialtyQuestions } from '@/data/specialtyGuidance';
 import FloatingWhatsApp from '@/components/shared/FloatingWhatsApp';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import ProfessionalServiceSchema from '@/components/seo/ProfessionalServiceSchema';
@@ -96,7 +97,7 @@ export default function OphthalmologyPage({ params: { locale } }: Props) {
       'فكر في فرص المراقبة أو البحث في جنوب أفريقيا'
     ],
     officialSources: [
-      { name: 'كلية أطباء العيون في جنوب أفريقيا', url: 'https://www.cmsa.co.za/colleges/ophthalmologists' },
+      { name: 'كلية أطباء العيون في جنوب أفريقيا', url: 'https://cmsa.co.za/college-of-ophthalmologists/' },
       { name: 'امتحان CMSA FC Ophth(SA)', url: 'https://cmsa.co.za/fellowship-of-the-college-of-ophthalmologists-of-south-africa-fc-ophthsa/' },
       { name: 'HPCSA', url: 'https://www.hpcsa.co.za/' }
     ],
@@ -140,7 +141,7 @@ export default function OphthalmologyPage({ params: { locale } }: Props) {
       'Consider observerships or research opportunities in South Africa'
     ],
     officialSources: [
-      { name: 'College of Ophthalmologists of South Africa', url: 'https://www.cmsa.co.za/colleges/ophthalmologists' },
+      { name: 'College of Ophthalmologists of South Africa', url: 'https://cmsa.co.za/college-of-ophthalmologists/' },
       { name: 'CMSA FC Ophth(SA) Examination', url: 'https://cmsa.co.za/fellowship-of-the-college-of-ophthalmologists-of-south-africa-fc-ophthsa/' },
       { name: 'HPCSA', url: 'https://www.hpcsa.co.za/' }
     ],
@@ -151,13 +152,13 @@ export default function OphthalmologyPage({ params: { locale } }: Props) {
     {
       organization: 'College of Ophthalmologists of South Africa',
       documentTitle: 'FC Ophth(SA) Examination Requirements',
-      url: 'https://www.cmsa.co.za/colleges/ophthalmologists',
+      url: 'https://cmsa.co.za/college-of-ophthalmologists/',
       lastChecked: 'September 2024'
     },
     {
-      organization: 'South African Society of Ophthalmologists',
-      documentTitle: 'Ophthalmology Training Information',
-      url: 'https://www.sasso.co.za/',
+      organization: 'University of Cape Town',
+      documentTitle: 'Ophthalmology Postgraduate Training',
+      url: 'https://health.uct.ac.za/ophthalmology/postgraduate',
       lastChecked: 'September 2024'
     },
     {
@@ -176,7 +177,7 @@ export default function OphthalmologyPage({ params: { locale } }: Props) {
         url={`https://darcape.com/${locale === 'en' ? '' : locale + '/'}specialties/ophthalmology`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
-      <SpecialtyProfile locale={locale} specialty={specialtyData} />
+      <SpecialtyProfile locale={locale} specialty={{ ...specialtyData, departmentQuestions: getSpecialtyQuestions('ophthalmology', locale) }} />
       <div className="container-max section-padding">
         <OfficialSources sources={officialSourcesData} />
       </div>

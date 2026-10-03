@@ -19,9 +19,10 @@ interface SpecialtyProfileProps {
   specialty: {
     name: string;
     overview: string;
+    departmentQuestions?: string[];
     trainingStructure: string;
     cmsaPathway: string;
-    universities: string[];
+    universities: Array<string | { name: string; url: string }>;
     internationalConsiderations: string;
     competitivenessFactors: string[];
     relevantExperience: string[];
@@ -87,6 +88,15 @@ const SpecialtyProfile = ({ locale, specialty }: SpecialtyProfileProps) => {
           <p className="text-gray-700 leading-relaxed">{specialty.overview}</p>
         </motion.div>
 
+        {specialty.departmentQuestions && (
+          <section className="bg-teal-50 p-6 sm:p-8 rounded-xl border border-teal-100 mb-6">
+            <h2 className="text-2xl font-bold text-navy-900 mb-4 font-serif">{t('sections.departmentQuestions')}</h2>
+            <p className="text-gray-700 mb-4">{t('questionsIntro')}</p>
+            <ul className="list-disc ps-5 space-y-3 text-gray-700 leading-relaxed">
+              {specialty.departmentQuestions.map(question => <li key={question}>{question}</li>)}
+            </ul>
+          </section>
+        )}
         {/* Training Structure */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -130,10 +140,10 @@ const SpecialtyProfile = ({ locale, specialty }: SpecialtyProfileProps) => {
             {specialty.universities.map((university, index) => (
               <Link
                 key={index}
-                href={`/${locale}/universities/${university.toLowerCase().replace(/\s+/g, '-')}`}
+                href={typeof university === 'string' ? `/${locale}/universities` : university.url}
                 className="bg-gray-50 px-4 py-3 rounded-lg text-teal-600 hover:text-teal-700 hover:bg-gray-100 transition-colors flex items-center"
               >
-                <span>{university}</span>
+                <span>{typeof university === 'string' ? university : university.name}</span>
                 <ArrowRightIcon className="h-4 w-4 ml-auto" />
               </Link>
             ))}

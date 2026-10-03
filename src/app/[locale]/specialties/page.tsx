@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { specialties, specialtySource } from '@/data/specialties';
 
 type Props = {
   params: { locale: string };
@@ -21,42 +22,43 @@ export default function SpecialtiesPage({ params: { locale } }: Props) {
   setRequestLocale(locale);
   const t = useTranslations('specialtiesPage');
 
-  const specialties = [
-    { id: 'ophthalmology', name: t('ophthalmology'), icon: '👁️' },
-    { id: 'orthopaedic-surgery', name: t('orthopaedicSurgery'), icon: '🦴' },
-  ];
-
   return (
     <main className="section-padding">
       <div className="container-max">
         {/* Heading */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-navy-900 font-serif">{t('title')}</h1>
-          <p className="text-gray-600 текст-lg mb-6 max-w-3xl mx-auto">{t('subtitle')}</p>
+          <p className="text-gray-600 text-lg mb-6 max-w-3xl mx-auto">{t('subtitle')}</p>
           <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
             {t('description')}
           </p>
         </div>
 
+        <p className="text-sm text-gray-600 mb-3">{t('directoryNote')}</p>
+        <a href={specialtySource} target="_blank" rel="noopener noreferrer" className="inline-block mb-8 text-teal-700 underline underline-offset-4">{t('directorySource')}</a>
         {/* Specialties Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {specialties.map((specialty) => (
+          {specialties.map((specialty) => {
+            const text = locale === 'ar' ? specialty.ar : specialty.en;
+            return (
             <Link
-              key={specialty.id}
-              href={`/${locale}/specialties/${specialty.id}`}
-              className="card-premium p-6 group hover:shadow-xl transition-all duration-300"
+              key={specialty.slug}
+              href={`/${locale}/specialties/${specialty.slug}`}
+              className="card-premium p-6 group hover:shadow-xl transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600"
             >
               <div className="flex items-start space-x-4 rtl:space-x-reverse">
-                <div className="text-4xl">{specialty.icon}</div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-navy-900 mb-2 font-serif group-hover:text-teal-700 transition-colors">
-                    {specialty.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{t('viewDetails')}</p>
+                <div className="text-4xl" aria-hidden="true">{specialty.icon}</div>
+                <div className="flex-1 min-w-0">
+                  <h2 className="text-xl font-bold text-navy-900 mb-2 font-serif group-hover:text-teal-700 transition-colors">
+                    {text.name}
+                  </h2>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{text.summary}</p>
+                  <span className="inline-block text-xs font-medium bg-teal-50 text-teal-800 px-2 py-1 rounded mb-3">{t('trainingBadge')}</span>
+                  <p className="text-teal-700 text-sm font-semibold">{t('viewDetails')}</p>
                 </div>
               </div>
             </Link>
-          ))}
+          ); })}
         </div>
 
         {/* Verification Notice */}

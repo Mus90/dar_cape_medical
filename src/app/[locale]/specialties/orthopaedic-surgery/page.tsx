@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import SpecialtyProfile from '@/components/specialties/SpecialtyProfile';
+import { getSpecialtyQuestions } from '@/data/specialtyGuidance';
 import FloatingWhatsApp from '@/components/shared/FloatingWhatsApp';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import ProfessionalServiceSchema from '@/components/seo/ProfessionalServiceSchema';
@@ -97,7 +98,7 @@ export default function OrthopaedicSurgeryPage({ params: { locale } }: Props) {
       'فكر في فرص المراقبة أو البحث في جنوب أفريقيا'
     ],
     officialSources: [
-      { name: 'كلية جراحي العظام في جنوب أفريقيا', url: 'https://www.cmsa.co.za/colleges/orthopaedic-surgeons' },
+      { name: 'كلية جراحي العظام في جنوب أفريقيا', url: 'https://cmsa.co.za/college-of-orthopaedic-surgeons/' },
       { name: 'امتحان CMSA FC Orth(SA)', url: 'https://cmsa.co.za/fellowship-of-the-college-of-orthopaedic-surgeons-of-south-africa-fc-orthsa/' },
       { name: 'HPCSA', url: 'https://www.hpcsa.co.za/' }
     ],
@@ -142,7 +143,7 @@ export default function OrthopaedicSurgeryPage({ params: { locale } }: Props) {
       'Consider observerships or research opportunities in South Africa'
     ],
     officialSources: [
-      { name: 'College of Orthopaedic Surgeons of South Africa', url: 'https://www.cmsa.co.za/colleges/orthopaedic-surgeons' },
+      { name: 'College of Orthopaedic Surgeons of South Africa', url: 'https://cmsa.co.za/college-of-orthopaedic-surgeons/' },
       { name: 'CMSA FC Orth(SA) Examination', url: 'https://cmsa.co.za/fellowship-of-the-college-of-orthopaedic-surgeons-of-south-africa-fc-orthsa/' },
       { name: 'HPCSA', url: 'https://www.hpcsa.co.za/' }
     ],
@@ -153,13 +154,13 @@ export default function OrthopaedicSurgeryPage({ params: { locale } }: Props) {
     {
       organization: 'College of Orthopaedic Surgeons of South Africa',
       documentTitle: 'FC Orth(SA) Examination Requirements',
-      url: 'https://www.cmsa.co.za/colleges/orthopaedic-surgeons',
+      url: 'https://cmsa.co.za/college-of-orthopaedic-surgeons/',
       lastChecked: 'September 2024'
     },
     {
-      organization: 'South African Orthopaedic Association',
-      documentTitle: 'Orthopaedic Training Information',
-      url: 'https://www.saoa.org.za/',
+      organization: 'Stellenbosch University',
+      documentTitle: 'MMed Orthopaedic Surgery Training',
+      url: 'https://www.su.ac.za/en/faculties/medicine/departments/surgical-sciences/orthopaedic-surgery',
       lastChecked: 'September 2024'
     },
     {
@@ -178,7 +179,7 @@ export default function OrthopaedicSurgeryPage({ params: { locale } }: Props) {
         url={`https://darcape.com/${locale === 'en' ? '' : locale + '/'}specialties/orthopaedic-surgery`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
-      <SpecialtyProfile locale={locale} specialty={specialtyData} />
+      <SpecialtyProfile locale={locale} specialty={{ ...specialtyData, departmentQuestions: getSpecialtyQuestions('orthopaedic-surgery', locale) }} />
       <div className="container-max section-padding">
         <OfficialSources sources={officialSourcesData} />
       </div>
