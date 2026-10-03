@@ -2,106 +2,167 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {
   DocumentTextIcon,
   AcademicCapIcon,
   ClipboardDocumentListIcon,
-  ArrowRightIcon
+  ShieldCheckIcon,
+  ArrowRightIcon,
+  CheckCircleIcon
 } from '@heroicons/react/24/outline';
 
 const ServicesSection = () => {
-  const t = useTranslations('servicesSimple');
-  const tCommon = useTranslations('common');
+  const t = useTranslations('servicesStages');
   const locale = useLocale();
 
-  const services = [
+  const stages = [
     {
+      number: 1,
       icon: DocumentTextIcon,
-      title: t('items.info.title'),
-      description: t('items.info.description'),
-      color: 'from-sky-500 to-sky-600'
+      title: t('stage1.title'),
+      for: t('stage1.for'),
+      problem: t('stage1.problem'),
+      deliverables: t.raw('stage1.deliverables'),
+      next: t('stage1.next'),
+      color: 'from-navy-600 to-navy-700'
     },
     {
+      number: 2,
       icon: AcademicCapIcon,
-      title: t('items.consultation.title'),
-      description: t('items.consultation.description'),
-      color: 'from-emerald-500 to-emerald-600'
+      title: t('stage2.title'),
+      for: t('stage2.for'),
+      problem: t('stage2.problem'),
+      deliverables: t.raw('stage2.deliverables'),
+      next: t('stage2.next'),
+      color: 'from-teal-600 to-teal-700'
     },
     {
+      number: 3,
       icon: ClipboardDocumentListIcon,
-      title: t('items.review.title'),
-      description: t('items.review.description'),
-      color: 'from-indigo-500 to-indigo-600'
+      title: t('stage3.title'),
+      for: t('stage3.for'),
+      problem: t('stage3.problem'),
+      deliverables: t.raw('stage3.deliverables'),
+      next: t('stage3.next'),
+      color: 'from-navy-700 to-navy-800'
+    },
+    {
+      number: 4,
+      icon: ShieldCheckIcon,
+      title: t('stage4.title'),
+      for: t('stage4.for'),
+      problem: t('stage4.problem'),
+      deliverables: t.raw('stage4.deliverables'),
+      next: t('stage4.next'),
+      color: 'from-teal-700 to-teal-800'
     }
   ];
 
   return (
     <section className="section-padding bg-white">
       <div className="container-max">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6 font-serif">
             {t('title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="group card overflow-hidden hover:scale-105 transition-transform duration-300"
+        <div className="space-y-12">
+          {stages.map((stage) => (
+            <div
+              key={stage.number}
+              className="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden"
             >
-              <div className="p-6">
-                <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <service.icon className="h-6 w-6 text-white" />
+              <div className="md:flex">
+                {/* Stage Number and Icon */}
+                <div className={`md:w-64 bg-gradient-to-br ${stage.color} p-8 flex flex-col items-center justify-center text-white`}>
+                  <div className="text-6xl font-bold opacity-30 mb-4 font-serif">
+                    {String(stage.number).padStart(2, '0')}
+                  </div>
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                    <stage.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-center font-serif">
+                    {stage.title}
+                  </h3>
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                <Link
-                  href={`/${locale}/contact`}
-                  className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group"
-                >
-                  {t('cta')}
-                  <ArrowRightIcon className="h-4 w-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform duration-200" />
-                </Link>
+                {/* Stage Details */}
+                <div className="flex-1 p-8 md:p-10">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* Left Column */}
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2">
+                          Who This Is For
+                        </h4>
+                        <p className="text-navy-900 leading-relaxed">
+                          {stage.for}
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2">
+                          Problem We Solve
+                        </h4>
+                        <p className="text-navy-900 leading-relaxed">
+                          {stage.problem}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Right Column */}
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2">
+                          Deliverables
+                        </h4>
+                        <ul className="space-y-2">
+                          {stage.deliverables.map((item: string, i: number) => (
+                            <li key={i} className="flex items-start text-navy-900">
+                              <CheckCircleIcon className="h-5 w-5 text-teal-600 mr-2 flex-shrink-0 mt-0.5" />
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2">
+                          What Happens Next
+                        </h4>
+                        <p className="text-navy-900 leading-relaxed">
+                          {stage.next}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Link
-            href={`/${locale}/contact`}
-            className="btn-primary text-lg px-8 py-4"
-          >
-            {t('cta')}
-            <ArrowRightIcon className="h-5 w-5 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180" />
-          </Link>
-        </motion.div>
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-navy-900 to-navy-800 rounded-2xl p-12">
+            <h3 className="text-2xl font-bold text-white mb-4 font-serif">
+              {t('ctaTitle')}
+            </h3>
+            <p className="text-stone-300 mb-8 max-w-2xl mx-auto">
+              {t('ctaDescription')}
+            </p>
+            <Link
+              href={`/${locale}/contact`}
+              className="inline-flex items-center px-8 py-4 bg-teal-600 text-white font-semibold rounded-xl hover:bg-teal-700 transition-colors"
+            >
+              {t('cta')}
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

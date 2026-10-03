@@ -18,10 +18,11 @@ const Header = () => {
 
   const navigation = [
     { name: t('home'), href: `/${locale}` },
-    { name: t('about'), href: `/${locale}/about` },
     { name: t('services'), href: `/${locale}/services` },
-    { name: t('howItWorks'), href: `/${locale}/how-it-works` },
-    { name: t('pricing'), href: `/${locale}/pricing` },
+    { name: t('specialties'), href: `/${locale}/specialties` },
+    { name: t('universities'), href: `/${locale}/universities` },
+    { name: t('guides'), href: `/${locale}/guides` },
+    { name: t('about'), href: `/${locale}/about` },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
@@ -33,23 +34,18 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Glass morphism backdrop */}
-      <div className="absolute inset-0 backdrop-blur-xl bg-white/80 border-b border-white/20" />
-
-      <nav className="relative container-max section-padding py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-stone-200">
+      <nav className="container-max px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center group">
-            <div className="relative h-32 w-auto">
-              <div className="absolute -inset-3 bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md" />
-              <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 shadow-xl" />
+          <Link href={`/${locale}`} className="flex items-center">
+            <div className="relative h-28 w-auto">
               <Image
                 src="/images/logo.jpeg"
                 alt="DAR CAPE MEDICA Logo"
                 width={480}
                 height={160}
-                className="relative h-32 w-auto transition-transform duration-300 group-hover:scale-105 p-3"
+                className="h-28 w-auto"
                 priority
               />
             </div>
@@ -61,32 +57,25 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative font-medium transition-all duration-300 py-2 px-1 ${isActive(item.href)
-                  ? 'text-primary-600'
-                  : 'text-gray-700 hover:text-primary-600'
+                className={`font-medium transition-colors duration-200 py-2 px-1 text-sm ${isActive(item.href)
+                  ? 'text-navy-900 border-b-2 border-navy-900'
+                  : 'text-stone-600 hover:text-navy-900'
                   }`}
               >
                 {item.name}
-                {/* Animated underline */}
-                <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary-600 to-primary-700 transition-all duration-300 ${isActive(item.href) ? 'w-full' : 'w-0 hover:w-full'
-                    }`}
-                />
               </Link>
             ))}
           </div>
 
           {/* Right side actions */}
-          <div className="flex items-center space-x-4 rtl:space-x-reverse z-10">
+          <div className="flex items-center space-x-4 rtl:space-x-reverse">
             {/* Language Toggle */}
-            <div className="relative z-20">
-              <LanguageToggle />
-            </div>
+            <LanguageToggle />
 
             {/* Mobile menu button */}
             <button
               type="button"
-              className="lg:hidden relative p-2 rounded-xl text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300 z-20"
+              className="lg:hidden p-2 rounded-lg text-stone-600 hover:text-navy-900 hover:bg-stone-100 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -106,17 +95,17 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden mt-4 border-t border-gray-200/50"
+              transition={{ duration: 0.2 }}
+              className="lg:hidden mt-6 border-t border-stone-200"
             >
-              <div className="pt-4 space-y-1">
+              <div className="pt-6 space-y-1">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${isActive(item.href)
-                      ? 'text-primary-600 bg-primary-50 border-l-4 border-primary-600'
-                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    className={`block px-4 py-3 rounded-lg font-medium transition-colors text-base ${isActive(item.href)
+                      ? 'text-navy-900 bg-stone-100'
+                      : 'text-stone-600 hover:text-navy-900 hover:bg-stone-50'
                       }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -124,10 +113,10 @@ const Header = () => {
                   </Link>
                 ))}
                 {/* Mobile CTA */}
-                <div className="pt-2 mt-2 border-t border-gray-200">
+                <div className="pt-4 mt-4 border-t border-stone-200">
                   <Link
                     href={`/${locale}/contact`}
-                    className="block w-full mx-4 px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium rounded-xl text-center transition-all duration-300 hover:shadow-lg"
+                    className="block w-full px-6 py-3 bg-navy-900 text-white font-medium rounded-lg text-center transition-colors hover:bg-navy-800"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('contact')}

@@ -4,10 +4,10 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
-  const t = useTranslations('about');
+  const t = useTranslations('about.hero');
 
   return (
-    <section className="relative py-24 bg-gradient-to-r from-primary-600 to-accent-500 overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-r from-navy-900 to-navy-800 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full animate-float" />
@@ -22,7 +22,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-6xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,8 +30,8 @@ const HeroSection = () => {
           >
             {t('title')}
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl md:text-2xl opacity-90 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

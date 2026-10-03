@@ -8,7 +8,7 @@ const HeroSection = () => {
   const t = useTranslations('contact');
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-primary-600 via-accent-500 to-secondary-600 overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-r from-navy-900 to-navy-800 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-float" />

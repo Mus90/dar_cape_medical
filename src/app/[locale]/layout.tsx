@@ -11,11 +11,14 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+// Fixed: Correctly typed Next.js asynchronous params signature for SEO generation
 export async function generateMetadata({
-  params: { locale }
+  params
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params; // Awaiting the asynchronous params object
+
   return {
     title: {
       template: '%s | Dar Cape Medica',
@@ -50,7 +53,7 @@ export async function generateMetadata({
       images: ['/images/og-image.jpg'],
     },
     alternates: {
-      canonical: 'https://darcape.com',
+      canonical: `https://darcape.com/${locale}`, // Fixed: Avoid duplicating canonical roots across distinct locales
       languages: {
         'ar': 'https://darcape.com/ar',
         'en': 'https://darcape.com/en',
@@ -61,29 +64,34 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params; // Awaiting the asynchronous params object
+
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
+  if (!locales.includes(locale)) notFound();
 
   // Load messages directly for static export compatibility
   const messages = (await import(`../../../messages/${locale}.json`)).default;
 
   const isRTL = locale === 'ar';
+  const direction = isRTL ? 'rtl' : 'ltr';
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <div className={`min-h-screen flex flex-col ${isRTL ? 'font-arabic' : 'font-english'} bg-gray-50`} data-locale={locale} data-dir={isRTL ? 'rtl' : 'ltr'}>
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
-      </div>
-    </NextIntlClientProvider>
+    <html lang={locale} dir={direction}>
+      <body className={`min-h-screen flex flex-col ${isRTL ? 'font-arabic' : 'font-english'} bg-gray-50 text-slate-800 antialiased`}>
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppButton />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

@@ -12,7 +12,8 @@ export default function LatestInsightsSection() {
 
   const items = [
     { key: "hpcsa", href: `/${locale}/insights/hpcsa-registration` },
-    { key: "trainingOverview", href: `/${locale}/insights/training-overview` }
+    { key: "trainingOverview", href: `/${locale}/insights/training-overview` },
+    { key: "imgPathway", href: `/${locale}/insights/pathway-for-international-medical-graduates` }
   ] as const;
 
   return (

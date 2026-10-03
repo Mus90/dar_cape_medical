@@ -483,7 +483,7 @@ const SettingsTab = ({ t }: { t: any }) => {
   React.useEffect(() => {
     const savedSettings = localStorage.getItem('dar_cape_settings');
     if (savedSettings) {
-      setSettings({ ...settings, ...JSON.parse(savedSettings) });
+      setSettings(current => ({ ...current, ...JSON.parse(savedSettings) }));
     }
   }, []);
 

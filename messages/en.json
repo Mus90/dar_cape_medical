@@ -6,7 +6,8 @@
     "universities": "Universities",
     "guides": "Guides",
     "about": "About",
-    "contact": "Contact / Start Assessment"
+    "contact": "Contact / Start Assessment",
+    "howItWorks": "How It Works"
   },
   "guidesPage": {
     "title": "Guides & Resources",
@@ -1546,11 +1547,55 @@
           "q": "How long should I plan to stay?",
           "a": "Length of stay depends on procedure and recovery; typical stays range from a few days for minor procedures to several weeks for complex care and rehabilitation."
         }
+      },
+      "access": {
+        "title": "Access & Travel",
+        "content": "Direct international flights to major centres, streamlined patient coordination, and post-care support networks for international patients."
       }
     },
-    "access": {
-      "title": "Access & Travel",
-      "content": "Direct international flights to major centres, streamlined patient coordination, and post-care support networks for international patients."
+    "hospitals": {
+      "title": "Hospitals and How to Choose",
+      "intro": "Consider specialist availability, hospital credentials and international patient support when choosing a facility.",
+      "selection": {
+        "title": "Choosing a Hospital",
+        "content": "Discuss your care needs with the treating team and compare specialist availability, location and the proposed care plan."
+      },
+      "accreditation": {
+        "title": "Hospital Credentials",
+        "content": "Ask the hospital about its current accreditation, clinical governance and the credentials of the treating specialists."
+      },
+      "internationalUnits": {
+        "title": "International Patient Support",
+        "content": "Confirm whether the hospital can assist with appointments, cost estimates, language support and follow-up arrangements."
+      },
+      "faq": {
+        "q1": {
+          "q": "How do I choose a hospital?",
+          "a": "Start with your clinical needs and consult the treating specialist. Confirm available services, costs and follow-up before booking."
+        }
+      }
+    },
+    "recovery": {
+      "title": "Recovery and Accommodation",
+      "intro": "Plan accommodation and follow-up with your treating team before travelling.",
+      "accommodation": {
+        "title": "Accommodation",
+        "content": "Choose accommodation near your care provider and confirm accessibility, transport and arrangements for companions."
+      },
+      "recoveryServices": {
+        "title": "Recovery Support",
+        "content": "Discuss any rehabilitation, nursing or follow-up needs with your treating team and arrange appropriate support."
+      },
+      "logistics": {
+        "title": "Travel and Logistics",
+        "content": "Coordinate appointments, transport and your return journey with the care plan and medical advice."
+      },
+      "faq": {
+        "q1": {
+          "q": "When can I travel after treatment?",
+          "a": "Ask your treating clinician to advise on recovery time and fitness to travel for your individual circumstances."
+        }
+      }
     }
   },
   "hospitals": {
