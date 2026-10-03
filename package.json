@@ -9,7 +9,9 @@
         "start": "next start",
         "lint": "next lint",
         "test": "jest",
-        "test:coverage": "jest --coverage --watchAll=false"
+        "test:coverage": "jest --coverage --watchAll=false",
+        "test:e2e": "playwright test",
+        "test:e2e:ui": "playwright test --ui"
     },
     "dependencies": {
         "@headlessui/react": "^1.7.17",
@@ -24,6 +26,7 @@
         "resend": "^6.32.0"
     },
     "devDependencies": {
+        "@playwright/test": "^1.63.0",
         "@testing-library/jest-dom": "^7.0.1",
         "@testing-library/react": "^16.3.3",
         "@types/jest": "^30.0.0",
